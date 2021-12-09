@@ -17,12 +17,12 @@
 
   gtag('config', 'G-H9CYDCGDRK');
 </script>
-<title>ページを追加する - Giblog Official Site - Tools creating Web Site and Blog that is managed using Git</title>
-<meta name="description" content="Webサイトにページを追加してみましょう。">
+<title> Add a page  - Giblog Official Site - Tools creating Web Site and Blog that is managed using Git</title>
+<meta name="description" content="Let's add a page to our website.">
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:site" content="@perlzemi" />
-<meta name="twitter:title" content="ページを追加する - Giblog Official Site - Tools creating Web Site and Blog that is managed using Git" />
-<meta name="twitter:description" content="Webサイトにページを追加してみましょう。" />
+<meta name="twitter:title" content=" Add a page  - Giblog Official Site - Tools creating Web Site and Blog that is managed using Git" />
+<meta name="twitter:description" content="Let's add a page to our website." />
 <meta name="twitter:image" content="https://en.giblog.perlzemi.com//images/giblog-favicon.png" />
 
 
@@ -45,7 +45,7 @@
 
 <div class="header-content">
   <div class="header-content-title">
-    <a href="/"><img src="/images/giblog-logo-image-text.png" width="170" alt="Giblog公式サイト" style="vertical-align:-25px;"></a>
+    <a href="/"><img src="/images/giblog-logo-image-text.png" width="170" alt="Giblog" style="vertical-align:-25px;"></a>
   </div>
   <div class="menu-button" onclick="$('.header-content-menu').toggle();">
     <img src="/images/menu.png" style="width:40px;">
@@ -66,74 +66,67 @@
 
   </div>
   <div class="middle">
-    <h2><a href="/blog/20190424084107.html">ページを追加する</a></h2>
+    <h2><a href="/blog/20190424084107.html"> Add a page </a></ h2>
 <p>
-  Webサイトにページを追加してみましょう。
+  Let's add a page to our website.
 </p>
 <p>
-  例として、プロフィールページ「profile.html」を追加してみましょう。
+  As an example, let's add a profile page "profile.html".
 </p>
 <p>
-  ページの追加は「templates」ディレクトリの中に、ファイルを配置するだけです。
-</p>
-<pre>
-templates
-</pre>
-<p>
-  このディレクトリの中に「profile.html」を作成してください。
-</p>
-<p>
-  テキストエディタで開いて、編集します。
-</p>
-<p>
-  簡単なプロフィールを書いてみましょう。
+  To add a page, just place the file in the "templates" directory.
 </p>
 <pre>
-&lt;h2&gt;Perlゼミのプロフィール&lt;/h2&gt;
+templates templates
+&lt;/ pre&gt;
 
-PerlでWebサイトを作成しています。
+Create "profile.html" in this directory.
 
-よろしくお願いします。
-</pre>
-<p>
-  タイトルは「h2」タグの中に書きます。本文は上のように、段落ごとに記述しましょう。
-</p>
-<p>
-  注意点として、先頭に半角空白を入れないようにしましょう。
-</p>
-<p>
-  先頭に半角空白を入れると、自動改行機能が無効になってしまうためです。
-</p>
-<p>
-  もし文字化けを起こしてしまう場合は、ファイルの保存の文字コードがUTF-8になっていることを確認しましょう。
-</p>
-<pre>
+Open it in a text editor and edit it.
+
+Let's write a brief profile.
+
+&lt;pre&gt;
+&lt;h2&gt; Perl Seminar Profile &lt;/ h2&gt;
+
+I'm creating a website in Perl.
+
+Thank you.
+&lt;/ pre&gt;
+
+Write the title inside the "h2" tag. Write the text paragraph by paragraph as above.
+
+As a caveat, do not put a half-width space at the beginning.
+
+This is because if you insert a half-width space at the beginning, the automatic line feed function will be disabled.
+
+If the characters are garbled, make sure that the character code for saving the file is UTF-8.
+
+&lt;pre&gt;
 morbo serve.pl
-</pre>
-<p>
-  次のURLでページにアクセスできます。
-</p>
-<pre>
+&lt;/ pre&gt;
+
+You can access the page at the following URL:
+
+&lt;pre&gt;
 http://127.0.0.1:3000/profile.html
-</pre>
-<p>
-  このページにリンクを張るには、他のページで次のように記述しましょう。
-</p>
-<pre>
-&lt;a href="/profile.html"&gt;Perlゼミのプロフィール&lt;/a&gt;
-</pre>
-<p>
-  「templates」ディレクトリの中にサブディレクトリを作ってページを作成することもできます。
-</p>
-<pre>
-templates/menu/service.html
-</pre>
-<p>
-  注意点として、最初に作成されている「blog」「common」「static」というディレクトリの中には、ファイルを配置しないでください。
-</p>
-<p>
-  このディレクトリは、特別なディレクトリとして予約されています。
-</p>
+&lt;/ pre&gt;
+
+To link to this page, write the following on another page:
+
+&lt;pre&gt;
+&lt;a href="/profile.html"&gt; Perl Seminar Profile &lt;/a&gt;
+&lt;/ pre&gt;
+
+You can also create pages in the "templates" directory by creating subdirectories.
+
+&lt;pre&gt;
+templates / menu / service.html
+&lt;/ pre&gt;
+
+Please note that do not place files in the initially created "blog", "common" and "static" directories.
+
+This directory is reserved as a special directory.
 
   </div>
   <div class="bottom">
@@ -147,12 +140,10 @@ templates/menu/service.html
           <!-- side -->
 <div class="side-list">
   <div class="side-list-title">
-    メニュー
+    Menu
   </div>
   <ul>
-    <li><a href="/blog/20190416153053.html">Windowsで個人ブログを作る</a></li>
-    <li>Macで個人ブログを作る</li>
-    <li>Linuxで個人ブログを作る</li>
+    <li><a href="/blog/20190416153053.html">Create Your Blogs on Windows</a></li>
   </ul>
 </div>
 

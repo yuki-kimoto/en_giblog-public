@@ -17,12 +17,12 @@
 
   gtag('config', 'G-H9CYDCGDRK');
 </script>
-<title>Giblogはレスポンシブデザインでスマートフォン対応 - Giblog Official Site - Tools creating Web Site and Blog that is managed using Git</title>
-<meta name="description" content="Giblogは、レスポンシブデザインを採用しており、デフォルトでスマートフォン対応のCSSが提供されています。">
+<title> Giblog has a responsive design and is compatible with smartphones  - Giblog Official Site - Tools creating Web Site and Blog that is managed using Git</title>
+<meta name="description" content="Giblog has a responsive design and comes with CSS for smartphones by default.">
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:site" content="@perlzemi" />
-<meta name="twitter:title" content="Giblogはレスポンシブデザインでスマートフォン対応 - Giblog Official Site - Tools creating Web Site and Blog that is managed using Git" />
-<meta name="twitter:description" content="Giblogは、レスポンシブデザインを採用しており、デフォルトでスマートフォン対応のCSSが提供されています。" />
+<meta name="twitter:title" content=" Giblog has a responsive design and is compatible with smartphones  - Giblog Official Site - Tools creating Web Site and Blog that is managed using Git" />
+<meta name="twitter:description" content="Giblog has a responsive design and comes with CSS for smartphones by default." />
 <meta name="twitter:image" content="https://en.giblog.perlzemi.com//images/giblog-favicon.png" />
 
 
@@ -45,7 +45,7 @@
 
 <div class="header-content">
   <div class="header-content-title">
-    <a href="/"><img src="/images/giblog-logo-image-text.png" width="170" alt="Giblog公式サイト" style="vertical-align:-25px;"></a>
+    <a href="/"><img src="/images/giblog-logo-image-text.png" width="170" alt="Giblog" style="vertical-align:-25px;"></a>
   </div>
   <div class="menu-button" onclick="$('.header-content-menu').toggle();">
     <img src="/images/menu.png" style="width:40px;">
@@ -66,249 +66,246 @@
 
   </div>
   <div class="middle">
-    <h2><a href="/blog/20190819080050.html">Giblogはレスポンシブデザインでスマートフォン対応</a></h2>
+    <h2><a href="/blog/20190819080050.html"> Giblog has a responsive design and is compatible with smartphones </a></ h2>
 <p>
-  Giblogは、レスポンシブデザインを採用しており、デフォルトでスマートフォン対応のCSSが提供されています。
+  Giblog has a responsive design and comes with CSS for smartphones by default.
 </p>
-<h3>スマートフォン対応のためのHTMLヘッダの設定</h3>
+<h3> HTML header settings for smartphones </ h3>
 <p>
-  HTMLヘッダは、スマートフォン対応のために
-</p>
-<pre>
-templates/common/meta.html
-</pre>
-<p>
-  というファイルで、Giblog 1.0では、以下のように定義されています。
+  HTML header for smartphone support
 </p>
 <pre>
-&lt;meta charset="UTF-8"&gt;
-&lt;meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0"&gt;
-&lt;link rel="stylesheet" type="text/css" href="/css/common.css"&gt;
-</pre>
-<p>
-  これが、デフォルトの設定で、スマートフォンの画面の幅に合わせて、コンテンツが表示されます。
-</p>
-<p>
-  レスポンシブデザインですので、パソコンから表示される場合は、パソコンの画面の幅に合わせてコンテンツが表示されます。
-</p>
-<h3>スマートフォン対応のためのCSSの設定</h3>
-<p>
-  CSSヘッダは、スマートフォン対応のために
-</p>
-<pre>
-templates/static/css/common.css
-</pre>
-<p>
-  というファイルで、Giblog 1.0では、以下のように定義されています。
-</p>
-<p>
-  960px以下の画面幅の場合は、スマートフォン(あるいはタブレット)と認識される設定になっています。
-</p>
-<pre>
-/* Default settings */
+templates / common / meta.html
+&lt;/ pre&gt;
+
+In Giblog 1.0, it is defined as follows.
+
+&lt;pre&gt;
+&lt;meta charset = "UTF-8"&gt;
+&lt;meta name = "viewport" content = "width = device-width, initial-scale = 1.0, minimum-scale = 1.0"&gt;
+&lt;link rel = "stylesheet" type = "text / css" href = "/ css / common.css"&gt;
+&lt;/ pre&gt;
+
+This is the default setting, and the content will be displayed according to the width of the smartphone screen.
+
+Since it is a responsive design, when it is displayed from a computer, the content will be displayed according to the width of the computer screen.
+
+&lt;h3&gt; CSS settings for smartphones &lt;/ h3&gt;
+
+CSS headers for smartphones
+
+&lt;pre&gt;
+templates / static / css / common.css
+&lt;/ pre&gt;
+
+In Giblog 1.0, it is defined as follows.
+
+If the screen width is 960px or less, it is set to be recognized as a smartphone (or tablet).
+
+&lt;pre&gt;
+/ * Default settings * /
   
-  /* all */
-  * {
-    margin:0;
-    padding:0;
+  / * all * /
+  * {{
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
-    -webkit-text-size-adjust:100%;
+    -webkit-text-size-adjust: 100%;
   }
-  a, a:visited {
-    color:#0000EE;
+  a, a: visited {
+    color: # 0000EE;
   }
   
-  /* header */
+  / * header * /
   .header {
-    background:#212121;
-    margin-bottom:15px;
+    background: # 212121;
+    margin-bottom: 15px;
   }
   
-  /* footer */
+  / * footer * /
   .footer {
-    background:white;
-    margin-top:15px;
-    text-align:center;
-    padding:15px 0;
-    border-top:1px solid #ccc;
+    background: white;
+    margin-top: 15px;
+    text-align: center;
+    padding: 15px 0;
+    border-top: 1px solid #ccc;
   }
-  .footer a, .footer a:visited {
-    color:#000;
+  .footer a, .footer a: visited {
+    color: # 000;
   }
   
-  /* container */
+  / * container * /
   .container {
-    background:#F2EFE2;
+    background: # F2EFE2;
   }
   
-  /* main */
+  / * main * /
   .main {
-    max-width:960px;
-    width:100%;
+    max-width: 960px;
+    width: 100%;
     margin: 0 auto 15px auto;
   }
-  .main:after {
-    content:"";
-    display:block;
-    clear:both;
+  .main: after {
+    content: "";
+    display: block;
+    clear: both;
   }
   
-  /* content */
+  / * content * /
   .content {
-    float:left;
-    width:74%;
+    float: left;
+    width: 74%;
   }
   
-  /* entry */
+  / * entry * /
   .entry {
-    border:1px solid #C0C0C0;
-    background:white;
-    box-shadow: 0 0 3px rgba(0,0,0,.1);
-    padding:15px 25px;
-    margin-bottom:10px;
+    border: 1px solid # C0C0C0;
+    background: white;
+    box-shadow: 0 0 3px rgba (0,0,0, .1);
+    padding: 15px 25px;
+    margin-bottom: 10px;
   }
   .entry li {
-    margin-left:25px;
-    line-height:1.5;
+    margin-left: 25px;
+    line-height: 1.5;
   }
   
-  /* side */
+  / * side * /
   .side {
-    float:left;
-    width:25%;
-    margin-left:1%;
+    float: left;
+    width: 25%;
+    margin-left: 1%;
   }
   
-  /* tags */
+  / * tags * /
   h1 {
-    max-width:960px;
-    width:100%;
-    font-size:30px;
-    padding:12px 10px 10px 13px;
+    max-width: 960px;
+    width: 100%;
+    font-size: 30px;
+    padding: 12px 10px 10px 13px;
     margin: 0 auto;
   }
-  h1 a, h1 a:visited {
-    color:white;
-    text-decoration:none;
-    color:white;
+  h1 a, h1 a: visited {
+    color: white;
+    text-decoration: none;
+    color: white;
   }
   h2 {
-    font-size:23px;
-    padding:10px 0;
-    letter-spacing:0.5px;
+    font-size: 23px;
+    padding: 10px 0;
+    letter-spacing: 0.5px;
   }
-  h2 a, h2 a:visited {
-    text-decoration:none;
-    color:#000;
+  h2 a, h2 a: visited {
+    text-decoration: none;
+    color: # 000;
   }
   h3 {
-    font-size:18px;
-    border-left:7px solid #ddd;
-    padding:6px 0px 4px 12px;
-    letter-spacing:0.5px;
-    margin:15px 0 10px 0;
+    font-size: 18px;
+    border-left: 7px solid #ddd;
+    padding: 6px 0px 4px 12px;
+    letter-spacing: 0.5px;
+    margin: 15px 0 10px 0;
   }
   h4 {
-    font-size:17px;
-    font-weight:bold;
-    padding:6px 0px 4px 5px;
-    letter-spacing:0.5px;
-    margin:15px 0 10px 0;
+    font-size: 17px;
+    font-weight: bold;
+    padding: 6px 0px 4px 5px;
+    letter-spacing: 0.5px;
+    margin: 15px 0 10px 0;
   }
   p {
-    font-size:16px;
-    color:#111;
-    margin:10px 0;
-    line-height:1.5;
+    font-size: 16px;
+    color: # 111;
+    margin: 10px 0;
+    line-height: 1.5;
   }
   pre {
-    font-size:16px;
-    background:#FCFCFC;
-    border:1px solid #CCCCCC;
-    border-radius:5px;
-    padding:10px 15px;
-    margin:10px 0;
-    line-height:1.5;
-    white-space:pre-wrap;
+    font-size: 16px;
+    background: #FCFCFC;
+    border: 1px solid #CCCCCC;
+    border-radius: 5px;
+    padding: 10px 15px;
+    margin: 10px 0;
+    line-height: 1.5;
+    white-space: pre-wrap;
   }
   blockquote {
-    font-size:16px;
-    background:#FCFCFC;
-    border:1px solid #CCCCCC;
-    border-radius:5px;
-    padding:10px 15px;
-    margin:10px 0;
-    line-height:1.5;
+    font-size: 16px;
+    background: #FCFCFC;
+    border: 1px solid #CCCCCC;
+    border-radius: 5px;
+    padding: 10px 15px;
+    margin: 10px 0;
+    line-height: 1.5;
   }
 
   table {
     border-collapse: collapse;
-    margin-left:15px;
+    margin-left: 15px;
   }
 
   table th {
-    border:1px solid #ddd;
-    padding:7px;
-    background:#eee;
-    font-weight:bold;
+    border: 1px solid #ddd;
+    padding: 7px;
+    background: #eee;
+    font-weight: bold;
   }
 
   table td {
-    border:1px solid #ddd;
-    padding:7px;
+    border: 1px solid #ddd;
+    padding: 7px;
   }
   
-  /* advanced */
+  / * advanced * /
   .day {
-    text-align:right;
-    color:#999;
+    text-align: right;
+    color: # 999;
   }
   .before-days {
-    text-align:center;
+    text-align: center;
   }
   .side-list {
-    box-shadow: 0 0 3px rgba(0,0,0,.1);
+    box-shadow: 0 0 3px rgba (0,0,0, .1);
   }
   .side-list-title {
-    background:#222;
-    color:white;
-    font-weight:bold;
+    background: # 222;
+    color: white;
+    font-weight: bold;
     padding: 7px 0px 5px 0px;
-    text-align:center;
-    border:1px solid #ccc;
-    border-bottom:none;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-bottom: none;
   }
   .side-list ul {
-    border:1px solid #ccc;
+    border: 1px solid #ccc;
   }
   .side-list li {
-    list-style:none;
-    background:white;
-    border-bottom:1px solid #ccc;
-    padding:7px 10px 5px 10px;
+    list-style: none;
+    background: white;
+    border-bottom: 1px solid #ccc;
+    padding: 7px 10px 5px 10px;
   }
-  .side li:last-child {
-    border-bottom:none;
+  .side li: last-child {
+    border-bottom: none;
   }
 
-/* Tablet and Smart phone */
-@media only screen and (max-width:960px) {
+/ * Tablet and Smart phone * /
+@media only screen and (max-width: 960px) {
   .content {
-    float:none;
-    width:97%;
-    margin:0 auto;
-    margin-bottom:15px;
+    float: none;
+    width: 97%;
+    margin: 0 auto;
+    margin-bottom: 15px;
   }
   .side {
-    float:none;
-    width:97%;
-    margin:0 auto;
+    float: none;
+    width: 97%;
+    margin: 0 auto;
   }
 }
-</pre>
-<p>
-  Giblogは、最初からスマートフォン対応になっているので、必要に応じて、少し修正するだけです。
-</p>
+&lt;/ pre&gt;
+
+Giblog is compatible with smartphones from the beginning, so you only need to modify it a little if necessary.
 
   </div>
   <div class="bottom">
@@ -322,12 +319,10 @@ templates/static/css/common.css
           <!-- side -->
 <div class="side-list">
   <div class="side-list-title">
-    メニュー
+    Menu
   </div>
   <ul>
-    <li><a href="/blog/20190416153053.html">Windowsで個人ブログを作る</a></li>
-    <li>Macで個人ブログを作る</li>
-    <li>Linuxで個人ブログを作る</li>
+    <li><a href="/blog/20190416153053.html">Create Your Blogs on Windows</a></li>
   </ul>
 </div>
 

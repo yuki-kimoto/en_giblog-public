@@ -17,12 +17,12 @@
 
   gtag('config', 'G-H9CYDCGDRK');
 </script>
-<title>Markdownで記事を書けるようにする - Giblog Official Site - Tools creating Web Site and Blog that is managed using Git</title>
-<meta name="description" content="Markdownで記事を書けるようにしてみましょう。GiblogのデフォルトはGiblog記法ですが、Markdownに対応させることもできます。拡張子が「md」だった場合に、マークダウン記法で書けるようにしてみましょう。">
+<title> Make it possible to write articles with Markdown  - Giblog Official Site - Tools creating Web Site and Blog that is managed using Git</title>
+<meta name="description" content="Let's make it possible to write articles with Markdown. Giblog defaults to Giblog notation, but you can also make it compatible with Markdown. If the extension is "md", let's write it in markdown notation.">
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:site" content="@perlzemi" />
-<meta name="twitter:title" content="Markdownで記事を書けるようにする - Giblog Official Site - Tools creating Web Site and Blog that is managed using Git" />
-<meta name="twitter:description" content="Markdownで記事を書けるようにしてみましょう。GiblogのデフォルトはGiblog記法ですが、Markdownに対応させることもできます。拡張子が「md」だった場合に、マークダウン記法で書けるようにしてみましょう。" />
+<meta name="twitter:title" content=" Make it possible to write articles with Markdown  - Giblog Official Site - Tools creating Web Site and Blog that is managed using Git" />
+<meta name="twitter:description" content="Let's make it possible to write articles with Markdown. Giblog defaults to Giblog notation, but you can also make it compatible with Markdown. If the extension is "md", let's write it in markdown notation." />
 <meta name="twitter:image" content="https://en.giblog.perlzemi.com//images/giblog-favicon.png" />
 
 
@@ -45,7 +45,7 @@
 
 <div class="header-content">
   <div class="header-content-title">
-    <a href="/"><img src="/images/giblog-logo-image-text.png" width="170" alt="Giblog公式サイト" style="vertical-align:-25px;"></a>
+    <a href="/"><img src="/images/giblog-logo-image-text.png" width="170" alt="Giblog" style="vertical-align:-25px;"></a>
   </div>
   <div class="menu-button" onclick="$('.header-content-menu').toggle();">
     <img src="/images/menu.png" style="width:40px;">
@@ -66,90 +66,85 @@
 
   </div>
   <div class="middle">
-    <h2><a href="/blog/20191125080513.html">Markdownで記事を書けるようにする</a></h2>
+    <h2><a href="/blog/20191125080513.html"> Make it possible to write articles with Markdown </a></ h2>
 <p>
-  Markdownで記事を書けるようにしてみましょう。GiblogのデフォルトはGiblog記法ですが、Markdownに対応させることもできます。拡張子が「md」だった場合に、マークダウン記法で書けるようにしてみましょう。
+  Let's make it possible to write articles with Markdown. Giblog defaults to Giblog notation, but you can also make it compatible with Markdown. If the extension is "md", let's write it in markdown notation.
 </p>
-<h3>Markdownモジュールのインストール</h3>
+<h3> Install Markdown module </ h3>
 <p>
-  Perlには、Markdownの入力をHTMLに変換するモジュールがCPANにはいくつかあります。ここでは、Githubのマークダウン記法に近い記述ができるText::Markdown::Hoedownを使ってみましょう。
-</p>
-<pre>
-cpan Text::Markdown::Hoedown
-</pre>
-<p>
-  または
+  Perl has several modules on CPAN that convert Markdown input to HTML. Here, let's use Text :: Markdown :: Hoedown, which has a description similar to the markdown notation of Github.
 </p>
 <pre>
-cpanm Text::Markdown::Hoedown
-</pre>
-<p>
-  cpanmがインストールされている場合は、cpanmで、cpanしかない場合は、cpanでインストールしましょう。
-</p>
-<h3>Markdownで記事を書くためのプログラムの修正</h3>
-<p>
-  Giblogの機能を追加・変更するには、ビルドコマンド「lib/Giblog/Command/build.pm」を修正します。修正を間違って動かなくなった時のために、このファイルをバックアップを取っておくと安全です。
-</p>
-<p>
-  ではビルドコマンドにMarkdownで編集できる機能を追加してみましょう。まず、parse_giblog_syntaxというメソッドが呼ばれている部分を探してください。
-</p>
-<pre>
-package Giblog::Command::build;
+cpan Text :: Markdown :: Hoedown
+&lt;/ pre&gt;
 
-use base 'Giblog::Command';
+or
+
+&lt;pre&gt;
+cpanm Text :: Markdown :: Hoedown
+&lt;/ pre&gt;
+
+If you have cpanm installed, install it with cpanm, and if you only have cpan, install it with cpan.
+
+&lt;h3&gt; Modification of the program for writing articles in Markdown &lt;/ h3&gt;
+
+To add / change Giblog functions, modify the build command "lib / Giblog / Command / build.pm". It is safe to back up this file in case the fix accidentally stops working.
+
+Now let's add a feature that can be edited with Markdown to the build command. First, look for the part where the method called parse_giblog_syntax is called.
+
+&lt;pre&gt;
+package Giblog :: Command :: build;
+
+use base'Giblog :: Command';
 
 use strict;
 use warnings;
 use utf8;
 
-use File::Basename 'basename';
+use File :: Basename'basename';
 
 sub run {
   # ...
 
-    # Parse Giblog syntax
-    $api-&gt;parse_giblog_syntax($data);
+    #Parse Giblog syntax
+    $ api-&gt; parse_giblog_syntax ($ data);
   
   # ...
 }
-</pre>
-<p>
-  この部分を、ファイルの拡張子が「md」であった場合に、Markdownとして解釈して、HTMLを出力するという処理を追加します。
-</p>
-<pre>
+&lt;/ pre&gt;
+
+If the extension of the file is "md", this part is interpreted as Markdown and HTML is output.
+
+&lt;pre&gt;
 sub run {
   # ...
 
-    # Parse Markdown syntax
-    if ($data-&gt;{file} =~ /\.md$/) {
-      require Text::Markdown::Hoedown;
+    #Parse Markdown syntax
+    if ($ data-&gt; {file} = ~ /\.md$/) {
+      require Text :: Markdown :: Hoedown;
       
-      # Convert extenstion from md to html
-      $data-&gt;{file} =~ s/\.md$/.html/;
+      #Convert extenstion from md to html
+      $ data-&gt; {file} = ~ s /\.md$/.html/;
       
-      # Convert Markdown to HTML
-      $data-&gt;{content} = Text::Markdown::Hoedown::markdown($data-&gt;{content});
+      #Convert Markdown to HTML
+      $ data-&gt; {content} = Text :: Markdown :: Hoedown :: markdown ($ data-&gt; {content});
     }
     else {
-      # Parse Giblog syntax
-      $api-&gt;parse_giblog_syntax($data);
+      #Parse Giblog syntax
+      $ api-&gt; parse_giblog_syntax ($ data);
     }
   
   # ...
 }
-</pre>
-<p>
-  require文を使って、Text::Markdown::Hoedownを動的にロードしています。
-</p>
-<p>
-  ファイル拡張子が「md」であった場合に、出力のためにhtmlに修正する処理を書いています。
-</p>
-<p>
-  markdown関数を使って、コンテンツをMarkdownからHTMLに変更する処理を書いています。
-</p>
-<p>
-  templatesの中にあるファイルの拡張子を「md」にして、Markdownで記事を書いてみましょう。出力がHTMLになっていれば、成功です。
-</p>
+&lt;/ pre&gt;
+
+I'm using the require statement to dynamically load Text :: Markdown :: Hoedown.
+
+If the file extension is "md", I am writing a process to modify it to html for output.
+
+I am writing a process to change the content from Markdown to HTML using the markdown function.
+
+Let's write an article with Markdown by setting the extension of the file in templates to "md". If the output is HTML, you're successful.
 
   </div>
   <div class="bottom">
@@ -163,12 +158,10 @@ sub run {
           <!-- side -->
 <div class="side-list">
   <div class="side-list-title">
-    メニュー
+    Menu
   </div>
   <ul>
-    <li><a href="/blog/20190416153053.html">Windowsで個人ブログを作る</a></li>
-    <li>Macで個人ブログを作る</li>
-    <li>Linuxで個人ブログを作る</li>
+    <li><a href="/blog/20190416153053.html">Create Your Blogs on Windows</a></li>
   </ul>
 </div>
 

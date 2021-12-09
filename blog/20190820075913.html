@@ -17,12 +17,12 @@
 
   gtag('config', 'G-H9CYDCGDRK');
 </script>
-<title>Giblogで作成したWebサイトにお問い合わせフォームを設置できます - Giblog Official Site - Tools creating Web Site and Blog that is managed using Git</title>
-<meta name="description" content="Giblogは、静的なCMS生成ツールですが、お問い合わせフォームを設置することができます。">
+<title> You can set up an inquiry form on the website created by Giblog  - Giblog Official Site - Tools creating Web Site and Blog that is managed using Git</title>
+<meta name="description" content="Giblog is a static CMS generation tool, but you can set up a contact form.">
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:site" content="@perlzemi" />
-<meta name="twitter:title" content="Giblogで作成したWebサイトにお問い合わせフォームを設置できます - Giblog Official Site - Tools creating Web Site and Blog that is managed using Git" />
-<meta name="twitter:description" content="Giblogは、静的なCMS生成ツールですが、お問い合わせフォームを設置することができます。" />
+<meta name="twitter:title" content=" You can set up an inquiry form on the website created by Giblog  - Giblog Official Site - Tools creating Web Site and Blog that is managed using Git" />
+<meta name="twitter:description" content="Giblog is a static CMS generation tool, but you can set up a contact form." />
 <meta name="twitter:image" content="https://en.giblog.perlzemi.com//images/giblog-favicon.png" />
 
 
@@ -45,7 +45,7 @@
 
 <div class="header-content">
   <div class="header-content-title">
-    <a href="/"><img src="/images/giblog-logo-image-text.png" width="170" alt="Giblog公式サイト" style="vertical-align:-25px;"></a>
+    <a href="/"><img src="/images/giblog-logo-image-text.png" width="170" alt="Giblog" style="vertical-align:-25px;"></a>
   </div>
   <div class="menu-button" onclick="$('.header-content-menu').toggle();">
     <img src="/images/menu.png" style="width:40px;">
@@ -66,91 +66,87 @@
 
   </div>
   <div class="middle">
-    <h2><a href="/blog/20190820075913.html">Giblogで作成したWebサイトにお問い合わせフォームを設置できます</a></h2>
+    <h2><a href="/blog/20190820075913.html"> You can set up an inquiry form on the website created by Giblog </a></ h2>
 <p>
-  Giblogは、静的なCMS生成ツールですが、お問い合わせフォームを設置することができます。
+  Giblog is a static CMS generation tool, but you can set up a contact form.
 </p>
-<div style="text-align:center">
-  <a href="/mail.html">お問い合わせフォームのサンプル</a>
-</div>
-<div style="text-align:center">
-  <a href="/mail.html"><img src="/images/otoiawase-example.png" style="border:1px solid #ddd;width:80%;"></a>
-</div>
+<div style = "text-align: center">
+  <a href="/mail.html"> Contact form sample </a>
+</ div>
+<div style = "text-align: center">
+  <a href="/mail.html"> <img src = "/ images / otoiawase-example.png" style = "border: 1px solid #ddd; width: 80%;"> </a>
+</ div>
 <p>
-  お問い合わせフォームは、Giblog自体には含まれません。
-</p>
-<p>
-  Giblogは、静的なCMSツールとして、GiblogのWebサイトの中に、CGIのフォームを埋め込める仕組みを準備しています。
+  The contact form is not included in the Giblog itself.
 </p>
 <p>
-  実際のCGIフォームの構成については、Giblog公式サイトのリポジトリの中にある以下の二つのファイルを見てください。
+  As a static CMS tool, Giblog is preparing a mechanism to embed CGI forms in the Giblog website.
 </p>
 <p>
-  <a href="https://github.com/yuki-kimoto/giblog-website/tree/master/templates">Giblog公式サイトのお問い合わせフォーム</a>
+  For the actual CGI form configuration, see the following two files in the repository on the official Giblog site.
 </p>
-<pre>
-templates/mail.html
-template/static/mail.cgi
-</pre>
 <p>
-  「git clone」で、GiblogWebサイトを、そのままコピーできますが、お問い合わせフォームだけを保存する場合は、CGIプログラムのパーミッションは755で、改行コードはLFで、保存してください。
-</p>
-<h3>Webサイトにお問い合わせフォームを埋め込める仕組み</h3>
-<p>
-  Giblogは、Webサイトに埋め込むことができるCGIのお問い合わせフォームを次の方法で実現しています。
-</p>
-<h4>お問い合わせフォームは、単純なHTMLのテンプレート</h4>
-<p>
-  お問い合わせフォームは、単純なHTMLのファイルです。
+  <a href="https://github.com/yuki-kimoto/giblog-website/tree/master/templates"> Giblog official website inquiry form </a>
 </p>
 <pre>
-templates/mail.html
-</pre>
-<p>
-  HTMLのformタグを使って、メールフォームを記述しています。
-</p>
-<p>
-  ヘッダとフッタなど、通常のコンテンツと同じ構成で、ラッピングされます。
-</p>
-<h4>メールを送信するCGIプログラム</h4>
-<pre>
-template/static/mail.cgi
-</pre>
-<p>
-  は、メールを送信するCGIプログラムです。
-</p>
-<h4>Ajax通信で、CGIを呼び出す</h4>
-<p>
-  「mail.html」の中には、JavaScriptが記述されており、Ajax通信で「mail.cgi」を呼び出します。
-</p>
-<p>
-  このようにして、お問い合わせフォームを、Webサイトに埋め込む方法を実現しています。
-</p>
-<h3>お問い合わせフォーム以外のCGIで作成したフォームを作成できますか</h3>
-<p>
-  はい。メッセージをやりとりするボードや、アンケートフォームなど、CGIプログラムでできることは、すべて実現可能です。
-</p>
-<h3>どのような環境で動きますか</h3>
-<p>
-  CGIをサポートしているレンタルサーバーを想定しています。
-</p>
-<h3>CGIフォームを設置した場合のセキュリティはどうなりますか</h3>
-<p>
-  CGIフォームを設置した場合のセキュリティは、そのCGIに脆弱性がないかどうかにかかっています。
-</p>
-<p>
-  お問い合わせフォームがサイトと一体になっていることよりも、セキュリティが優先事項の場合は、サイトを完全に静的なものにして、<a href="https://www.google.com/intl/ja_jp/forms/about/">googleフォーム</a>などの外部のWebサービスを利用することもできます。
-</p>
-<h3>既存のCGIプログラムを利用することはできますか</h3>
-<p>
-  既存のCGIプログラムは、ほぼすべて、CGIプログラムの中に、HTMLフォームが記述される構成になっていると思われます。
-</p>
-<p>
-  ですので、残念ながら再利用することは、難しいでしょう。
-</p>
-<p>
-  HTMLフォームとCGIプログラムが分離されており、Ajax通信をCGIプログラムの中で行う形のCGIプログラムであれば、再利用しやすいと思います。
-</p>
+templates / mail.html
+template / static / mail.cgi
+&lt;/ pre&gt;
+
+You can copy the Giblog website as it is with "git clone", but if you want to save only the inquiry form, save it with the permission of the CGI program of 755 and the line feed code of LF.
+
+&lt;h3&gt; Mechanism for embedding an inquiry form on a website &lt;/ h3&gt;
+
+Giblog realizes the CGI inquiry form that can be embedded in the website by the following method.
+
+&lt;h4&gt; The contact form is a simple HTML template &lt;/ h4&gt;
+
+The contact form is a simple HTML file.
+
+
+&lt;pre&gt;
+templates / mail.html
+&lt;/ pre&gt;
+
+The mail form is described using the HTML form tag.
+
+It is wrapped with the same structure as normal content such as header and footer.
+
+&lt;h4&gt; CGI program to send emails &lt;/ h4&gt;
+
+&lt;pre&gt;
+template / static / mail.cgi
+&lt;/ pre&gt;
+
+Is a CGI program that sends emails.
+
+&lt;h4&gt; Call CGI with Ajax communication &lt;/ h4&gt;
+
+JavaScript is described in "mail.html", and "mail.cgi" is called by Ajax communication.
+
+In this way, we have realized how to embed the contact form in the website.
+
+&lt;h3&gt; Can I create a form created with CGI other than the inquiry form? &lt;/ H3&gt;
+
+Yes. Everything you can do with a CGI program, such as a board for exchanging messages and a survey form, is feasible.
+
+&lt;h3&gt; What kind of environment does it work in? &lt;/ H3&gt;
+
+We are assuming a rental server that supports CGI.
+
+&lt;h3&gt; What will happen to the security if I install the CGI form? &lt;/ H3&gt;
+
+The security of installing a CGI form depends on whether the CGI is vulnerable.
+
+If security is a priority over the contact form being integrated with the site, make the site completely static and &lt;a href="https://www.google.com/intl" You can also use external web services such as / ja_jp / forms / about / "&gt; google forms &lt;/a&gt;.
+
+&lt;h3&gt; Can I use an existing CGI program? &lt;/ H3&gt;
+
+It seems that almost all existing CGI programs are configured so that HTML forms are written inside the CGI program.
+
+So unfortunately it will be difficult to reuse.
+
+If the HTML form and the CGI program are separated and the Ajax communication is performed in the CGI program, I think it is easy to reuse.
 
   </div>
   <div class="bottom">
@@ -164,12 +160,10 @@ template/static/mail.cgi
           <!-- side -->
 <div class="side-list">
   <div class="side-list-title">
-    メニュー
+    Menu
   </div>
   <ul>
-    <li><a href="/blog/20190416153053.html">Windowsで個人ブログを作る</a></li>
-    <li>Macで個人ブログを作る</li>
-    <li>Linuxで個人ブログを作る</li>
+    <li><a href="/blog/20190416153053.html">Create Your Blogs on Windows</a></li>
   </ul>
 </div>
 

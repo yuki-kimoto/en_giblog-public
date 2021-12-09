@@ -17,12 +17,12 @@
 
   gtag('config', 'G-H9CYDCGDRK');
 </script>
-<title>サイドバーを非表示・幅変更・左右入れ替えする - Giblog Official Site - Tools creating Web Site and Blog that is managed using Git</title>
-<meta name="description" content="サイドバーを非表示・幅変更・左右変更しましょう。Giblogで作成されたブログやWebサイトは、サイドバーがデフォルトで設定されています。これを変更したい場合にも対応できます。">
+<title> Hide / change width / swap left / right sidebar  - Giblog Official Site - Tools creating Web Site and Blog that is managed using Git</title>
+<meta name="description" content="Hide, change the width, and change the width of the sidebar. Blogs and websites created with Giblog have a sidebar set by default. If you want to change this, you can do it.">
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:site" content="@perlzemi" />
-<meta name="twitter:title" content="サイドバーを非表示・幅変更・左右入れ替えする - Giblog Official Site - Tools creating Web Site and Blog that is managed using Git" />
-<meta name="twitter:description" content="サイドバーを非表示・幅変更・左右変更しましょう。Giblogで作成されたブログやWebサイトは、サイドバーがデフォルトで設定されています。これを変更したい場合にも対応できます。" />
+<meta name="twitter:title" content=" Hide / change width / swap left / right sidebar  - Giblog Official Site - Tools creating Web Site and Blog that is managed using Git" />
+<meta name="twitter:description" content="Hide, change the width, and change the width of the sidebar. Blogs and websites created with Giblog have a sidebar set by default. If you want to change this, you can do it." />
 <meta name="twitter:image" content="https://en.giblog.perlzemi.com//images/giblog-favicon.png" />
 
 
@@ -45,7 +45,7 @@
 
 <div class="header-content">
   <div class="header-content-title">
-    <a href="/"><img src="/images/giblog-logo-image-text.png" width="170" alt="Giblog公式サイト" style="vertical-align:-25px;"></a>
+    <a href="/"><img src="/images/giblog-logo-image-text.png" width="170" alt="Giblog" style="vertical-align:-25px;"></a>
   </div>
   <div class="menu-button" onclick="$('.header-content-menu').toggle();">
     <img src="/images/menu.png" style="width:40px;">
@@ -66,141 +66,140 @@
 
   </div>
   <div class="middle">
-    <h2><a href="/blog/20190515100430.html">サイドバーを非表示・幅変更・左右入れ替えする</a></h2>
+    <h2><a href="/blog/20190515100430.html"> Hide / change width / swap left / right sidebar </a></ h2>
 <p>
-  サイドバーを非表示・幅変更・左右変更しましょう。Giblogで作成されたブログやWebサイトは、サイドバーがデフォルトで設定されています。これを変更したい場合にも対応できます。
+  Hide, change the width, and change the width of the sidebar. Blogs and websites created with Giblog have a sidebar set by default. If you want to change this, you can do it.
 </p>
 <p>
-  サイドバーのデザインを編集するには、次のCSSを編集します。
-</p>
-<pre>
-templates/static/css/common.css
-</pre>
-<p>
-  最初に、このファイルを開いてください。
-</p>
-<p>
-  コンテントとサイドバーの設定を探してください。デフォルト設定とスマートフォン用の設定の二つのものがあります。
-</p>
-<p>
-  「@media only screen and (max-width:960px)」より上にあるものが、デフォルト設定、下にあるものがスマートフォン用の設定です。
+  To edit the sidebar design, edit the following CSS.
 </p>
 <pre>
-  /* content */
+templates / static / css / common.css
+&lt;/ pre&gt;
+
+First, open this file.
+
+Look for content and sidebar settings. There are two settings, the default setting and the setting for smartphones.
+
+The ones above "@media only screen and (max-width: 960px)" are the default settings, and the ones below are the settings for smartphones.
+
+&lt;pre&gt;
+  / * content * /
   .content {
-    /* コンテントエリアの設定 */
+    / * Content area settings * /
   }
 
-  /* side */
+  / * side * /
   .side {
-    /* サイドバーの設定 */
+    / * Sidebar settings * /
   }
 
-/* Tablet and Smart phone */
-@media only screen and (max-width:960px) {
+/ * Tablet and Smart phone * /
+@media only screen and (max-width: 960px) {
   .content {
-    /* コンテントエリアの設定 - スマートフォン */
+    / * Content area settings-Smartphone * /
   }
   .side {
-    /* サイドバーの設定 - スマートフォン */
+    / * Sidebar settings-Smartphone * /
   }
 }
-</pre>
-<h3>サイドバーを非表示にする</h3>
-<p>
-  <b>スマートフォンの場合だけ、サイドバーを非表示</b>にしたい場合は、次のように記述してください。
-</p>
-<pre>
-  /* content */
+&lt;/ pre&gt;
+
+&lt;h3&gt; Hide sidebar &lt;/ h3&gt;
+
+&lt;b&gt; If you want to hide the sidebar only for smartphones &lt;/ b&gt;, write as follows.
+
+&lt;pre&gt;
+  / * content * /
   .content {
-    /* コンテントエリアの設定 */
+    / * Content area settings * /
   }
 
-  /* side */
+  / * side * /
   .side {
-    /* サイドバーの設定 */
+    / * Sidebar settings * /
   }
 
-/* Tablet and Smart phone */
-@media only screen and (max-width:960px) {
+/ * Tablet and Smart phone * /
+@media only screen and (max-width: 960px) {
   .content {
-    width:100%;
+    width: 100%;
   }
   .side {
-    display:none;
+    display: none;
   }
 }
-</pre>
-<p>
-  <b>PCとスマートフォンの両方でサイドバーを非表示</b>にしたい場合は、次のように記述してください。
-</p>
-<pre>
-  /* content */
+&lt;/ pre&gt;
+
+&lt;b&gt; If you want to hide the sidebar on both your PC and smartphone &lt;/ b&gt;, write:
+
+&lt;pre&gt;
+  / * content * /
   .content {
-    width:100%;
+    width: 100%;
   }
 
-  /* side */
+  / * side * /
   .side {
-    display:none;
+    display: none;
   }
 
-/* Tablet and Smart phone */
-@media only screen and (max-width:960px) {
+/ * Tablet and Smart phone * /
+@media only screen and (max-width: 960px) {
   .content {
-    width:100%;
+    width: 100%;
   }
   .side {
-    display:none;
+    display: none;
   }
 }
-</pre>
-<h3>サイドバーの幅を変更する</h3>
-<p>
-  サイドバーの幅を変更するには、以下のように設定します。widthとmargin-leftを変更してください。
-</p>
-<p>
-  メインコンテンツが70%、サイドバーが29%、間のマージンを1%に設定する例です。
-</p>
-<pre>
-  /* content */
+&lt;/ pre&gt;
+
+&lt;h3&gt; Change the width of the sidebar &lt;/ h3&gt;
+
+To change the width of the sidebar, set as follows: Change width and margin-left.
+
+This is an example of setting the main content to 70%, the sidebar to 29%, and the margin between them to 1%.
+
+&lt;pre&gt;
+  / * content * /
   .content {
-    float:left;
-    width:70%;
+    float: left;
+    width: 70%;
   }
   
-  /* side */
+  / * side * /
   .side {
-    float:left;
-    width:29%;
-    margin-left:1%;
+    float: left;
+    width: 29%;
+    margin-left: 1%;
   }
-</pre>
-<h3>サイドバーの左右を入れ替える</h3>
-<p>
-  サイドバーの左右を入れ替えるには、以下のように設定します。floatの設定をrightに変更し、margin-leftをmargin-rightに変更します。
-</p>
-<pre>
-  /* content */
+&lt;/ pre&gt;
+
+&lt;h3&gt; Swap the left and right sides of the sidebar &lt;/ h3&gt;
+
+To swap the left and right sides of the sidebar, set as follows. Change the float setting to right and change margin-left to margin-right.
+
+&lt;pre&gt;
+  / * content * /
   .content {
-    float:right;
-    width:74%;
+    float: right;
+    width: 74%;
   }
   
-  /* side */
+  / * side * /
   .side {
-    float:right;
-    width:25%;
-    margin-right:1%;
+    float: right;
+    width: 25%;
+    margin-right: 1%;
   }
-</pre>
-<h3>参考</h3>
-<p>
-  サイドバーのデザインの変更のために、CSSの基礎について知りたい場合は、以下の記事を参考にしてください。
-</p>
-<p>
-  <a href="/blog/20190509080917.html">Webサイト作成のためのCSSの基礎</a>
-</p>
+&lt;/ pre&gt;
+
+&lt;h3&gt; Reference &lt;/ h3&gt;
+
+If you want to know the basics of CSS for changing the design of the sidebar, please refer to the following articles.
+
+&lt;a href="/blog/20190509080917.html"&gt; CSS basics for creating websites &lt;/a&gt;
 
   </div>
   <div class="bottom">
@@ -214,12 +213,10 @@ templates/static/css/common.css
           <!-- side -->
 <div class="side-list">
   <div class="side-list-title">
-    メニュー
+    Menu
   </div>
   <ul>
-    <li><a href="/blog/20190416153053.html">Windowsで個人ブログを作る</a></li>
-    <li>Macで個人ブログを作る</li>
-    <li>Linuxで個人ブログを作る</li>
+    <li><a href="/blog/20190416153053.html">Create Your Blogs on Windows</a></li>
   </ul>
 </div>
 

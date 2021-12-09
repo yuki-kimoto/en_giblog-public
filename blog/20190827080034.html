@@ -17,12 +17,12 @@
 
   gtag('config', 'G-H9CYDCGDRK');
 </script>
-<title>GiblogはサイトをPerlで自由にカスタマイズできる - Giblog Official Site - Tools creating Web Site and Blog that is managed using Git</title>
-<meta name="description" content="Giblogは、Perlというテキスト処理が得意なプログラミング言語で作成されており、サイトをPerlで自由にカスタマイズできます。">
+<title> Giblog is free to customize your site with Perl  - Giblog Official Site - Tools creating Web Site and Blog that is managed using Git</title>
+<meta name="description" content="Giblog is written in Perl, a programming language that excels at text processing, and you can freely customize your site with Perl.">
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:site" content="@perlzemi" />
-<meta name="twitter:title" content="GiblogはサイトをPerlで自由にカスタマイズできる - Giblog Official Site - Tools creating Web Site and Blog that is managed using Git" />
-<meta name="twitter:description" content="Giblogは、Perlというテキスト処理が得意なプログラミング言語で作成されており、サイトをPerlで自由にカスタマイズできます。" />
+<meta name="twitter:title" content=" Giblog is free to customize your site with Perl  - Giblog Official Site - Tools creating Web Site and Blog that is managed using Git" />
+<meta name="twitter:description" content="Giblog is written in Perl, a programming language that excels at text processing, and you can freely customize your site with Perl." />
 <meta name="twitter:image" content="https://en.giblog.perlzemi.com//images/giblog-favicon.png" />
 
 
@@ -45,7 +45,7 @@
 
 <div class="header-content">
   <div class="header-content-title">
-    <a href="/"><img src="/images/giblog-logo-image-text.png" width="170" alt="Giblog公式サイト" style="vertical-align:-25px;"></a>
+    <a href="/"><img src="/images/giblog-logo-image-text.png" width="170" alt="Giblog" style="vertical-align:-25px;"></a>
   </div>
   <div class="menu-button" onclick="$('.header-content-menu').toggle();">
     <img src="/images/menu.png" style="width:40px;">
@@ -66,139 +66,134 @@
 
   </div>
   <div class="middle">
-    <h2><a href="/blog/20190827080034.html">GiblogはサイトをPerlで自由にカスタマイズできる</a></h2>
+    <h2><a href="/blog/20190827080034.html"> Giblog is free to customize your site with Perl </a></ h2>
 <p>
-  Giblogは、Perlというテキスト処理が得意なプログラミング言語で作成されており、サイトをPerlで自由にカスタマイズできます。
+  Giblog is written in Perl, a programming language that excels at text processing, and you can freely customize your site with Perl.
 </p>
-<h3>Perlを使った、サイトのカスタマイズ方法</h3>
+<h3> How to customize your site using Perl </ h3>
 <p>
-  Giblogでサイトを構築するには、以下のコマンドを実行します。
+  To build a site with Giblog, run the following command.
 </p>
 <pre>
 giblog build
-</pre>
-<p>
-  この処理を、<a href="https://perlzemi.com/">Perl</a>を使ってカスタマイズすることができます。
-</p>
-<p>
-  処理をカスタマイズするには、以下のPerlモジュールファイルを編集することで行います。
-</p>
-<h4>構築のためのモジュールファイル</h4>
-<pre>
-lib/Giblog/Command/build.pm
-</pre>
-<p>
-  このファイルの中にはGiblogのサイトの構築の処理が記述されています。
-</p>
-<pre>
-package Giblog::Command::build;
+&lt;/ pre&gt;
 
-use base 'Giblog::Command';
+You can customize this process using &lt;a href="https://perlzemi.com/"&gt; Perl &lt;/a&gt;.
+
+To customize the process, edit the following Perl module file.
+
+&lt;h4&gt; Module file for building &lt;/ h4&gt;
+
+&lt;pre&gt;
+lib / Giblog / Command / build.pm
+&lt;/ pre&gt;
+
+This file describes the process of building the Giblog site.
+
+&lt;pre&gt;
+package Giblog :: Command :: build;
+
+use base'Giblog :: Command';
 
 use strict;
 use warnings;
 
-use File::Basename 'basename';
+use File :: Basename'basename';
 
 sub run {
-  my ($self, @args) = @_;
+  my ($ self, @args) = @_;
   
   # API
-  my $api = $self-&gt;api;
+  my $ api = $ self-&gt; api;
   
   # Read config
-  my $config = $api-&gt;read_config;
+  my $ config = $ api-&gt; read_config;
   
-  # Copy static files to public
-  $api-&gt;copy_static_files_to_public;
+  #Copy static files to public
+  $ api-&gt; copy_static_files_to_public;
 
-  # Get files in templates directory
-  my $files = $api-&gt;get_templates_files;
+  #Get files in templates directory
+  my $ files = $ api-&gt; get_templates_files;
   
-  for my $file (@$files) {
+  for my $ file (@ $ files) {
     
-    my $data = {file =&gt; $file};
+    my $ data = {file =&gt; $ file};
     
-    # Get content from file in templates directory
-    $api-&gt;get_content($data);
+    #Get content from file in templates directory
+    $ api-&gt; get_content ($ data);
 
-    # Parse Giblog syntax
-    $api-&gt;parse_giblog_syntax($data);
+    #Parse Giblog syntax
+    $ api-&gt; parse_giblog_syntax ($ data);
 
-    # Parse title
-    $api-&gt;parse_title_from_first_h_tag($data);
+    #Parse title
+    $ api-&gt; parse_title_from_first_h_tag ($ data);
 
-    # Edit title
-    my $site_title = $config-&gt;{site_title};
-    if ($data-&gt;{file} eq 'index.html') {
-      $data-&gt;{title} = $site_title;
+    #Edit title
+    my $ site_title = $ config-&gt; {site_title};
+    if ($ data-&gt; {file} eq'index.html') {
+      $ data-&gt; {title} = $ site_title;
     }
     else {
-      $data-&gt;{title} = "$data-&gt;{title} - $site_title";
+      $ data-&gt; {title} = "$ data-&gt; {title}-$ site_title";
     }
 
-    # Add page link
-    $api-&gt;add_page_link_to_first_h_tag($data, {root =&gt; 'index.html'});
+    #Add page link
+    $ api-&gt; add_page_link_to_first_h_tag ($ data, {root =&gt;'index.html'});
 
-    # Parse description
-    $api-&gt;parse_description_from_first_p_tag($data);
+    #Parse description
+    $ api-&gt; parse_description_from_first_p_tag ($ data);
 
-    # Read common templates
-    $api-&gt;read_common_templates($data);
+    #Read common templates
+    $ api-&gt; read_common_templates ($ data);
     
-    # Add meta title
-    $api-&gt;add_meta_title($data);
+    #Add meta title
+    $ api-&gt; add_meta_title ($ data);
 
-    # Add meta description
-    $api-&gt;add_meta_description($data);
+    #Add meta description
+    $ api-&gt; add_meta_description ($ data);
 
-    # Build entry html
-    $api-&gt;build_entry($data);
+    #Build entry html
+    $ api-&gt; build_entry ($ data);
     
-    # Build whole html
-    $api-&gt;build_html($data);
+    #Build whole html
+    $ api-&gt; build_html ($ data);
     
-    # Write to public file
-    $api-&gt;write_to_public_file($data);
+    #Write to public file
+    $ api-&gt; write_to_public_file ($ data);
   }
 
-  # Create list page
-  $self-&gt;create_list;
+  #Create list page
+  $ self-&gt; create_list;
 }
 1;
-</pre>
-<h4>ユーザーがプログラミングを直接書いて機能を追加・編集</h4>
-<p>
-  注目してほしいのは、サイトの構築処理がすべて書かれている、Perlのプログラムであるということです。つまり、機能を追加したり、機能を改造したりすることを、すべての構築プロセスに、差し込むことができます。
-</p>
-<p>
-  ブログの記事のフォーマットをマークダウンやPOD記法に差し替えることや、タイトルとサブタイトルの区切り文字を変えることや、<a href="/blog/20190520080109.html">Twitterカードを追加する</a>ことなど、あなたが必要とするすべてのことを、記述することができます。
-</p>
-<p>
-  WordPressが機能追加のためにプラグイン機能を用意しているのとは対照に、Giblogは、ユーザーがプログラミングを直接書いて、機能の追加・編集ができることを重視しています。
-</p>
-<p>
-  Giblogで利用されているAPIについては、<a href="https://docgiblog.perlclub.net/Giblog/API.html">Giblog::API</a>ですべて解説しています。Giblogの構築処理は、シンプルなプログラムなので、APIを理解できれば、処理の内容を理解できます。
-</p>
-<h3>サイトを自由にカスタマイズできる理由</h3>
-<p>
-  なぜGiblogでは、サイトを自由にカスタマイズできるのでしょうか。
-</p>
-<p>
-  Perlは、動的に実行されるタイプのプログラミング言語です。動的に実行されるということは、一部の処理を実行時に差し替えることができるのです。
-</p>
-<p>
-  Giblogでは、再構築を行うときにbuildコマンドを実行します。
-</p>
-<pre>
+&lt;/ pre&gt;
+
+&lt;h4&gt; Users write programming directly to add / edit functions &lt;/ h4&gt;
+
+Note that it's a Perl program that does all the site building work for you. This means that you can add features or modify features into any building process.
+
+Replacing the format of blog articles with markdown or POD notation, changing the delimiter between titles and subtitles, &lt;a href="/blog/20190520080109.html"&gt; adding a Twitter card &lt;/a&gt; And so on, you can describe everything you need.
+
+In contrast to WordPress, which provides plugins for adding features, Giblog focuses on allowing users to write programming directly to add and edit features.
+
+All the APIs used in Giblog are explained in &lt;a href="https://docgiblog.perlclub.net/Giblog/API.html"&gt; Giblog :: API &lt;/a&gt;. The Giblog construction process is a simple program, so if you can understand the API, you can understand the contents of the process.
+
+
+&lt;h3&gt; Why you can customize your site freely &lt;/ h3&gt;
+
+Why is Giblog free to customize your site?
+
+Perl is a dynamically executed type of programming language. Being dynamically executed means that some processing can be replaced at runtime.
+
+In Giblog, run the build command when doing a rebuild.
+
+&lt;pre&gt;
 giblog build
-</pre>
-<p>
-  普通はプログラムの動きは固定されていて、インストールしたときの機能で動きます。
-</p>
-<p>
-  Perlは、プログラム言語の動的な特徴から、一部の処理を、差し替えることができるので、buildコマンドをカスタマイズすることができるのです。
-</p>
+&lt;/ pre&gt;
+
+Normally, the behavior of the program is fixed, and it works with the function when it was installed.
+
+Perl can replace some of the processing due to the dynamic characteristics of the programming language, so you can customize the build command.
 
   </div>
   <div class="bottom">
@@ -212,12 +207,10 @@ giblog build
           <!-- side -->
 <div class="side-list">
   <div class="side-list-title">
-    メニュー
+    Menu
   </div>
   <ul>
-    <li><a href="/blog/20190416153053.html">Windowsで個人ブログを作る</a></li>
-    <li>Macで個人ブログを作る</li>
-    <li>Linuxで個人ブログを作る</li>
+    <li><a href="/blog/20190416153053.html">Create Your Blogs on Windows</a></li>
   </ul>
 </div>
 

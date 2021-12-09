@@ -17,12 +17,12 @@
 
   gtag('config', 'G-H9CYDCGDRK');
 </script>
-<title>Twitterカードを追加する - Giblog Official Site - Tools creating Web Site and Blog that is managed using Git</title>
-<meta name="description" content="Twitterカードを追加してみましょう。Twitterカードは、記事へのリンクを張るだけで、Twitter上で、要約を掲載できる機能のことです。">
+<title> Add a Twitter card  - Giblog Official Site - Tools creating Web Site and Blog that is managed using Git</title>
+<meta name="description" content="Let's add a Twitter card. A Twitter card is a function that allows you to post a summary on Twitter simply by linking to an article.">
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:site" content="@perlzemi" />
-<meta name="twitter:title" content="Twitterカードを追加する - Giblog Official Site - Tools creating Web Site and Blog that is managed using Git" />
-<meta name="twitter:description" content="Twitterカードを追加してみましょう。Twitterカードは、記事へのリンクを張るだけで、Twitter上で、要約を掲載できる機能のことです。" />
+<meta name="twitter:title" content=" Add a Twitter card  - Giblog Official Site - Tools creating Web Site and Blog that is managed using Git" />
+<meta name="twitter:description" content="Let's add a Twitter card. A Twitter card is a function that allows you to post a summary on Twitter simply by linking to an article." />
 <meta name="twitter:image" content="https://en.giblog.perlzemi.com//images/giblog-favicon.png" />
 
 
@@ -45,7 +45,7 @@
 
 <div class="header-content">
   <div class="header-content-title">
-    <a href="/"><img src="/images/giblog-logo-image-text.png" width="170" alt="Giblog公式サイト" style="vertical-align:-25px;"></a>
+    <a href="/"><img src="/images/giblog-logo-image-text.png" width="170" alt="Giblog" style="vertical-align:-25px;"></a>
   </div>
   <div class="menu-button" onclick="$('.header-content-menu').toggle();">
     <img src="/images/menu.png" style="width:40px;">
@@ -66,115 +66,113 @@
 
   </div>
   <div class="middle">
-    <h2><a href="/blog/20190520080109.html">Twitterカードを追加する</a></h2>
+    <h2><a href="/blog/20190520080109.html"> Add a Twitter card </a></ h2>
 <p>
-  Twitterカードを追加してみましょう。Twitterカードは、記事へのリンクを張るだけで、Twitter上で、要約を掲載できる機能のことです。
+  Let's add a Twitter card. A Twitter card is a function that allows you to post a summary on Twitter simply by linking to an article.
 </p>
-<h3>ビルドスクリプトを開く</h3>
+<h3> Open build script </ h3>
 <p>
-  まず最初に、サイトをビルドしているPerlスクリプトを開きます。
-</p>
-<pre>
-lib/Giblog/Command/build.pm
-</pre>
-<h3>Twitterカード追加のプログラムを追加</h3>
-<p>
-  「Add meta description」と「Build entry html」の間に「Twitter card」のPerlプログラムを追加します。
+  First of all, open the Perl script that is building your site.
 </p>
 <pre>
-    # Add meta description
-    $api-&gt;add_meta_description($data);
+lib / Giblog / Command / build.pm
+&lt;/ pre&gt;
+
+&lt;h3&gt; Added a program to add a Twitter card &lt;/ h3&gt;
+
+Add a Perl program for "Twitter card" between "Add meta description" and "Build entry html".
+
+&lt;pre&gt;
+    #Add meta description
+    $ api-&gt; add_meta_description ($ data);
     
-    # Twitter card
+    #Twitter card
     {
-      my $meta = $data-&gt;{meta};
+      my $ meta = $ data-&gt; {meta};
       
-      my $site_url = $config-&gt;{site_url};
-      my $title = $data-&gt;{title} || '';
-      my $description = $data-&gt;{description} || '';
+      my $ site_url = $ config-&gt; {site_url};
+      my $ title = $ data-&gt; {title} ||'';
+      my $ description = $ data-&gt; {description} ||'';
       
-      my $twitter_card = &lt;&lt;"EOS";
-&lt;meta name="twitter:card" content="summary" /&gt;
-&lt;meta name="twitter:site" content="\@perlzemi" /&gt;
-&lt;meta name="twitter:title" content="$title" /&gt;
-&lt;meta name="twitter:description" content="$description" /&gt;
-&lt;meta name="twitter:image" content="$site_url/images/perlzemi-twitter-card.png" /&gt;
+      my $ twitter_card = &lt;&lt; "EOS";
+&lt;meta name = "twitter: card" content = "summary" /&gt;
+&lt;meta name = "twitter: site" content = "\ @ perlzemi" /&gt;
+&lt;meta name = "twitter: title" content = "$ title" /&gt;
+&lt;meta name = "twitter: description" content = "$ description" /&gt;
+&lt;meta name = "twitter: image" content = "$ site_url / images / perlzemi-twitter-card.png" /&gt;
 EOS
       
-      $meta .= "\n$twitter_card\n";
+      $ meta. = "\ n $ twitter_card \ n";
       
-      $data-&gt;{meta} = $meta;
+      $ data-&gt; {meta} = $ meta;
     }
     
-    # Build entry html
-    $api-&gt;build_entry($data);
-</pre>
-<p>
-  こんな風にして、直接Perlプログラムを書き込んで、サイトをカスタマイズできます。
-</p>
-<h3>Twitterカードを確認するには</h3>
-<p>
-  Twitterカードが正しく表示されるかを確認するには、Twitterが提供している「Card validator」を使います。
-</p>
-<p>
-  <a href="https://cards-dev.twitter.com/validator">Card validator</a>
-</p>
-<h3>記事の最初の画像を表示するには?</h3>
-<p>
-  スマートフォンサイトでは、記事の最初の画像をTwitter Cardに張ることも一般的ですね。
-</p>
-<p>
-  記事の最初の画像を表示したい場合は、以下のようにします。
-</p>
-<p>
-  「Create description from first p tag」と「Read common templates」の間に、最初の画像を取得するPerlプログラムを追加します。
-</p>
-<pre>
-    # Create description from first p tag
-    $api-&gt;parse_description_from_first_p_tag($data);
+    #Build entry html
+    $ api-&gt; build_entry ($ data);
+&lt;/ pre&gt;
 
-    # Get first image src
-    $api-&gt;parse_first_img_src($data);
+This way you can write Perl programs directly to customize your site.
 
-    # Read common templates
-    $api-&gt;read_common_templates($data);
-</pre>
-<p>
-  次にTwitterカードの部分を以下のように記述します。
-</p>
-<pre>
-    # Add meta description
-    $api-&gt;add_meta_description($data);
+&lt;h3&gt; How to check your Twitter card &lt;/ h3&gt;
+
+To check if the Twitter card is displayed correctly, use the "Card validator" provided by Twitter.
+
+&lt;a href="https://cards-dev.twitter.com/validator"&gt; Card validator &lt;/a&gt;
+
+&lt;h3&gt; How to display the first image of an article? &lt;/ H3&gt;
+
+On smartphone sites, it's also common to put the first image of an article on a Twitter Card.
+
+If you want to see the first image of an article, do the following:
+
+Add a Perl program to get the first image between "Create description from first p tag" and "Read common templates".
+
+&lt;pre&gt;
+    #Create description from first p tag
+    $ api-&gt; parse_description_from_first_p_tag ($ data);
+
+    #Get first image src
+    $ api-&gt; parse_first_img_src ($ data);
+
+    #Read common templates
+    $ api-&gt; read_common_templates ($ data);
+&lt;/ pre&gt;
+
+Next, describe the part of the Twitter card as follows.
+
+&lt;pre&gt;
+    #Add meta description
+    $ api-&gt; add_meta_description ($ data);
     
-    # Twitter card
+    #Twitter card
     {
-      my $meta = $data-&gt;{meta};
+      my $ meta = $ data-&gt; {meta};
       
-      my $site_url = $config-&gt;{site_url};
-      my $title = $data-&gt;{title} || '';
-      my $description = $data-&gt;{description} || '';
-      my $img_src = $data-&gt;{img_src};
+      my $ site_url = $ config-&gt; {site_url};
+      my $ title = $ data-&gt; {title} ||'';
+      my $ description = $ data-&gt; {description} ||'';
+      my $ img_src = $ data-&gt; {img_src};
       
-      my $twitter_card = &lt;&lt;"EOS";
-&lt;meta name="twitter:card" content="summary" /&gt;
-&lt;meta name="twitter:site" content="\@perlzemi" /&gt;
-&lt;meta name="twitter:title" content="$title" /&gt;
-&lt;meta name="twitter:description" content="$description" /&gt;
+      my $ twitter_card = &lt;&lt; "EOS";
+&lt;meta name = "twitter: card" content = "summary" /&gt;
+&lt;meta name = "twitter: site" content = "\ @ perlzemi" /&gt;
+&lt;meta name = "twitter: title" content = "$ title" /&gt;
+&lt;meta name = "twitter: description" content = "$ description" /&gt;
 EOS
-      if (defined $img_src) {
-        $twitter_card .= &lt;&lt;"EOS";
-&lt;meta name="twitter:image" content="$site_url$img_src" /&gt;
+      if (defined $ img_src) {
+        $ twitter_card. = &lt;&lt; "EOS";
+&lt;meta name = "twitter: image" content = "$ site_url $ img_src" /&gt;
 EOS
       }
       
-      $meta .= "\n$twitter_card\n";
+      $ meta. = "\ n $ twitter_card \ n";
       
-      $data-&gt;{meta} = $meta;
+      $ data-&gt; {meta} = $ meta;
     }
     
-    # Build entry html
-    $api-&gt;build_entry($data);
-</pre>
+    #Build entry html
+    $ api-&gt; build_entry ($ data);
+&lt;/ pre&gt;
 
   </div>
   <div class="bottom">
@@ -188,12 +186,10 @@ EOS
           <!-- side -->
 <div class="side-list">
   <div class="side-list-title">
-    メニュー
+    Menu
   </div>
   <ul>
-    <li><a href="/blog/20190416153053.html">Windowsで個人ブログを作る</a></li>
-    <li>Macで個人ブログを作る</li>
-    <li>Linuxで個人ブログを作る</li>
+    <li><a href="/blog/20190416153053.html">Create Your Blogs on Windows</a></li>
   </ul>
 </div>
 

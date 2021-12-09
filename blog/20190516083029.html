@@ -17,12 +17,12 @@
 
   gtag('config', 'G-H9CYDCGDRK');
 </script>
-<title>ブログのトップページを自分で作成するには - Giblog Official Site - Tools creating Web Site and Blog that is managed using Git</title>
-<meta name="description" content="new_blogコマンドで作成したブログは、1週間分の記事を掲載したトップページが自動的に生成されます。ブログのトップページを静的なHTMLのページにする方法を解説します。">
+<title> How to create your own blog top page  - Giblog Official Site - Tools creating Web Site and Blog that is managed using Git</title>
+<meta name="description" content="For blogs created with the new_blog command, the top page containing articles for one week is automatically generated. I will explain how to make the top page of the blog a static HTML page.">
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:site" content="@perlzemi" />
-<meta name="twitter:title" content="ブログのトップページを自分で作成するには - Giblog Official Site - Tools creating Web Site and Blog that is managed using Git" />
-<meta name="twitter:description" content="new_blogコマンドで作成したブログは、1週間分の記事を掲載したトップページが自動的に生成されます。ブログのトップページを静的なHTMLのページにする方法を解説します。" />
+<meta name="twitter:title" content=" How to create your own blog top page  - Giblog Official Site - Tools creating Web Site and Blog that is managed using Git" />
+<meta name="twitter:description" content="For blogs created with the new_blog command, the top page containing articles for one week is automatically generated. I will explain how to make the top page of the blog a static HTML page." />
 <meta name="twitter:image" content="https://en.giblog.perlzemi.com//images/giblog-favicon.png" />
 
 
@@ -45,7 +45,7 @@
 
 <div class="header-content">
   <div class="header-content-title">
-    <a href="/"><img src="/images/giblog-logo-image-text.png" width="170" alt="Giblog公式サイト" style="vertical-align:-25px;"></a>
+    <a href="/"><img src="/images/giblog-logo-image-text.png" width="170" alt="Giblog" style="vertical-align:-25px;"></a>
   </div>
   <div class="menu-button" onclick="$('.header-content-menu').toggle();">
     <img src="/images/menu.png" style="width:40px;">
@@ -66,47 +66,49 @@
 
   </div>
   <div class="middle">
-    <h2><a href="/blog/20190516083029.html">ブログのトップページを自分で作成するには</a></h2>
+    <h2><a href="/blog/20190516083029.html"> How to create your own blog top page </a></ h2>
 <p>
-  new_blogコマンドで作成したブログは、1週間分の記事を掲載したトップページが自動的に生成されます。ブログのトップページを静的なHTMLのページにする方法を解説します。
+  For blogs created with the new_blog command, the top page containing articles for one week is automatically generated. I will explain how to make the top page of the blog a static HTML page.
 </p>
-<h3>ビルドスクリプトを開く</h3>
+<h3> Open build script </ h3>
 <p>
-  まず最初に、サイトをビルドしているPerlスクリプトを開きます。
-</p>
-<pre>
-lib/Giblog/Command/build.pm
-</pre>
-<h3>トップページの自動生成の処理をコメントアウト</h3>
-<p>
-  次のコードを探してください。
+  First of all, open the Perl script that is building your site.
 </p>
 <pre>
-  # Create index page
-  $self-&gt;create_index;
-</pre>
-<p>
-  この部分をコメントアウトします。Perlのコメントは「#」です。
-</p>
-<pre>
-  # Create index page
-  # $self-&gt;create_index;
-</pre>
-<h3>トップページのHTMLを配置</h3>
-<p>
-  最後に、自分でトップページを作成します。以下のファイルを作成してください。
-</p>
-<pre>
-templates/index.html
-</pre>
-<p>
-  内容はトップページの内容。
-</p>
-<pre>
-&lt;h2&gt;わたしのサイト&lt;/h2&gt;
+lib / Giblog / Command / build.pm
+&lt;/ pre&gt;
 
-わたしのサイトです。
-</pre>
+&lt;h3&gt; Comment out the process of automatically generating the top page &lt;/ h3&gt;
+
+Look for the following code.
+
+&lt;pre&gt;
+  #Create index page
+  $ self-&gt; create_index;
+&lt;/ pre&gt;
+
+Comment out this part. Perl comments are "#".
+
+&lt;pre&gt;
+  #Create index page
+  # $ self-&gt; create_index;
+&lt;/ pre&gt;
+
+&lt;h3&gt; Place the HTML of the top page &lt;/ h3&gt;
+
+Finally, create your own top page. Create the following file.
+
+&lt;pre&gt;
+templates / index.html
+&lt;/ pre&gt;
+
+The content is the content of the top page.
+
+&lt;pre&gt;
+&lt;h2&gt; My site &lt;/ h2&gt;
+
+This is my site.
+&lt;/ pre&gt;
 
   </div>
   <div class="bottom">
@@ -120,12 +122,10 @@ templates/index.html
           <!-- side -->
 <div class="side-list">
   <div class="side-list-title">
-    メニュー
+    Menu
   </div>
   <ul>
-    <li><a href="/blog/20190416153053.html">Windowsで個人ブログを作る</a></li>
-    <li>Macで個人ブログを作る</li>
-    <li>Linuxで個人ブログを作る</li>
+    <li><a href="/blog/20190416153053.html">Create Your Blogs on Windows</a></li>
   </ul>
 </div>
 

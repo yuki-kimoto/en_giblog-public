@@ -17,12 +17,12 @@
 
   gtag('config', 'G-H9CYDCGDRK');
 </script>
-<title>Github Pagesを使って完全無料でサイト公開 - Giblog Official Site - Tools creating Web Site and Blog that is managed using Git</title>
-<meta name="description" content="Giblogでは、Gibhub Pagesを使って完全無料で、あなただけのサイトを公開できます。Giblogで作成したWebサイトを、Githubを使って無料で簡単に公開する方法があります。">
+<title> Publish the site completely free of charge using Github Pages  - Giblog Official Site - Tools creating Web Site and Blog that is managed using Git</title>
+<meta name="description" content="With Giblog, you can publish your own site completely free of charge using Gibhub Pages. There is an easy way to publish a website created with Giblog for free using Github.">
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:site" content="@perlzemi" />
-<meta name="twitter:title" content="Github Pagesを使って完全無料でサイト公開 - Giblog Official Site - Tools creating Web Site and Blog that is managed using Git" />
-<meta name="twitter:description" content="Giblogでは、Gibhub Pagesを使って完全無料で、あなただけのサイトを公開できます。Giblogで作成したWebサイトを、Githubを使って無料で簡単に公開する方法があります。" />
+<meta name="twitter:title" content=" Publish the site completely free of charge using Github Pages  - Giblog Official Site - Tools creating Web Site and Blog that is managed using Git" />
+<meta name="twitter:description" content="With Giblog, you can publish your own site completely free of charge using Gibhub Pages. There is an easy way to publish a website created with Giblog for free using Github." />
 <meta name="twitter:image" content="https://en.giblog.perlzemi.com//images/giblog-favicon.png" />
 
 
@@ -45,7 +45,7 @@
 
 <div class="header-content">
   <div class="header-content-title">
-    <a href="/"><img src="/images/giblog-logo-image-text.png" width="170" alt="Giblog公式サイト" style="vertical-align:-25px;"></a>
+    <a href="/"><img src="/images/giblog-logo-image-text.png" width="170" alt="Giblog" style="vertical-align:-25px;"></a>
   </div>
   <div class="menu-button" onclick="$('.header-content-menu').toggle();">
     <img src="/images/menu.png" style="width:40px;">
@@ -66,96 +66,87 @@
 
   </div>
   <div class="middle">
-    <h2><a href="/blog/20190828064434.html">Github Pagesを使って完全無料でサイト公開</a></h2
+    <h2><a href="/blog/20190828064434.html"> Publish the site completely free of charge using Github Pages </a></ h2
 <p>
-  Giblogでは、Gibhub Pagesを使って完全無料で、あなただけのサイトを公開できます。Giblogで作成したWebサイトを、Githubを使って無料で簡単に公開する方法があります。
+  With Giblog, you can publish your own site completely free of charge using Gibhub Pages. There is an easy way to publish a website created with Giblog for free using Github.
 </p>
-<h3>Github Pagesを使って完全無料でサイト公開</h3>
+<h3> Publish the site completely free of charge using Github Pages </ h3>
 <p>
-  Github Pagesを使って、サイトを公開してみましょう。
+  Let's publish the site using Github Pages.
 </p>
 <p>
-  Github Pagesの特徴です。
+  It is a feature of Github Pages.
 </p>
 <ul>
-  <li>静的サイト (HTML、CSS、画像、JavaScript)を公開できます。</li>
-  <li>URLは https://ユーザ名.github.io</li>
-  <li>独自ドメインを指定可能</li>
-  <li>サイトの容量は1GBまで。リクエストは、1か月あたり100GBまたは100,000まで。</li>
-</ul>
+  <li> You can publish static sites (HTML, CSS, images, JavaScript). </ li>
+  <li> URL is https://username.github.io </ li>
+  <li> You can specify your own domain </ li>
+  <li> The capacity of the site is up to 1GB. Requests up to 100GB or 100,000 per month. </ li>
+</ ul>
 <p>
-  Github Pagesを、作るのは簡単です。Giblogで作成した公開リポジトリを、以下のリポジトリを作成してpushするだけです。
+  Creating Github Pages is easy. Just create the following repository and push the public repository created by Giblog.
 </p>
 <pre>
-ユーザ名.github.io
-</pre>
-<p>
-  後で、独自ドメインを指定することもできますよ! SSLにも対応しているので「https」のサイトで運用できます。
-</p>
-<p>
-  もしあなたのGithubのユーザーIDが「yuki-kimoto」であれば
-</p>
-<pre>
+Username.github.io
+&lt;/ pre&gt;
+
+You can also specify your own domain later! Since it also supports SSL, you can operate it on the "https" site.
+
+If your Github user ID is "yuki-kimoto"
+
+&lt;pre&gt;
 yuki-kimoto.github.io
-</pre>
-<p>
-  というレポジトリを、Githubで作成してください。
-</p>
-<p>
-  そして、このリポジトリを、公開ファイルのgitレポジトリとして指定します。
-</p>
-<pre>
+&lt;/ pre&gt;
+
+Please create the repository on Github.
+
+Then specify this repository as the git repository for public files.
+
+&lt;pre&gt;
 cd mysite
 cd public
 git remote add origin git@github.com:yuki-kimoto/yuki-kimoto.github.io.git
-</pre>
-<p>
-  すでに他の場所を指定している場合は、いったん削除しましょう。
-</p>
-<pre>
+&lt;/ pre&gt;
+
+If you have already specified another location, delete it.
+
+&lt;pre&gt;
 git remote remove origin
-</pre>
-<p>
-  あとは、普段と同じようにpushするだけです。
-</p>
-<pre>
+&lt;/ pre&gt;
+
+All you have to do is push as you normally would.
+
+&lt;pre&gt;
 git push origin master
-</pre>
-<h3>Github Pagesの公開URL</h3>
-<p>
-  pushしたらサイトを確認してみましょう。
-</p>
-<p>
-  上記の例の場合は、以下のURLでアクセスできます。
-</p>
-<blockquote>
-<p>
-  <a href="https://yuki-kimoto.github.io">https://yuki-kimoto.github.io</a>
-</p>
-</blockquote>
-<p>
-  ページが表示されましたか?
-</p>
-<p>
-  もしページが404になってしまう場合は、Githubがindex.htmlを、トップページと認識していないのかもしれません。
-</p>
-<p>
-  そういう場合は、index.htmlに空白などの意味のない文字列などを足して、コミットして、再度pushしてみてください。
-</p>
-<p>
-  あるいは、5分程度、待ってみてください。Github Pagesのトップページは、即時反映では、ないのかもしれません。
-</p>
-<h3>複数のGithub Pagesを持つにはどうすればよいですか</h3>
-<p>
-  ユーザーIDに対して、Github Pagesは一つ提供されますので、複数のGithub Pagesを持ちたい場合は、複数のユーザーIDが必要になります。
-</p>
-<h3>GitとGithubの使い方がわかりません</h3>
-<p>
-  近いうちに、GitとGithubの使い方を解説したページも作成予定です。
-</p>
-<p>
-  GitとGithubについては、すでに解説されたサイトがたくさんあるので、それを検索してみるのもよいでしょう。
-</p>
+&lt;/ pre&gt;
+
+&lt;h3&gt; Public URL of Github Pages &lt;/ h3&gt;
+
+After pushing, let's check the site.
+
+In the case of the above example, you can access it at the following URL.
+
+&lt;blockquote&gt;
+&lt;a href="https://yuki-kimoto.github.io"&gt; https://yuki-kimoto.github.io &lt;/a&gt;
+&lt;/ blockquote&gt;
+
+Did you see the page?
+
+If the page turns to 404, Github may not recognize index.html as the top page.
+
+In that case, add a meaningless character string such as a blank to index.html, commit, and try pushing again.
+
+Or wait for about 5 minutes. The top page of Github Pages may not be an immediate reflection.
+
+&lt;h3&gt; How do I have multiple Github Pages &lt;/ h3&gt;
+
+One Github Pages is provided for each user ID, so if you want to have multiple Github Pages, you need multiple user IDs.
+
+&lt;h3&gt; I don't know how to use Git and Github &lt;/ h3&gt;
+
+In the near future, we plan to create a page that explains how to use Git and Github.
+
+There are many sites already mentioned about Git and Github, so it's a good idea to search for them.
 
   </div>
   <div class="bottom">
@@ -169,12 +160,10 @@ git push origin master
           <!-- side -->
 <div class="side-list">
   <div class="side-list-title">
-    メニュー
+    Menu
   </div>
   <ul>
-    <li><a href="/blog/20190416153053.html">Windowsで個人ブログを作る</a></li>
-    <li>Macで個人ブログを作る</li>
-    <li>Linuxで個人ブログを作る</li>
+    <li><a href="/blog/20190416153053.html">Create Your Blogs on Windows</a></li>
   </ul>
 </div>
 

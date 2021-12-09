@@ -17,12 +17,12 @@
 
   gtag('config', 'G-H9CYDCGDRK');
 </script>
-<title>高度なSEO対策 - titleタグとdescriptionの自動設定 - Giblog Official Site - Tools creating Web Site and Blog that is managed using Git</title>
-<meta name="description" content="Giblogは、デフォルトで、効果の高いSEO対策が、実施されています。">
+<title> Advanced SEO measures-automatic setting of title tag and description  - Giblog Official Site - Tools creating Web Site and Blog that is managed using Git</title>
+<meta name="description" content="By default, Giblog has effective SEO measures implemented.">
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:site" content="@perlzemi" />
-<meta name="twitter:title" content="高度なSEO対策 - titleタグとdescriptionの自動設定 - Giblog Official Site - Tools creating Web Site and Blog that is managed using Git" />
-<meta name="twitter:description" content="Giblogは、デフォルトで、効果の高いSEO対策が、実施されています。" />
+<meta name="twitter:title" content=" Advanced SEO measures-automatic setting of title tag and description  - Giblog Official Site - Tools creating Web Site and Blog that is managed using Git" />
+<meta name="twitter:description" content="By default, Giblog has effective SEO measures implemented." />
 <meta name="twitter:image" content="https://en.giblog.perlzemi.com//images/giblog-favicon.png" />
 
 
@@ -45,7 +45,7 @@
 
 <div class="header-content">
   <div class="header-content-title">
-    <a href="/"><img src="/images/giblog-logo-image-text.png" width="170" alt="Giblog公式サイト" style="vertical-align:-25px;"></a>
+    <a href="/"><img src="/images/giblog-logo-image-text.png" width="170" alt="Giblog" style="vertical-align:-25px;"></a>
   </div>
   <div class="menu-button" onclick="$('.header-content-menu').toggle();">
     <img src="/images/menu.png" style="width:40px;">
@@ -66,13 +66,13 @@
 
   </div>
   <div class="middle">
-    <h2><a href="/blog/20190816080249.html">高度なSEO対策 - titleタグとdescriptionの自動設定</a></h2>
+    <h2><a href="/blog/20190816080249.html"> Advanced SEO measures-automatic setting of title tag and description </a></ h2>
 <p>
-  Giblogは、デフォルトで、効果の高いSEO対策が、実施されています。
+  By default, Giblog has effective SEO measures implemented.
 </p>
-<h3>titleタグの自動設定</h3>
+<h3> Automatic setting of title tag </ h3>
 <p>
-  トップページ「index.html」のタイトルは、giblog.confの「site_title」で設定されているサイトタイトルになります。
+  The title of the top page "index.html" will be the site title set in "site_title" of giblog.conf.
 </p>
 <pre>
 use strict;
@@ -80,123 +80,124 @@ use warnings;
 use utf8;
 
 {
-  site_title =&gt; '私だけのオリジナルサイト',
-  site_url =&gt; 'http://somesite.example',
+  site_title =&gt;'My original site',
+  site_url =&gt;'http://somesite.example',
 }
-</pre>
-<p>
-  この場合のトップページのtitleタグは「私だけのオリジナルサイト」になります。
-</p>
-<pre>
-&lt;title&gt;私だけのオリジナルサイト&lt;/title&gt;
-</pre>
-<p>
-  トップぺージ以外のタイトルは、ページの最初の見出しの後ろに、サイトタイトルをつけたものになります。
-</p>
-<p>
-  トップページ以外のページの例は、たとえば、最初の見だしが
-</p>
-<pre>
-&lt;h2&gt;トマトのおいしい食べ方&lt;/h2&gt;
-</pre>
-<p>
-  であった場合は、このページのtitleタグは「トマトのおいしい食べ方 - 私だけのオリジナルサイト」になります。
-</p>
-<pre>
-&lt;title&gt;トマトのおいしい食べ方 - 私だけのオリジナルサイト&lt;/title&gt;
-</pre>
-<h3>descriptionの自動設定</h3>
-<p>
-  タグのない最初の段落が、descriptionに自動設定されます。
-</p>
-<pre>
-&lt;h2&gt;トマトのおいしい食べ方&lt;/h2&gt;
+&lt;/ pre&gt;
 
-トマトをおいしく食べるには、どうしたらいいのでしょうか。冷蔵庫で冷やしてみましょう。
-</pre>
-<pre>
-&lt;meta name="description" content="トマトをおいしく食べるには、どうしたらいいのでしょうか。冷蔵庫で冷やしてみましょう。"&gt;
-</pre>
-<p>
-  タグのある最初の段落は、descriptionとしては、認識されないので、SEOで大切な、パンくずリストを書くこともできます。
-</p>
-<pre>
-&lt;ol class="bread" itemscope itemtype="http://schema.org/BreadcrumbList"&gt;
-  &lt;li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"&gt;
-    &lt;a itemprop="item" href="/"&gt;&lt;span itemprop="name"&gt;トマト&lt;/span&gt;&lt;/a&gt;
-    &lt;meta itemprop="position" content="1" /&gt;
-  &lt;/li&gt;
-  &amp;#8250;
-  &lt;li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"&gt;
-    &lt;a itemprop="item" href="/blog/20101130129876.html"&gt;&lt;span itemprop="name"&gt;食べ方&lt;/span&gt;&lt;/a&gt;
-    &lt;meta itemprop="position" content="2" /&gt;
-  &lt;/li&gt;
-  &amp;#8250;
-  &lt;li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"&gt;
-      &lt;span itemprop="name"&gt;here&lt;/span&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
+In this case, the title tag of the top page will be "My original site".
 
-&lt;h2&gt;トマトのおいしい食べ方&lt;/h2&gt;
+&lt;pre&gt;
+&lt;title&gt; My own original site &lt;/ title&gt;
+&lt;/ pre&gt;
 
-トマトをおいしく食べるには、どうしたらいいのでしょうか。冷蔵庫で冷やしてみましょう。
-</pre>
-<p>
-  上記のように、パンくずリストがある場合でも、タグのない最初の段落の内容がdescriptionに設定されます。
-</p>
-<pre>
-&lt;meta name="description" content="トマトをおいしく食べるには、どうしたらいいのでしょうか。冷蔵庫で冷やしてみましょう。"&gt;
-</pre>
-<h3>titleタグとdescriptionのカスタマイズ</h3>
-<p>
-  上記の設定は「lib/Giblog/Command/build.pm」を編集することでカスタマイズすることもできます。
-</p>
-<p>
-  <a href="https://perlzemi.com/">Perl</a>を知っていれば、カスタマイズしやすと思いますが、ページタイトルとサイトタイトルの区切り文字の変更ならば、単純に書き換えるだけです。
-</p>
-<pre>
-lib/Giblog/Command/build.pm
-</pre>
-<p>
-  ページタイトルとサイトタイトルの区切り文字「-」を「|」に変えました。
-</p>
-<pre>
-package Giblog::Command::build;
+Titles other than the top page will have the site title after the first heading on the page.
 
-# 省略
+An example of a page other than the top page is, for example, the first heading
+
+&lt;pre&gt;
+&lt;h2&gt; How to eat delicious tomatoes &lt;/ h2&gt;
+&lt;/ pre&gt;
+
+If so, the title tag on this page will be "How to Eat Tomatoes-My Original Site".
+
+&lt;pre&gt;
+&lt;title&gt; How to eat delicious tomatoes-my original site &lt;/ title&gt;
+&lt;/ pre&gt;
+
+&lt;h3&gt; Automatic description setting &lt;/ h3&gt;
+
+The first untagged paragraph is automatically set to description.
+
+&lt;pre&gt;
+&lt;h2&gt; How to eat delicious tomatoes &lt;/ h2&gt;
+
+How can I eat tomatoes deliciously? Let's cool it in the refrigerator.
+&lt;/ pre&gt;
+
+&lt;pre&gt;
+&lt;meta name = "description" content = "How can I eat tomatoes deliciously? Let's cool them in the refrigerator."&gt;
+&lt;/ pre&gt;
+
+The first paragraph with a tag is not recognized as a description, so you can also write a breadcrumb trail that is important for SEO.
+
+&lt;pre&gt;
+&lt;ol class = "bread" itemscope itemtype = "http://schema.org/BreadcrumbList"&gt;
+  &lt;li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem"&gt;
+    &lt;a itemprop="item" href="/"&gt; &lt;span itemprop = "name"&gt; tomato &lt;/ span&gt; &lt;/a&gt;
+    &lt;meta itemprop = "position" content = "1" /&gt;
+  &lt;/ li&gt;
+  &amp; # 8250;
+  &lt;li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem"&gt;
+    &lt;a itemprop="item" href="/blog/20101130129876.html"&gt; &lt;span itemprop = "name"&gt; How to eat &lt;/ span&gt; &lt;/a&gt;
+    &lt;meta itemprop = "position" content = "2" /&gt;
+  &lt;/ li&gt;
+  &amp; # 8250;
+  &lt;li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem"&gt;
+      &lt;span itemprop = "name"&gt; here &lt;/ span&gt;
+  &lt;/ li&gt;
+&lt;/ ol&gt;
+
+&lt;h2&gt; How to eat delicious tomatoes &lt;/ h2&gt;
+
+How can I eat tomatoes deliciously? Let's cool it in the refrigerator.
+&lt;/ pre&gt;
+
+As mentioned above, even if you have a breadcrumb trail, the content of the first untagged paragraph is set to description.
+
+&lt;pre&gt;
+&lt;meta name = "description" content = "How can I eat tomatoes deliciously? Let's cool them in the refrigerator."&gt;
+&lt;/ pre&gt;
+
+&lt;h3&gt; Customize title tag and description &lt;/ h3&gt;
+
+The above settings can also be customized by editing "lib / Giblog / Command / build.pm".
+
+If you know &lt;a href="https://perlzemi.com/"&gt; Perl &lt;/a&gt;, it will be easy to customize, but if you want to change the delimiter between the page title and the site title, simply rewrite it. only.
+
+&lt;pre&gt;
+lib / Giblog / Command / build.pm
+&lt;/ pre&gt;
+
+Changed the delimiter "-" between the page title and the site title to "|".
+
+&lt;pre&gt;
+package Giblog :: Command :: build;
+
+# omit
 
 sub run {
-  my ($self, @args) = @_;
+  my ($ self, @args) = @_;
   
-  # 省略
+  # omit
   
-  for my $file (@$files) {
+  for my $ file (@ $ files) {
     
-    # Parse title
-    $api-&gt;parse_title_from_first_h_tag($data);
+    #Parse title
+    $ api-&gt; parse_title_from_first_h_tag ($ data);
 
-    # Edit title
-    my $site_title = $config-&gt;{site_title};
-    if ($data-&gt;{file} eq 'index.html') {
-      $data-&gt;{title} = $site_title;
+    #Edit title
+    my $ site_title = $ config-&gt; {site_title};
+    if ($ data-&gt; {file} eq'index.html') {
+      $ data-&gt; {title} = $ site_title;
     }
     else {
       #
-      # こちらを編集しました
+      # Edited here
       #
-      $data-&gt;{title} = "$data-&gt;{title} | $site_title";
+      $ data-&gt; {title} = "$ data-&gt; {title} | $ site_title";
     }
 
-    # Add page link
-    $api-&gt;add_page_link_to_first_h_tag($data, {root =&gt; 'index.html'});
+    #Add page link
+    $ api-&gt; add_page_link_to_first_h_tag ($ data, {root =&gt;'index.html'});
 
-    # Parse description
-    $api-&gt;parse_description_from_first_p_tag($data);
+    #Parse description
+    $ api-&gt; parse_description_from_first_p_tag ($ data);
   }
   
-  # 省略
+  # omit
 }
-</pre>
+&lt;/ pre&gt;
 
   </div>
   <div class="bottom">
@@ -210,12 +211,10 @@ sub run {
           <!-- side -->
 <div class="side-list">
   <div class="side-list-title">
-    メニュー
+    Menu
   </div>
   <ul>
-    <li><a href="/blog/20190416153053.html">Windowsで個人ブログを作る</a></li>
-    <li>Macで個人ブログを作る</li>
-    <li>Linuxで個人ブログを作る</li>
+    <li><a href="/blog/20190416153053.html">Create Your Blogs on Windows</a></li>
   </ul>
 </div>
 

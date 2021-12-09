@@ -17,12 +17,12 @@
 
   gtag('config', 'G-H9CYDCGDRK');
 </script>
-<title>Webサイト作成のためのCSSの基礎 - Giblog Official Site - Tools creating Web Site and Blog that is managed using Git</title>
-<meta name="description" content="Webサイトを作成するための前提知識としてCSSの基本を解説します。これだけ知っていれば、CSSを自由に記述することができる程度のものを目指しました。">
+<title> CSS basics for website creation  - Giblog Official Site - Tools creating Web Site and Blog that is managed using Git</title>
+<meta name="description" content="I will explain the basics of CSS as prerequisite knowledge for creating a website. With this much knowledge, I aimed for something that would allow me to write CSS freely.">
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:site" content="@perlzemi" />
-<meta name="twitter:title" content="Webサイト作成のためのCSSの基礎 - Giblog Official Site - Tools creating Web Site and Blog that is managed using Git" />
-<meta name="twitter:description" content="Webサイトを作成するための前提知識としてCSSの基本を解説します。これだけ知っていれば、CSSを自由に記述することができる程度のものを目指しました。" />
+<meta name="twitter:title" content=" CSS basics for website creation  - Giblog Official Site - Tools creating Web Site and Blog that is managed using Git" />
+<meta name="twitter:description" content="I will explain the basics of CSS as prerequisite knowledge for creating a website. With this much knowledge, I aimed for something that would allow me to write CSS freely." />
 <meta name="twitter:image" content="https://en.giblog.perlzemi.com//images/giblog-favicon.png" />
 
 
@@ -45,7 +45,7 @@
 
 <div class="header-content">
   <div class="header-content-title">
-    <a href="/"><img src="/images/giblog-logo-image-text.png" width="170" alt="Giblog公式サイト" style="vertical-align:-25px;"></a>
+    <a href="/"><img src="/images/giblog-logo-image-text.png" width="170" alt="Giblog" style="vertical-align:-25px;"></a>
   </div>
   <div class="menu-button" onclick="$('.header-content-menu').toggle();">
     <img src="/images/menu.png" style="width:40px;">
@@ -66,483 +66,507 @@
 
   </div>
   <div class="middle">
-    <h2><a href="/blog/20190509080917.html">Webサイト作成のためのCSSの基礎</a></h2>
+    <h2><a href="/blog/20190509080917.html"> CSS basics for website creation </a></ h2>
 <p>
-  Webサイトを作成するための前提知識としてCSSの基本を解説します。これだけ知っていれば、CSSを自由に記述することができる程度のものを目指しました。
+  I will explain the basics of CSS as prerequisite knowledge for creating a website. With this much knowledge, I aimed for something that would allow me to write CSS freely.
 </p>
-<h3>CSS(カスケーディングスタイルシート)とは</h3>
+<h3> What is CSS (cascading style sheet)? </ H3>
 <p>
-  CSSはHTMLのデザインを行うためのものです。CSSを利用すると文字の色や背景の色を変えたりすることができます。また各要素の配置を指定することができます。HTMLでもある程度のデザインを行うことができますが、HTMLで文書の意味を、CSSでデザインを行うというのが主流です。
+  CSS is for designing HTML. You can change the color of the characters and the color of the background by using CSS. You can also specify the placement of each element. You can design to some extent with HTML, but the mainstream is to design the meaning of the document with HTML and with CSS.
 </p>
-<h3>style属性を使ったCSSの記述</h3>
+<h3> CSS description using style attribute </ h3>
 <p>
-  CSSをタグに適用する一番簡単な方法は、style属性を使用することです。
-</p>
-<pre>
-&lt;h1 style="color:red;font-size:200%;"&gt;見出し1&lt;/h1&gt;
-&lt;div style="background-color:blue;"&gt;ブロック要素&lt;/div&gt;
-&lt;p style="border:1px green solid;"&gt;段落&lt;/p&gt;
-</pre>
-<p>
-  上記のように記述すると以下のように表示されます。フォントの色が赤くなったり、背景が青になったり、緑の枠線がついているのが確認できます。
-</p>
-<hr>
-<p>
-  [f:id:perlcodesample:20110526135651p:image]
-</p>
-<hr>
-<p>
-  CSSは「color:red」のように「プロパティ:値」という組み合わせで記述します。
+  The easiest way to apply CSS to a tag is to use the style attribute.
 </p>
 <pre>
-プロパティ:値
-</pre>
-<p>
-  セミコロン「;」で区切って複数の「プロパティ:値」を記述することができます。
-</p>
-<h3>styleタグを利用したCSSの記述</h3>
-<p>
-  styleタグを利用するとHTMLのタグとスタイルを分離させることができます。上記のスタイルシートを、styleタグを利用して書き換えてみます。
-</p>
-<pre>
-&lt;style type="text/css"&gt;/*&lt;![CDATA[*/
+&lt;h1 style = "color: red; font-size: 200%;"&gt; Heading 1 &lt;/ h1&gt;
+&lt;div style = "background-color: blue;"&gt; block element &lt;/ div&gt;
+&lt;p style = "border: 1px green solid;"&gt; paragraph &lt;/ p&gt;
+&lt;/ pre&gt;
+
+If you write as above, it will be displayed as follows. You can see that the font color is red, the background is blue, and there is a green border.
+&lt;hr&gt;
+
+[f: id: perlcodesample: 20110526135651p: image]
+
+&lt;hr&gt;
+
+CSS is described by a combination of "property: value" such as "color: red".
+
+&lt;pre&gt;
+Property: Value
+&lt;/ pre&gt;
+
+You can write multiple "property: value" separated by a semicolon ";".
+
+&lt;h3&gt; CSS description using style tag &lt;/ h3&gt;
+
+You can use the style tag to separate the HTML tag from the style. Let's rewrite the above style sheet using the style tag.
+
+&lt;pre&gt;
+&lt;style type = "text / css"&gt; / * &lt;! [CDATA [* /
 
 h1 {
-  color:red;
-  font-size:200%;
+  color: red;
+  font-size: 200%;
 }
 
 div {
-  background-color:blue;
+  background-color: blue;
 }
 
 p {
-  border:1px green solid;
+  border: 1px green solid;
 }
 
-/*]]&gt;*/&lt;/style&gt;
+/ *]]&gt; * / &lt;/ style&gt;
 
-&lt;h1&gt;見出し1&lt;/h1&gt;
-&lt;div&gt;ブロック要素&lt;/div&gt;
-&lt;p&gt;段落&lt;/p&gt;
-</pre>
-<p>
-  タグの中のstyle属性はなくなって、styleタグの中にスタイルシートを記述しています。「h1 { ... }」や「div { ... }のh1やdivはセレクタと呼ばれます。
-</p>
-<pre>
-セレクタ {
-  プロパティ1:値1;
-  プロパティ1:値2;
+&lt;h1&gt; Heading 1 &lt;/ h1&gt;
+&lt;div&gt; block element &lt;/ div&gt;
+&lt;p&gt; Paragraph &lt;/ p&gt;
+&lt;/ pre&gt;
+
+The style attribute in the tag is gone, and the stylesheet is described in the style tag. The h1 and div of "h1 {...}" and "div {...}" are called selectors.
+
+&lt;pre&gt;
+Selector {
+  Property 1: Value 1;
+  Property 1: Value 2;
 }
-</pre>
-<p>
-  セレクタはどの要素にCSSを適用するかを指定するものです。h1を指定した場合は、すべてのh1にCSSが適用されます。
-</p>
-<h3>外部に定義されたCSSを読み込む</h3>
-<p>
-  CSSは外部ファイルにしておいて読み込むこともできます。記述方法はstyleタグを使用した方法と同じです。
-</p>
-<p>
-  まず外部ファイルとしてCSSを準備します。comonn.cssという名前にして、ドキュメントルートに配置してください。
-</p>
-<pre>
-/* common.css */
+&lt;/ pre&gt;
+
+The selector specifies which element to apply the CSS to. If you specify h1, CSS will be applied to all h1s.
+
+&lt;h3&gt; Read externally defined CSS &lt;/ h3&gt;
+
+CSS can also be read as an external file. The description method is the same as the method using the style tag.
+First, prepare CSS as an external file. Name it comonn.css and place it in the document root.
+
+&lt;pre&gt;
+/* common.css * /
 h1 {
-  color:red;
-  font-size:200%;
+  color: red;
+  font-size: 200%;
 }
 
 div {
-  background-color:blue;
+  background-color: blue;
 }
 
 p {
-  border:1px green solid;
+  border: 1px green solid;
 }
-</pre>
-<p>
-  HTMLは以下のようになります。
-</p>
-<pre>
-&lt;html&gt; 
-  &lt;head&gt; 
-    &lt;meta http-equiv="Content-Type" content="text/html; charset=UTF-8" &gt; 
-    &lt;link href="/common.css" media="screen" rel="stylesheet" type="text/css" /&gt; 
-  &lt;/head&gt; 
-  &lt;body&gt; 
-    &lt;h1&gt;見出し1&lt;/h1&gt; 
-    &lt;div&gt;ブロック要素&lt;/div&gt; 
-    &lt;p&gt;段落&lt;/p&gt;
-  &lt;/body&gt; 
-&lt;/html&gt; 
-</pre>
-<p>
-  linkタグを利用して外部で定義したCSSを読み込んでいます。
-</p>
-<p>
-  たくさんのページでCSSを共有したい場合は外部ファイルで定義するのがよいでしょう。ページの個別のCSSについてはstyleタグを用いるのがよいでしょう。
-</p>
-<h4>コメント</h4>
-<p>
-  CSSでコメントを記述するには、コメントにしたい部分を「/*」と「*/」で囲みます。
-</p>
-<pre>
-/* コメント */
-</pre>
-<h3>文字の装飾に関するプロパティ</h3>
-<p>
-  ここからは、よく使用されるプロパティについて分野別に紹介していきます。
-</p>
-<h4>文字色 color</h4>
-<pre>
-&lt;div style="color:red;"&gt;赤&lt;/div&gt;
-&lt;div style="color:#FF0000;"&gt;赤&lt;/div&gt;
-</pre>
-<p>
-  文字色を指定するにはcolorを使用します。色の指定には、<a href="http://e-words.jp/p/r-colornames.html">カラーネーム</a>か、カラーコードを利用します。カラーコードは16進数で指定します。最初の2桁が「赤」の度合い、次の2桁が「緑」の度合い、最後の2桁が「青」の度合いです。各色の光の合成が行われ「#FFFFFF」が白に、「#000000」は黒になります。
-</p>
-<h4>文字の大きさ font-size</h4>
-<pre>
-&lt;div style="font-size:200%;"&gt;200%&lt;/div&gt;
-&lt;div style="font-size:50%;"&gt;50%&lt;/div&gt;
-</pre>
-<p>
-  文字の大きさを指定するにはfont-sizeを使用します。サイズの指定方法にはさまざまなものがありますが、親要素からの相対サイズで指定する「%」で指定する方法が多く利用されているようです。
-</p>
-<h4>文字の太さ font-weight</h4>
-<pre>
-&lt;div style="font-weight: bold;"&gt;太字&lt;/div&gt;
-</pre>
-<p>
-  文字を太くするにはfont-weightに「bold」を指定します。
-</p>
-<h4>アンダーライン text-decoration</h4>
-<pre>
-&lt;div style="text-decoration: underline;"&gt;アンダーライン&lt;/div&gt;
-&lt;div style="text-decoration: none;"&gt;アンダーラインの取消&lt;/div&gt;
-&lt;div style="text-decoration: line-through;"&gt;打消し線&lt;/div&gt;
-</pre>
-<p>
-  アンダーラインをつけるにはtext-decorationに「underline」を指定します。アンダーラインを取り除きたい場合には「none」を指定します。「line-through」を指定すると打ち消し線をつけることができます。
-</p>
-<h3>文字の位置や配置に関するプロパティ</h3>
-<h4>文字の左右の位置の指定 text-align</h4>
-<pre>
-&lt;div style="text-align: left;"&gt;左寄せ&lt;/div&gt;
-&lt;div style="text-align: center;"&gt;中央&lt;/div&gt;
-&lt;div style="text-align: right;"&gt;右寄せ&lt;/div&gt;
-</pre>
-<p>
-  文字の位置を指定するにはtext-alignを使用します。「left」で左寄せ、「center」で中央寄せ、「right」で右寄せになります。
-</p>
-<p>
-  このプロパティはブロック要素に対してしか効果を持たないということをに注意しましょう。インライン要素に対しては効果がありません。spanはインライン要素ですので、下記のような記述は効果がありません。
-</p>
-<pre>
-&lt;span style="text-align: right;"&gt;右寄せ&lt;/span&gt;
-</pre>
-<h4>行の高さ line-height</h4>
-<pre>
-&lt;div style="line-height: 150%;"&gt;行の高さはline-heightで指定します。行の高さをある程度あけると、文章が読みやすくなる効果があります。見やすい行の高さを設定しましょう。これくらい長い文章を書くと2行にわたるはず。&lt;/div&gt;
-</pre>
-<p>
-  行の高さを指定するにはline-heightを使用します。値の指定方法にはいくつかの方法がありますが、「%」を使う記述が多く利用されているようです。「%」は文字の高さに対して、行の高さをどれくらいにするかということを指定します。ですので、たとえば「150%」を指定すると、文字の高さを100とするとその半分の「50」文の行間になるということです。行間を適切に指定すると文章が読みやすくなる効果があります。
-</p>
-<h4>文字間隔 letter-spacing</h4>
-<pre>
-&lt;div style="letter-spacing: 1em;"&gt;文字間隔&lt;/div&gt;
-&lt;div style="letter-spacing: 0.1em;"&gt;読みやすい文字間隔&lt;/div&gt;
-</pre>
-<p>
-  文字間隔を指定するにはletter-spacingを使用します。値の指定方法はいくつかの方法がありますが、1文字を基準とした「em」が多く利用されているようです。文字間隔をわずかに広くすると文章が読みやすくなる効果があるようです。
-</p>
-<h3>背景に関するプロパティ</h3>
-<h4>背景色 background-color</h4>
-<pre>
-&lt;div style="background-color: red;"&gt;背景色&lt;/div&gt;
-&lt;div style="background-color: #FFDDDD;"&gt;背景色(とても薄い赤色)&lt;/div&gt;
-&lt;div style="background-color: #DDFFDD;"&gt;背景色(とても薄い緑色)&lt;/div&gt;
-&lt;div style="background-color: #DDDDFF;"&gt;背景色(とても薄い青色)&lt;/div&gt;
-</pre>
-<p>
-  背景色を指定するにはbackground-colorを使用します。薄い色の背景色はデザインするときによく利用されるようです。
-</p>
-<h4>背景画像 background-image</h4>
-<pre>
-&lt;div style="background-image: url('/image/sky.png');"&gt;背景画像&lt;/div&gt;
-</pre>
-<p>
-  背景画像を指定するにはbackground-imageを使用します。画像のURLを指定します。URLはドキュメントルートからの絶対パスで指定するのがよいと思われます。背景画像はデフォルトで縦と横に繰り返して表示されます。
-</p>
-<h4>背景画像の繰り返しの指定</h4>
-<pre>
-&lt;div style="background-repeat:no-repeat;"&gt;繰り返しなし&lt;/div&gt;
-</pre>
-<p>
-  背景画像はデフォルトで繰り返されますが、background-repeatに「no-repeat」を指定すると繰り返しが解除できます。
-</p>
-<h3>枠線(ボーダー)に関するプロパティ</h3>
-<h4>枠線の指定border</h4>
-<pre>
-&lt;div style="border: 1px solid blue;"&gt;1pxの青の1本線の枠線&lt;/div&gt;
-&lt;div style="border: 1px double blue;"&gt;1pxの青の2本線の枠線&lt;/div&gt;
-&lt;div style="border: 1px dashed blue;"&gt;1pxの青の破線の枠線&lt;/div&gt;
-&lt;div style="border: 1px dotted blue;"&gt;1pxの青の点線の枠線&lt;/div&gt;
-</pre>
-<p>
-  枠線を指定するにはborderを使用します。「線の太さ」「線の種類」「線の色」の組み合わせを空白で区切って指定します。
-</p>
-<p>
-  線の種類には以下のような種類があります。
-</p>
-<ul>
-  <li>
-    1本線 solid
-  </li>
-  <li>
-    2本線 double
-  </li>
-  <li>
-    破線 dashed
-  </li>
-  <li>
-    点線 dotted
-  </li>
-</ul>
-<p>
-  また「border-top」「border-left」「border-right」「border-bottom」というプロパティを利用すると特定の位置の枠線だけを指定することもできます。
-</p>
-<pre>
-&lt;div style="border-top: 1px solid blue;"&gt;枠線(上側)&lt;/div&gt;
-&lt;div style="border-left: 1px solid blue;"&gt;枠線(左側)&lt;/div&gt;
-&lt;div style="border-right: 1px solid blue;"&gt;枠線(右側)&lt;/div&gt;
-&lt;div style="border-bottom: 1px solid blue;"&gt;枠線(下側)&lt;/div&gt;
-</pre>
-<h3>要素の位置や表示に関するプロパティ</h3>
-<h4>ブロック要素の幅と高さ width, height</h4>
-<pre>
-&lt;div style="width:200px; height:100px; background-color:green;"&gt;幅(200px), 高さ(100px)&lt;/div&gt;
-</pre>
-<p>
-  ブロック要素の幅と高さを指定するにはwidthとheightを使用します。インライン要素にwidth,heightを指定しても効果がないので注意してください。
-</p>
-<p>
-  また親要素の幅を基準にして、割合で指定することもできます。
-</p>
-<pre>
-&lt;div style="width:200px; height:100px; background-color:green;"&gt;
-  &lt;div style="width:80%; height:70%; background-color:blue;"&gt;幅(80%), 高さ(70%)&lt;/div&gt;
-&lt;/div&gt;
-</pre>
-<h4>マージン margin</h4>
-<pre>
-&lt;div style="background-color:#FFCCCC;"&gt;
-  &lt;div style="background-color:#FF6666;"&gt;上側の要素&lt;/div&gt;
-  &lt;div style="margin:20px 30px 50px 30px;background-color:#FF6666;"&gt;「上 左 下 右」のマージンを指定&lt;/div&gt;
-  &lt;div style="margin:20px 30px;background-color:#FF6666;"&gt;「上左 下右」のマージンを指定&lt;/div&gt;
-  &lt;div style="margin:20px;background-color:#FF6666;"&gt;「上左下右」のマージンをまとめて指定&lt;/div&gt;
-  &lt;div style="background-color:#FF6666;"&gt;下側の要素&lt;/div&gt;
-&lt;/div&gt;
-</pre>
-<p>
-  マージンを指定するにはmarginを使用します。マージンとは要素間の間隔のことです。マージンは空白で区切って指定します。４つの値を空白で区切って指定した場合は「上 左 下 右」の指定になります。2つの値を空白で区切って指定した場合は「上下 左右」の指定になります。値をひとつだけ指定した場合は「上下左右」で同じ値になります。例ではマージンの意味がわかりやすいように、背景色をつけています。
-</p>
-<p>
-  ひとつの注意として、要素が垂直方向に接し合う場合にはマージンの値は加算されるのではないということに注意してください。その場合は大きいほうの値が選択されます。たとえばAという要素の下側のマージンが20pxでBという要素の上側のマージンが50pxであった場合は、AとBの間の上下のマージンは加算し70pxになるのではなく、大きいほうの値の50pxになります。
-</p>
-<p>
-  マージンは上下左右をそれぞれ個別に指定することもできます。
-</p>
-<pre>
-&lt;div style="background-color:#FFCCCC;"&gt;
-  &lt;div style="background-color:#FF6666;"&gt;上側の要素&lt;/div&gt;
-  &lt;div style="margin-top:20px;background-color:#FF6666;"&gt;上のマージン&lt;/div&gt;
-  &lt;div style="margin-left:20px;background-color:#FF6666;"&gt;左のマージン&lt;/div&gt;
-  &lt;div style="margin-bottom:20px;background-color:#FF6666;"&gt;下のマージン&lt;/div&gt;
-  &lt;div style="margin-right:20px;background-color:#FF6666;"&gt;右のマージン&lt;/div&gt;
-  &lt;div style="background-color:#FF6666;"&gt;下側の要素&lt;/div&gt;
-&lt;/div&gt;
-</pre>
-<p>
-  またもうひとつの注意としてインライン要素に上下のマージンを指定しても無視されるということを覚えておきましょう。たとえば、以下のような指定については、左右は20pxのマージンがありますが、上下にはマージンが設定されません。
-</p>
-<pre>
-&lt;span style="margin:20px;"&gt;インライン要素では上下のマージンは無視される&lt;/span&gt;
-</pre>
-<h4>パディング padding</h4>
-<pre>
-&lt;div style="padding:20px 30px 50px 30px;background-color:#FFCCCC;"&gt;「上 左 下 右」のパディングを指定&lt;/div&gt;&lt;br&gt;
-&lt;div style="padding:20px 30px;background-color:#FFCCCC;"&gt;「上左 下右」のパディングを指定&lt;/div&gt;&lt;br&gt;
-&lt;div style="padding:20px;background-color:#FFCCCC;"&gt;「上左下右」のパディングをまとめて指定&lt;/div&gt;
-</pre>
-<p>
-  パディングを指定するにはpaddingを使用します。パディングとは内側の要素との間隔のことです。パディングは空白で区切って指定します。４つの値を空白で区切って指定した場合は「上 左 下 右」の指定になります。2つの値を空白で区切って指定した場合は「上下 左右」の指定になります。値をひとつだけ指定した場合は「上下左右」で同じ値になります。
-</p>
-<p>
-  パディングは上下左右をそれぞれ個別に指定することもできます。
-</p>
-<pre>
-&lt;div style="padding-top:20px;background-color:#FF6666;"&gt;上側のパディング&lt;/div&gt;
-&lt;div style="padding-left:20px;background-color:#FF6666;"&gt;左側のパディング&lt;/div&gt;
-&lt;div style="padding-bottom:20px;background-color:#FF6666;"&gt;下側のパディング&lt;/div&gt;
-&lt;div style="padding-right:20px;background-color:#FF6666;"&gt;右側のパディング&lt;/div&gt;
-</pre>
-<h4>はみ出す部分の表示方法 overflow</h4>
-<pre>
-&lt;div style="height:100px;width:100px;overflow:auto;"&gt;はみ出る部分をスクロールさせる。はみ出る部分をスクロールさせる。はみ出る部分をスクロールさせる。はみ出る部分をスクロールさせる。&lt;/div&gt;
-</pre>
-<p>
-  はみ出る部分を縦にスクロールさせたい場合は、overflowに「auto」を指定します。
-</p>
-<h3>要素の表示方法を変更 display</h3>
-<pre>
-&lt;span style="display:block"&gt;spanをブロック要素に変更&lt;/span&gt;
-&lt;h1 style="display:inline"&gt;h1をインライン要素に変更&lt;/h1&gt;あああ
-</pre>
-<p>
-  要素の表示方法を変更するにはdisplayを使用します。「block」を指定するとブロック要素に、「inline」を指定するとインライン要素になります。
-</p>
-<h3>リストに関するプロパティ</h3>
-<h4>リストのスタイルのタイプ list-style-type</h4>
-<pre>
-&lt;ul style="list-style-type:none"&gt;
-  &lt;li&gt;何もつけない&lt;/li&gt;
-  &lt;li&gt;何もつけない&lt;/li&gt;
-&lt;/ul&gt;
+&lt;/ pre&gt;
 
-&lt;ul style="list-style-type:circle"&gt;
-  &lt;li&gt;白丸&lt;/li&gt;
-  &lt;li&gt;白丸&lt;/li&gt;
-&lt;/ul&gt;
-</pre>
-<p>
-  ulで作成したリストやolで作成したリストには数字や黒丸が先頭につきますが、これを変更することができます。なおnoneを指定した場合は、左側に余白ができるのが気になる場合は、左側のマージンとパディングを0pxに指定すれば、余白をなくすことができます。
-</p>
-<pre>
-&lt;ul style="list-style-type:none;margin-left:0px;padding:0px"&gt;
-  &lt;li&gt;何もつけない&lt;/li&gt;
-  &lt;li&gt;何もつけない&lt;/li&gt;
-&lt;/ul&gt;
-</pre>
-<h3>CSSセレクタ</h3>
-<p>
-  ここまでで、デザインに関するプロパティを説明してきましたが、今度はどの要素に対してCSSを設定するかということを細かく指定するためのCSSセレクタについて学びましょう。CSSをstyleタグの中や、外部に記述する場合は以下のように記述しました。h1やdivやpの部分がセレクタです。
-</p>
-<pre>
+The HTML looks like this:
+
+&lt;pre&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;meta http-equiv = "Content-Type" content = "text / html; charset = UTF-8"&gt;
+    &lt;link href = "/ common.css" media = "screen" rel = "stylesheet" type = "text / css" /&gt;
+  &lt;/ head&gt;
+  &lt;body&gt;
+    &lt;h1&gt; Heading 1 &lt;/ h1&gt;
+    &lt;div&gt; block element &lt;/ div&gt;
+    &lt;p&gt; Paragraph &lt;/ p&gt;
+  &lt;/ body&gt;
+&lt;/ html&gt;
+&lt;/ pre&gt;
+
+The CSS defined externally is read using the link tag.
+
+If you want to share CSS on many pages, it's best to define it in an external file. It's a good idea to use the style tag for individual CSS on the page.
+
+&lt;h4&gt; Comments &lt;/ h4&gt;
+
+To write a comment in CSS, enclose the part you want to comment with "/ *" and "* /".
+
+&lt;pre&gt;
+/* comment */
+&lt;/ pre&gt;
+
+&lt;h3&gt; Character decoration properties &lt;/ h3&gt;
+
+From here, we will introduce commonly used properties by field.
+
+&lt;h4&gt; Text color color &lt;/ h4&gt;
+
+&lt;pre&gt;
+&lt;div style = "color: red;"&gt; red &lt;/ div&gt;
+&lt;div style = "color: # FF0000;"&gt; red &lt;/ div&gt;
+&lt;/ pre&gt;
+
+Use color to specify the font color. To specify the color, use &lt;a href="http://e-words.jp/p/r-colornames.html"&gt; color name &lt;/a&gt; or the color code. Specify the color code in hexadecimal. The first two digits are the degree of "red", the next two digits are the degree of "green", and the last two digits are the degree of "blue". The light of each color is combined and "#FFFFFF" becomes white and "# 000000" becomes black.
+
+&lt;h4&gt; Character size font-size &lt;/ h4&gt;
+
+&lt;pre&gt;
+&lt;div style = "font-size: 200%;"&gt; 200% &lt;/ div&gt;
+&lt;div style = "font-size: 50%;"&gt; 50% &lt;/ div&gt;
+&lt;/ pre&gt;
+
+Use font-size to specify the font size. There are various ways to specify the size, but it seems that the method of specifying by "%", which is specified by the relative size from the parent element, is often used.
+
+&lt;h4&gt; Character thickness font-weight &lt;/ h4&gt;
+
+&lt;pre&gt;
+&lt;div style = "font-weight: bold;"&gt; bold &lt;/ div&gt;
+&lt;/ pre&gt;
+
+To make the characters thicker, specify "bold" for font-weight.
+
+&lt;h4&gt; Underline text-decoration &lt;/ h4&gt;
+
+&lt;pre&gt;
+&lt;div style = "text-decoration: underline;"&gt; Underline &lt;/ div&gt;
+&lt;div style = "text-decoration: none;"&gt; Cancel underline &lt;/ div&gt;
+&lt;div style = "text-decoration: line-through;"&gt; Strikethrough &lt;/ div&gt;
+&lt;/ pre&gt;
+
+To add an underline, specify "underline" for text-decoration. If you want to remove the underline, specify "none". You can add a strikethrough by specifying "line-through".
+
+&lt;h3&gt; Properties related to character position and placement &lt;/ h3&gt;
+
+&lt;h4&gt; Specifying the left and right positions of characters text-align &lt;/ h4&gt;
+
+&lt;pre&gt;
+&lt;div style = "text-align: left;"&gt; Left justified &lt;/ div&gt;
+&lt;div style = "text-align: center;"&gt; center &lt;/ div&gt;
+&lt;div style = "text-align: right;"&gt; right justified &lt;/ div&gt;
+&lt;/ pre&gt;
+
+Use text-align to specify the character position. "Left" is left-aligned, "center" is center-aligned, and "right" is right-aligned.
+
+Note that this property only has an effect on block elements. It has no effect on inline elements. Since span is an inline element, the following description has no effect.
+
+&lt;pre&gt;
+&lt;span style = "text-align: right;"&gt; right justified &lt;/ span&gt;
+&lt;/ pre&gt;
+
+&lt;h4&gt; Line height line-height &lt;/ h4&gt;
+
+&lt;pre&gt;
+&lt;div style = "line-height: 150%;"&gt; The line height is specified by line-height. Opening the line height to some extent has the effect of making the text easier to read. Set the row height for easy viewing. Writing such a long sentence should span two lines. &lt;/ div&gt;
+&lt;/ pre&gt;
+
+Use line-height to specify the height of the line. There are several ways to specify the value, but it seems that the description using "%" is often used. "%" Specifies how high the line should be with respect to the height of the character. So, for example, if you specify "150%", if the height of the character is 100, it will be half the line spacing of "50" sentences. Properly specifying the line spacing has the effect of making the text easier to read.
+
+&lt;h4&gt; Character spacing letter-spacing &lt;/ h4&gt;
+
+&lt;pre&gt;
+&lt;div style = "letter-spacing: 1em;"&gt; Character spacing &lt;/ div&gt;
+&lt;div style = "letter-spacing: 0.1em;"&gt; Easy-to-read character spacing &lt;/ div&gt;
+&lt;/ pre&gt;
+
+Use letter-spacing to specify the character spacing. There are several ways to specify the value, but it seems that "em" based on one character is often used. It seems that a slightly wider character spacing has the effect of making the text easier to read.
+
+&lt;h3&gt; Background properties &lt;/ h3&gt;
+
+&lt;h4&gt; Background color background-color &lt;/ h4&gt;
+
+&lt;pre&gt;
+&lt;div style = "background-color: red;"&gt; background color &lt;/ div&gt;
+&lt;div style = "background-color: #FFDDDD;"&gt; Background color (very light red) &lt;/ div&gt;
+&lt;div style = "background-color: #DDFFDD;"&gt; Background color (very light green) &lt;/ div&gt;
+&lt;div style = "background-color: #DDDDFF;"&gt; Background color (very light blue) &lt;/ div&gt;
+&lt;/ pre&gt;
+
+Use background-color to specify the background color. The light background color seems to be often used when designing.
+
+&lt;h4&gt; background image background-image &lt;/ h4&gt;
+
+&lt;pre&gt;
+&lt;div style = "background-image: url ('/image/sky.png');"&gt; background image &lt;/ div&gt;
+&lt;/ pre&gt;
+
+Use background-image to specify a background image. Specify the URL of the image. It seems better to specify the URL as an absolute path from the document root. By default, the background image is displayed repeatedly vertically and horizontally.
+
+&lt;h4&gt; Specifying the repetition of the background image &lt;/ h4&gt;
+
+&lt;pre&gt;
+&lt;div style = "background-repeat: no-repeat;"&gt; No repeat &lt;/ div&gt;
+&lt;/ pre&gt;
+
+The background image is repeated by default, but you can cancel the repetition by specifying "no-repeat" for background-repeat.
+
+&lt;h3&gt; Border properties &lt;/ h3&gt;
+
+&lt;h4&gt; Border specification border &lt;/ h4&gt;
+
+&lt;pre&gt;
+&lt;div style = "border: 1px solid blue;"&gt; 1px blue single line border &lt;/ div&gt;
+&lt;div style = "border: 1px double blue; "&gt; 1px blue two-line border &lt;/ div&gt;
+&lt;div style = "border: 1px dashed blue;"&gt; 1px dashed blue border &lt;/ div&gt;
+&lt;div style = "border: 1px dotted blue;"&gt; 1px blue dotted border &lt;/ div&gt;
+&lt;/ pre&gt;
+
+Use border to specify the border. Specify the combination of "Line thickness", "Line type", and "Line color" separated by a blank.
+
+There are the following types of lines.
+
+&lt;ul&gt;
+  &lt;li&gt;
+    1 line solid
+  &lt;/ li&gt;
+  &lt;li&gt;
+    2 main line double
+  &lt;/ li&gt;
+  &lt;li&gt;
+    Dashed dashed
+  &lt;/ li&gt;
+  &lt;li&gt;
+    Dotted line dotted
+  &lt;/ li&gt;
+&lt;/ ul&gt;
+
+You can also specify only the border at a specific position by using the properties "border-top", "border-left", "border-right", and "border-bottom".
+
+&lt;pre&gt;
+&lt;div style = "border-top: 1px solid blue;"&gt; Border (upper) &lt;/ div&gt;
+&lt;div style = "border-left: 1px solid blue;"&gt; Border (left side) &lt;/ div&gt;
+&lt;div style = "border-right: 1px solid blue;"&gt; Border (right side) &lt;/ div&gt;
+&lt;div style = "border-bottom: 1px solid blue;"&gt; Border (bottom) &lt;/ div&gt;
+&lt;/ pre&gt;
+
+&lt;h3&gt; Element position and display properties &lt;/ h3&gt;
+
+&lt;h4&gt; Block element width and height width, height &lt;/ h4&gt;
+
+&lt;pre&gt;
+&lt;div style = "width: 200px; height: 100px; background-color: green;"&gt; width (200px), height (100px) &lt;/ div&gt;
+&lt;/ pre&gt;
+
+Use width and height to specify the width and height of the block element. Note that specifying width and height for inline elements has no effect.
+
+You can also specify a percentage based on the width of the parent element.
+
+&lt;pre&gt;
+&lt;div style = "width: 200px; height: 100px; background-color: green;"&gt;
+  &lt;div style = "width: 80%; height: 70%; background-color: blue;"&gt; width (80%), height (70%) &lt;/ div&gt;
+&lt;/ div&gt;
+&lt;/ pre&gt;
+
+&lt;h4&gt; Margin margin &lt;/ h4&gt;
+
+&lt;pre&gt;
+&lt;div style = "background-color: #FFCCCC;"&gt;
+  &lt;div style = "background-color: # FF6666;"&gt; Upper element &lt;/ div&gt;
+  &lt;div style = "margin: 20px 30px 50px 30px; background-color: # FF6666;"&gt; Specify the "top left bottom right" margin &lt;/ div&gt;
+  &lt;div style = "margin: 20px 30px; background-color: # FF6666;"&gt; Specify the "top left bottom right" margin &lt;/ div&gt;
+  &lt;div style = "margin: 20px; background-color: # FF6666;"&gt; Specify the margins of "upper left lower right" together &lt;/ div&gt;
+  &lt;div style = "background-color: # FF6666;"&gt; Lower element &lt;/ div&gt;
+&lt;/ div&gt;
+&lt;/ pre&gt;
+
+Use margin to specify the margin. Margin is the spacing between elements. Margins are specified by separating them with a blank. If you specify four values ​​separated by a blank, it will be specified as "upper left lower right". If you specify two values ​​separated by a blank, it will be specified as "up / down / left / right". If only one value is specified, the same value will be obtained for "up / down / left / right". In the example, the background color is added so that the meaning of the margin is easy to understand.
+
+One caveat is that the margin values ​​are not added when the elements touch vertically. In that case, the larger value is selected. For example, if the lower margin of the element A is 20px and the upper margin of the element B is 50px, the upper and lower margins between A and B are not added to 70px, but the larger value. It will be 50px.
+
+Margins can also be specified individually on the top, bottom, left, and right.
+
+&lt;pre&gt;
+&lt;div style = "background-color: #FFCCCC;"&gt;
+  &lt;div style = "background-color: # FF6666;"&gt; Upper element &lt;/ div&gt;
+  &lt;div style = "margin-top: 20px; background-color: # FF6666;"&gt; Margin on top &lt;/ div&gt;
+  &lt;div style = "margin-left: 20px; background-color: # FF6666;"&gt; left margin &lt;/ div&gt;
+  &lt;div style = "margin-bottom: 20px; background-color: # FF6666;"&gt; bottom margin &lt;/ div&gt;
+  &lt;div style = "margin-right: 20px; background-color: # FF6666;"&gt; right margin &lt;/ div&gt;
+  &lt;div style = "background-color: # FF6666;"&gt; Lower element &lt;/ div&gt;
+&lt;/ div&gt;
+&lt;/ pre&gt;
+
+Another caveat is that if you specify a top and bottom margin for an inline element, it will be ignored. For example, for the following specifications, there is a 20px margin on the left and right, but no margin is set on the top and bottom.
+
+&lt;pre&gt;
+&lt;span style = "margin: 20px;"&gt; Inline elements ignore top and bottom margins &lt;/ span&gt;
+&lt;/ pre&gt;
+
+&lt;h4&gt; Padding padding &lt;/ h4&gt;
+
+&lt;pre&gt;
+&lt;div style = "padding: 20px 30px 50px 30px; background-color: #FFCCCC;"&gt; Specify "top left bottom right" padding &lt;/ div&gt; &lt;br&gt;
+&lt;div style = "padding: 20px 30px; background-color: #FFCCCC;"&gt; Specify the padding of "upper left lower right" &lt;/ div&gt; &lt;br&gt;
+&lt;div style = "padding: 20px; background-color: #FFCCCC;"&gt; Specify the padding of "upper left lower right" together &lt;/ div&gt;
+&lt;/ pre&gt;
+
+Use padding to specify padding. Padding is the distance between the inner elements. Padding is specified by separating them with a blank. If you specify four values ​​separated by a blank, it will be specified as "upper left lower right". If you specify two values ​​separated by a blank, it will be specified as "up / down / left / right". If only one value is specified, the same value will be obtained for "up / down / left / right".
+
+You can also specify the padding individually on the top, bottom, left, and right.
+
+&lt;pre&gt;
+&lt;div style = "padding-top: 20px; background-color: # FF6666;"&gt; Upper padding &lt;/ div&gt;
+&lt;div style = "padding-left: 20px; background-color: # FF6666;"&gt; Left padding &lt;/ div&gt;
+&lt;div style = "padding-bottom: 20px; background-color: # FF6666;"&gt; Lower padding &lt;/ div&gt;
+&lt;div style = "padding-right: 20px; background-color: # FF6666;"&gt; Right padding &lt;/ div&gt;
+&lt;/ pre&gt;
+
+&lt;h4&gt; How to display the protruding part overflow &lt;/ h4&gt;
+
+&lt;pre&gt;
+&lt;div style = "height: 100px; width: 100px; overflow: auto;"&gt; Scroll the protruding part. Scroll the protruding part. Scroll the protruding part. Scroll the protruding part. &lt;/ div&gt;
+&lt;/ pre&gt;
+
+If you want to scroll the protruding part vertically, specify "auto" for overflow.
+
+&lt;h3&gt; Change the display method of elements display &lt;/ h3&gt;
+
+&lt;pre&gt;
+&lt;span style = "display: block"&gt; Change span to block element &lt;/ span&gt;
+&lt;h1 style = "display: inline"&gt; Change h1 to an inline element &lt;/ h1&gt; Ah
+&lt;/ pre&gt;
+
+Use display to change how elements are displayed. If "block" is specified, it becomes a block element, and if "inline" is specified, it becomes an inline element.
+
+&lt;h3&gt; List properties &lt;/ h3&gt;
+
+&lt;h4&gt; List style type list-style-type &lt;/ h4&gt;
+
+&lt;pre&gt;
+&lt;ul style = "list-style-type: none"&gt;
+  &lt;li&gt; Nothing attached &lt;/ li&gt;
+  &lt;li&gt; Nothing attached &lt;/ li&gt;
+&lt;/ ul&gt;
+
+&lt;ul style = "list-style-type: circle"&gt;
+  &lt;li&gt; white circle &lt;/ li&gt;
+  &lt;li&gt; white circle &lt;/ li&gt;
+&lt;/ ul&gt;
+&lt;/ pre&gt;
+
+Lists created with ul and lists created with ol are prefixed with numbers and black circles, but you can change this. If you specify none and you are concerned about the left margin, you can eliminate the margin by specifying the left margin and padding to 0px.
+
+&lt;pre&gt;
+&lt;ul style = "list-style-type: none; margin-left: 0px; padding: 0px"&gt;
+  &lt;li&gt; Nothing attached &lt;/ li&gt;
+  &lt;li&gt; Nothing attached &lt;/ li&gt;
+&lt;/ ul&gt;
+&lt;/ pre&gt;
+
+&lt;h3&gt; CSS selector &lt;/ h3&gt;
+
+Now that we've covered the properties related to design, let's learn about CSS selectors to specify in detail which elements to set CSS for. When writing CSS inside or outside the style tag, write as follows. The h1, div and p parts are the selectors.
+
+&lt;pre&gt;
 h1 {
-  color:red;
-  font-size:200%;
+  color: red;
+  font-size: 200%;
 }
 
 div {
-  background-color:blue;
+  background-color: blue;
 }
 
 p {
-  border:1px green solid;
+  border: 1px green solid;
 }
 
-</pre>
-<p>
-  このように定義を行うとすべてのh1、div、pに対してCSSが適用されます。
-</p>
-<h4>識別子による指定</h4>
-<p>
-  識別子を使うとある特定の要素にだけCSSを適用することができます。
-</p>
-<pre>
-/* CSS */
+&lt;/ pre&gt;
+
+With this definition, CSS will be applied to all h1, divs and ps.
+
+&lt;h4&gt; Specify by identifier &lt;/ h4&gt;
+
+Identifiers allow you to apply CSS only to certain elements.
+
+&lt;pre&gt;
+/ * CSS * /
 #discription {
-  color:red;
+  color: red;
 }
-</pre>
-<pre>
-&lt;!-- HTML --&gt;
-&lt;div id="discription"&gt;識別子による指定&lt;/div&gt;
-</pre>
-<p>
-  識別子を利用するには、HTMLの側の要素にidを指定しておく必要があります。CSSの側では「#識別子」という指定を行います。
-</p>
-<pre>
-#識別子 {
+&lt;/ pre&gt;
+
+&lt;pre&gt;
+&lt;!-HTML-&gt;
+&lt;div id = "discription"&gt; Specify by identifier &lt;/ div&gt;
+&lt;/ pre&gt;
+
+To use the identifier, you need to specify the id in the element on the HTML side. On the CSS side, specify "# identifier".
+
+&lt;pre&gt;
+#Identifier {
   
 }
-</pre>
-<h4>クラスによる指定</h4>
-<p>
-  クラスを使うと特定のグループに対してのみCSSを適用することができます。
-</p>
-<pre>
-/* CSS */
-.pretty {
-  color:red;
+&lt;/ pre&gt;
+
+&lt;h4&gt; Specify by class &lt;/ h4&gt;
+
+Classes allow you to apply CSS only to specific groups.
+
+&lt;pre&gt;
+/ * CSS * /
+.pretty {color: red;
 }
-</pre>
-<pre>
-&lt;!-- HTML --&gt;
-&lt;div class="pretty"&gt;クラスによる指定&lt;/div&gt;
-&lt;div class="pretty"&gt;クラスによる指定&lt;/div&gt;
-</pre>
-<p>
-  クラスを利用するには、HTMLの側の要素にclassを指定しておく必要があります。CSSの側では「.識別子」という指定を行います。
-</p>
-<pre>
-.クラス {
+&lt;/ pre&gt;
+
+&lt;pre&gt;
+&lt;!-HTML-&gt;
+&lt;div class = "pretty"&gt; specified by class &lt;/ div&gt;
+&lt;div class = "pretty"&gt; specified by class &lt;/ div&gt;
+&lt;/ pre&gt;
+
+To use the class, it is necessary to specify the class in the element on the HTML side. On the CSS side, specify ".identifier".
+
+&lt;pre&gt;
+.class {
   
 }
-</pre>
-<h4>タグ名とクラスの組み合わせ</h4>
-<p>
-  タグ名とクラスを組み合わせて利用することもできます。
-</p>
-<pre>
-/* CSS */
+&lt;/ pre&gt;
+
+&lt;h4&gt; Tag name and class combination &lt;/ h4&gt;
+
+You can also use a combination of tag name and class.
+
+&lt;pre&gt;
+/ * CSS * /
 h1.pretty {
-  color:red;
+  color: red;
 }
-</pre>
-<pre>
-&lt;!-- HTML --&gt;
-&lt;h1 class="pretty"&gt;タグ名とクラスによる指定&lt;/h1&gt;
-&lt;div class="pretty"&gt;こちらには適用されない&lt;/div&gt;
-</pre>
-<p>
-  タグ名とクラス名を組み合わせて利用するには「タグ名.クラス」という指定を行います。
-</p>
-<pre>
-タグ名.クラス
-</pre>
-<h4>入れ子になった構造</h4>
-<p>
-  入れ子になった要素に対してCSSを適用することもできます。
-</p>
-<pre>
-/* CSS */
+&lt;/ pre&gt;
+
+&lt;pre&gt;
+&lt;!-HTML-&gt;
+&lt;h1 class = "pretty"&gt; Tag name and class specification &lt;/ h1&gt;
+&lt;div class = "pretty"&gt; Not applicable here &lt;/ div&gt;
+&lt;/ pre&gt;
+
+To use the tag name and class name in combination, specify "tag name.class".
+
+&lt;pre&gt;
+Tag name.class
+&lt;/ pre&gt;
+
+&lt;h4&gt; Nested structure &lt;/ h4&gt;
+
+You can also apply CSS to nested elements.
+
+&lt;pre&gt;
+/ * CSS * /
 #description p.pretty {
-  color:red;
+  color: red;
 }
-</pre>
-<pre>
-&lt;!-- HTML --&gt;
-&lt;div id="description"&gt;
-  &lt;p class="pretty"&gt;入れ子になった要素に適用&lt;/p&gt;
-&lt;/div&gt;
+&lt;/ pre&gt;
+
+&lt;pre&gt;
+&lt;!-HTML-&gt;
+&lt;div id = "description"&gt;
+  &lt;p class = "pretty"&gt; Apply to nested elements &lt;/ p&gt;
+&lt;/ div&gt;
 
 &lt;div&gt;
-  &lt;p class="pretty"&gt;こちらには適用されない&lt;/p&gt;
-&lt;/div&gt;
-</pre>
-<p>
-  上記の指定は、idが「description」であるタグの内側に存在し、クラスが「pretty」であるpタグに適用という意味になります。
-</p>
-<p>
-  入れ子になった構造に対してCSSを適用するにはセレクタを空白で区切って適用します。
-</p>
-<pre>
-セレクタ1 セレクタ2 {
+  &lt;p class = "pretty"&gt; Not applicable here &lt;/ p&gt;
+&lt;/ div&gt;
+&lt;/ pre&gt;
+
+The above specification means that it is applied to the p tag whose id is "description" and whose class is "pretty".
+
+To apply CSS to a nested structure, apply the selectors separated by spaces.
+
+&lt;pre&gt;
+Selector 1 Selector 2 {
 
 }
-</pre>
+&lt;/ pre&gt;
 
   </div>
   <div class="bottom">
@@ -556,12 +580,10 @@ h1.pretty {
           <!-- side -->
 <div class="side-list">
   <div class="side-list-title">
-    メニュー
+    Menu
   </div>
   <ul>
-    <li><a href="/blog/20190416153053.html">Windowsで個人ブログを作る</a></li>
-    <li>Macで個人ブログを作る</li>
-    <li>Linuxで個人ブログを作る</li>
+    <li><a href="/blog/20190416153053.html">Create Your Blogs on Windows</a></li>
   </ul>
 </div>
 

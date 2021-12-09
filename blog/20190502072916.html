@@ -17,12 +17,12 @@
 
   gtag('config', 'G-H9CYDCGDRK');
 </script>
-<title>画像を表示する - Giblog Official Site - Tools creating Web Site and Blog that is managed using Git</title>
-<meta name="description" content="画像を記事の中に表示してみましょう。わかりやすいイラストが入ると、記事の質がぐっと高まります。">
+<title> Display image  - Giblog Official Site - Tools creating Web Site and Blog that is managed using Git</title>
+<meta name="description" content="Let's display the image in the article. With easy-to-understand illustrations, the quality of the article will be greatly improved.">
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:site" content="@perlzemi" />
-<meta name="twitter:title" content="画像を表示する - Giblog Official Site - Tools creating Web Site and Blog that is managed using Git" />
-<meta name="twitter:description" content="画像を記事の中に表示してみましょう。わかりやすいイラストが入ると、記事の質がぐっと高まります。" />
+<meta name="twitter:title" content=" Display image  - Giblog Official Site - Tools creating Web Site and Blog that is managed using Git" />
+<meta name="twitter:description" content="Let's display the image in the article. With easy-to-understand illustrations, the quality of the article will be greatly improved." />
 <meta name="twitter:image" content="https://en.giblog.perlzemi.com//images/giblog-favicon.png" />
 
 
@@ -45,7 +45,7 @@
 
 <div class="header-content">
   <div class="header-content-title">
-    <a href="/"><img src="/images/giblog-logo-image-text.png" width="170" alt="Giblog公式サイト" style="vertical-align:-25px;"></a>
+    <a href="/"><img src="/images/giblog-logo-image-text.png" width="170" alt="Giblog" style="vertical-align:-25px;"></a>
   </div>
   <div class="menu-button" onclick="$('.header-content-menu').toggle();">
     <img src="/images/menu.png" style="width:40px;">
@@ -66,104 +66,99 @@
 
   </div>
   <div class="middle">
-    <h2><a href="/blog/20190502072916.html">画像を表示する</a></h2>
+    <h2><a href="/blog/20190502072916.html"> Display image </a></ h2>
 <p>
-  画像を記事の中に表示してみましょう。わかりやすいイラストが入ると、記事の質がぐっと高まります。
+  Let's display the image in the article. With easy-to-understand illustrations, the quality of the article will be greatly improved.
 </p>
 <p>
-  画像の例としてLinuxのペンギン君で試してみましょう。
+  Let's try Linux Penguins as an example of the image.
 </p>
 <p>
-  <img src="/images/linux-penguin.png">
+  <img src = "/ images / linux-penguin.png">
 </p>
 <p>
-  上記が表示した例です。
+  The above is the example displayed.
 </p>
-<h3>画像を配置する</h3>
+<h3> Place the image </ h3>
 <p>
-  最初に、画像を配置する必要があります。
-</p>
-<p>
-  準備した画像の名前が「linux-penguin.png」だとして、以下のディレクトリの中に、画像を配置しましょう。
-</p>
-<pre>
-templates/static/images
-</pre>
-<p>
-  このディレクトリの中に画像を配置しましょう。
-</p>
-<h3>画像を表示する</h3>
-<p>
-  画像の配置が完了したら、画像を表示してみましょう。
+  First, you need to place the image.
 </p>
 <p>
-  記事の中に次の一行を追加しましょう。
+  Assuming that the name of the prepared image is "linux-penguin.png", let's place the image in the following directory.
 </p>
 <pre>
-&lt;img src="/images/linux-penguin.png"&gt;
-</pre>
-<p>
-  画像が表示されました。
-</p>
-<p>
-  imgタグというのは、画像を表示するためのHTMLの機能です。srcという属性に、画像のパスを指定します。
-</p>
-<h3>FAQ</h3>
-<h4>画像のサイズを指定したい</h4>
-<p>
-  画像のサイズを指定したい場合は、スタイルシートを使用して以下のように書きましょう。
-</p>
-<pre>
-&lt;img src="/images/linux-penguin.png" style="width:400px"&gt;
-</pre>
-<p>
-  <img src="/images/linux-penguin.png" style="width:400px">
-</p>
-<h4>画像のサイズを、スマートフォンとPCの両方で対応したい</h4>
-<p>
-  画像のサイズを、スマートフォンとPCの両方で対応したい場合は、以下のように書きましょう。
-</p>
-<p>
-  スマートフォンの場合は、横画面の98%、パソコンの場合は、400pxで表示されます。
-</p>
-<pre>
-&lt;img src="/images/linux-penguin.png" style="width:98%;max-width:400px;"&gt;
-</pre>
-<p>
-  <img src="/images/linux-penguin.png" style="width:98%;max-width:400px;">
-</p>
-<h4>画像をボーダーで囲みたい</h4>
-<p>
-  画像をボーダーで囲みたい場合は、以下のように書きましょう。
-</p>
-<pre>
-&lt;img src="/images/linux-penguin.png" style="border:1px solid #ddd"&gt;
-</pre>
-<p>
-  <img src="/images/linux-penguin.png" style="border:1px solid #ddd">
-</p>
-<p>
-  1pxの薄い灰色のボーダーで囲まれます。
-</p>
-<h4>画像の配置は、サブディレクトリにしても大丈夫ですか</h4>
-<p>
-  はい。
-</p>
-<pre>
-templates/static/images/foo/bar.png
-</pre>
-<p>
-  のように、サブディレクトリにしても大丈夫です。
-</p>
-<p>
-  画像の指定はは
-</p>
-<pre>
-&lt;img src="/images/foo/bar.png"&gt;
-</pre>
-<p>
-  になります。
-</p>
+templates / static / images
+&lt;/ pre&gt;
+
+Place your images in this directory.
+
+&lt;h3&gt; Display image &lt;/ h3&gt;
+
+After arranging the images, let's display the images.
+
+Add the following line to your article.
+
+&lt;pre&gt;
+&lt;img src = "/ images / linux-penguin.png"&gt;
+&lt;/ pre&gt;
+
+The image is displayed.
+
+The img tag is an HTML function for displaying images. Specify the image path in the attribute called src.
+
+&lt;h3&gt; FAQ &lt;/ h3&gt;
+
+&lt;h4&gt; I want to specify the size of the image &lt;/ h4&gt;
+
+If you want to specify the size of the image, use a stylesheet and write:
+
+&lt;pre&gt;
+&lt;img src = "/ images / linux-penguin.png" style = "width: 400px"&gt;
+&lt;/ pre&gt;
+
+&lt;img src = "/ images / linux-penguin.png" style = "width: 400px"&gt;
+
+&lt;h4&gt; I want to support the image size on both smartphones and PCs &lt;/ h4&gt;
+
+If you want to support the size of the image on both smartphones and PCs, write as follows.
+
+For smartphones, it is displayed at 98% of the horizontal screen, and for PCs, it is displayed at 400px.
+
+&lt;pre&gt;
+&lt;img src = "/ images / linux-penguin.png" style = "width: 98%; max-width: 400px;"&gt;
+&lt;/ pre&gt;
+
+&lt;img src = "/ images / linux-penguin.png" style = "width: 98%; max-width: 400px;"&gt;
+
+&lt;h4&gt; I want to surround the image with a border &lt;/ h4&gt;
+
+If you want to surround the image with a border, write as follows.
+
+&lt;pre&gt;
+&lt;img src = "/ images / linux-penguin.png" style = "border: 1px solid #ddd"&gt;
+&lt;/ pre&gt;
+
+&lt;img src = "/ images / linux-penguin.png" style = "border: 1px solid #ddd"&gt;
+
+Surrounded by a 1px light gray border.
+
+&lt;h4&gt; Is it okay to place images in subdirectories? &lt;/ H4&gt;
+
+Yes.
+
+&lt;pre&gt;
+templates / static / images / foo / bar.png
+&lt;/ pre&gt;
+
+It's okay to have a subdirectory like this.
+
+The image is specified
+
+&lt;pre&gt;
+&lt;img src = "/ images / foo / bar.png"&gt;
+&lt;/ pre&gt;
+
+Will be.
 
   </div>
   <div class="bottom">
@@ -177,12 +172,10 @@ templates/static/images/foo/bar.png
           <!-- side -->
 <div class="side-list">
   <div class="side-list-title">
-    メニュー
+    Menu
   </div>
   <ul>
-    <li><a href="/blog/20190416153053.html">Windowsで個人ブログを作る</a></li>
-    <li>Macで個人ブログを作る</li>
-    <li>Linuxで個人ブログを作る</li>
+    <li><a href="/blog/20190416153053.html">Create Your Blogs on Windows</a></li>
   </ul>
 </div>
 

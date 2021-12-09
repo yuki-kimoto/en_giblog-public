@@ -17,12 +17,12 @@
 
   gtag('config', 'G-H9CYDCGDRK');
 </script>
-<title>ブログの記事を追加する - Giblog Official Site - Tools creating Web Site and Blog that is managed using Git</title>
-<meta name="description" content="ブログの記事を追加してみましょう。ブログで、新しい記事を書きたいときは、次のコマンドを実行します。">
+<title> Add a blog post  - Giblog Official Site - Tools creating Web Site and Blog that is managed using Git</title>
+<meta name="description" content="Let's add a blog post. If you want to write a new article on your blog, run the following command:">
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:site" content="@perlzemi" />
-<meta name="twitter:title" content="ブログの記事を追加する - Giblog Official Site - Tools creating Web Site and Blog that is managed using Git" />
-<meta name="twitter:description" content="ブログの記事を追加してみましょう。ブログで、新しい記事を書きたいときは、次のコマンドを実行します。" />
+<meta name="twitter:title" content=" Add a blog post  - Giblog Official Site - Tools creating Web Site and Blog that is managed using Git" />
+<meta name="twitter:description" content="Let's add a blog post. If you want to write a new article on your blog, run the following command:" />
 <meta name="twitter:image" content="https://en.giblog.perlzemi.com//images/giblog-favicon.png" />
 
 
@@ -45,7 +45,7 @@
 
 <div class="header-content">
   <div class="header-content-title">
-    <a href="/"><img src="/images/giblog-logo-image-text.png" width="170" alt="Giblog公式サイト" style="vertical-align:-25px;"></a>
+    <a href="/"><img src="/images/giblog-logo-image-text.png" width="170" alt="Giblog" style="vertical-align:-25px;"></a>
   </div>
   <div class="menu-button" onclick="$('.header-content-menu').toggle();">
     <img src="/images/menu.png" style="width:40px;">
@@ -66,66 +66,60 @@
 
   </div>
   <div class="middle">
-    <h2><a href="/blog/20190423082921.html">ブログの記事を追加する</a></h2>
+    <h2><a href="/blog/20190423082921.html"> Add a blog post </a></ h2>
 <p>
-  ブログの記事を追加してみましょう。ブログで、新しい記事を書きたいときは、次のコマンドを実行します。
+  Let's add a blog post. If you want to write a new article on your blog, run the following command:
 </p>
 <p>
-  ホームディレクトリに「mysite」という名前で、サイトが作成されていると想定して解説します。
+  Let's assume that a site has been created in your home directory with the name "mysite".
 </p>
 <p>
-  まずcdコマンドを使って、サイトのディレクトリに移動します。
-</p>
-<pre>
-cd ~/mysite
-</pre>
-<p>
-  ディレクトリに移動したら「giblog add」コマンドを使って、ブログの記事を追加します。
+  First, use the cd command to change to your site's directory.
 </p>
 <pre>
+cd ~ / mysite
+&lt;/ pre&gt;
+
+Once in the directory, use the "giblog add" command to add a blog post.
+
+&lt;pre&gt;
 giblog add
-</pre>
-<p>
-  すると、次のようなメッセージが表示されます。
-</p>
-<pre>
-Create templates/blog/20190423082921.html
-</pre>
-<p>
-  今日の年月日と時刻が入ったHTMLファイルが作成されます。
-</p>
-<p>
-  このファイルは空なので、テキストエディタで開いて、編集します。
-</p>
-<p>
-  記事のタイトルと簡単な記事を書いてみましょう。
-</p>
-<pre>
-&lt;h2&gt;今日はみかんを食べたぞ&lt;/h2&gt;
+&lt;/ pre&gt;
 
-今日食べたみかんは、とても甘くおいしかった。
+Then, the following message will be displayed.
 
-みっつも食べてしまった。
+&lt;pre&gt;
+Create templates / blog / 20190423082921.html
+&lt;/ pre&gt;
 
-</pre>
-<p>
-  タイトルは「h2」タグの中に書きます。本文は上のように、段落ごとに記述しましょう。
-</p>
-<p>
-  注意点として、先頭に半角空白を入れないようにしましょう。
-</p>
-<p>
-  先頭に半角空白を入れると、自動改行機能が無効になってしまうためです。
-</p>
-<p>
-  記事を追加したら、次のコマンドでサイトを立ち上げて、確認してみましょう。
-</p>
-<p>
-  もし文字化けを起こしてしまう場合は、ファイルの保存の文字コードがUTF-8になっていることを確認しましょう。
-</p>
-<pre>
+An HTML file will be created with today's date and time.
+
+This file is empty, so open it in a text editor and edit it.
+
+Let's write an article title and a brief article.
+
+&lt;pre&gt;
+&lt;h2&gt; I ate oranges today &lt;/ h2&gt;
+
+The oranges I ate today were very sweet and delicious.
+
+I ate Mitsu too.
+
+&lt;/ pre&gt;
+
+Write the title inside the "h2" tag. Write the text paragraph by paragraph as above.
+
+As a caveat, do not put a half-width space at the beginning.
+
+This is because if you insert a half-width space at the beginning, the automatic line feed function will be disabled.
+
+After adding the article, launch the site with the following command and check it.
+
+If the characters are garbled, make sure that the character code for saving the file is UTF-8.
+
+&lt;pre&gt;
 morbo serve.pl
-</pre>
+&lt;/ pre&gt;
 
   </div>
   <div class="bottom">
@@ -139,12 +133,10 @@ morbo serve.pl
           <!-- side -->
 <div class="side-list">
   <div class="side-list-title">
-    メニュー
+    Menu
   </div>
   <ul>
-    <li><a href="/blog/20190416153053.html">Windowsで個人ブログを作る</a></li>
-    <li>Macで個人ブログを作る</li>
-    <li>Linuxで個人ブログを作る</li>
+    <li><a href="/blog/20190416153053.html">Create Your Blogs on Windows</a></li>
   </ul>
 </div>
 

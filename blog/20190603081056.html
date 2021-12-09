@@ -17,12 +17,12 @@
 
   gtag('config', 'G-H9CYDCGDRK');
 </script>
-<title>お問い合わせフォームを設置する - Giblog Official Site - Tools creating Web Site and Blog that is managed using Git</title>
-<meta name="description" content="お問い合わせフォームを設置してみましょう。">
+<title> Set up an inquiry form  - Giblog Official Site - Tools creating Web Site and Blog that is managed using Git</title>
+<meta name="description" content="Let's set up an inquiry form.">
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:site" content="@perlzemi" />
-<meta name="twitter:title" content="お問い合わせフォームを設置する - Giblog Official Site - Tools creating Web Site and Blog that is managed using Git" />
-<meta name="twitter:description" content="お問い合わせフォームを設置してみましょう。" />
+<meta name="twitter:title" content=" Set up an inquiry form  - Giblog Official Site - Tools creating Web Site and Blog that is managed using Git" />
+<meta name="twitter:description" content="Let's set up an inquiry form." />
 <meta name="twitter:image" content="https://en.giblog.perlzemi.com//images/giblog-favicon.png" />
 
 
@@ -45,7 +45,7 @@
 
 <div class="header-content">
   <div class="header-content-title">
-    <a href="/"><img src="/images/giblog-logo-image-text.png" width="170" alt="Giblog公式サイト" style="vertical-align:-25px;"></a>
+    <a href="/"><img src="/images/giblog-logo-image-text.png" width="170" alt="Giblog" style="vertical-align:-25px;"></a>
   </div>
   <div class="menu-button" onclick="$('.header-content-menu').toggle();">
     <img src="/images/menu.png" style="width:40px;">
@@ -66,46 +66,46 @@
 
   </div>
   <div class="middle">
-    <h2><a href="/blog/20190603081056.html">お問い合わせフォームを設置する</a></h2>
+    <h2><a href="/blog/20190603081056.html"> Set up an inquiry form </a></ h2>
 <p>
-  お問い合わせフォームを設置してみましょう。
+  Let's set up an inquiry form.
 </p>
 <p>
-  CGIが実行できるレンタルサーバーで動いていることが条件です。
+  It must be running on a rental server that can run CGI.
 </p>
 <p>
-  今回紹介するのは、件名とメールアドレスとメッセージを送信できる<a href="https://perlzemi.com/mail.html">シンプルなメールフォーム</a>です。
+  Introducing this time is a <a href="https://perlzemi.com/mail.html"> simple email form </a> that allows you to send a subject, email address and message.
 </p>
 <p>
-  お問い合わせフォームのHTMLとお問い合わせフォームのCGIを設定することで、動きます
+  It works by setting the HTML of the inquiry form and the CGI of the inquiry form.
 </p>
-<h3>お問い合わせフォームのHTML</h3>
+<h3> Inquiry Form HTML </ h3>
 <p>
-  お問い合わせフォームのHTMLです。
+  HTML for the contact form.
 </p>
 <pre>
-&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"&gt;&lt;/script&gt;
+&lt;script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"&gt; &lt;/ script&gt;
 
 &lt;script&gt;
-  $(function() {
-    $('.mail-form button').on('click', function () {
-      var form_values = $('.mail-form form').serialize();
-      $.post(
+  $ (function () {
+    $ ('.mail-form button'). on ('click', function () {
+      var form_values ​​= $ ('.mail-form form'). serialize ();
+      $ .post (
         "/mail.cgi",
         form_values,
         function (data) {
           if (data.success) {
-            $('.mail-form').html('&lt;div class="mail-form-success"&gt;メッセージを受け付けました。送信ありがとうございます。&lt;/div&gt;');
+            $ ('.mail-form'). html ('&lt;div class = "mail-form-success"&gt; Message accepted. Thank you for sending. &lt;/ Div&gt;');
           }
           else {
-            // エラーメッセージ
+            // Error message
             var errors = data.errors;
-            $('.mail-form-errors').empty();
-            for (var i = 0; i &lt; errors.length; i++) {
-              var error = errors[i];
-              var li = $('&lt;li&gt;&lt;/li&gt;');
-              li.text(error);
-              $('.mail-form-errors').append(li);
+            $ ('.mail-form-errors'). empty ();
+            for (var i = 0; i &lt;errors.length; i ++) {
+              var error = errors [i];
+              var li = $ ('&lt;li&gt; &lt;/ li&gt;');
+              li.text (error);
+              $ ('.mail-form-errors'). Append (li);
             }
           }
         },
@@ -113,170 +113,167 @@
       );
     });
   });
-&lt;/script&gt;
+&lt;/ script&gt;
 
-&lt;h2&gt;お問合せフォーム&lt;/h2&gt;
-&lt;div class="mail-form"&gt;
-  &lt;ul class="mail-form-errors"&gt;
-  &lt;/ul&gt;
+&lt;h2&gt; Inquiry Form &lt;/ h2&gt;
+&lt;div class = "mail-form"&gt;
+  &lt;ul class = "mail-form-errors"&gt;
+  &lt;/ ul&gt;
   &lt;form&gt;
     &lt;label&gt;
-      &lt;div class="mail-form-title"&gt;
-        名前:
-      &lt;/div&gt;
-      &lt;div class="mail-form-body"&gt;
-        &lt;input type="text" size=50 name="name"&gt;&lt;br&gt;
-      &lt;/div&gt;
-    &lt;/label&gt;
+      &lt;div class = "mail-form-title"&gt;
+        name:
+      &lt;/ div&gt;
+      &lt;div class = "mail-form-body"&gt;
+        &lt;input type = "text" size = 50 name = "name"&gt; &lt;br&gt;
+      &lt;/ div&gt;
+    &lt;/ label&gt;
     &lt;label&gt;
-      &lt;div class="mail-form-title"&gt;
-        メールアドレス:
-      &lt;/div&gt;
-      &lt;div class="mail-form-body"&gt;
-        &lt;input type="text" size=50 name="email"&gt;
-      &lt;/div&gt;
-    &lt;/label&gt;
+      &lt;div class = "mail-form-title"&gt;
+        email address:
+      &lt;/ div&gt;
+      &lt;div class = "mail-form-body"&gt;
+        &lt;input type = "text" size = 50 name = "email"&gt;
+      &lt;/ div&gt;
+    &lt;/ label&gt;
     &lt;label&gt;
-      &lt;div class="mail-form-title"&gt;
-        メッセージ:
-      &lt;/div&gt;
-      &lt;div class="mail-form-body"&gt;
-        &lt;textarea name="message"&gt;&lt;/textarea&gt;
-      &lt;/div&gt;
-    &lt;/label&gt;
+      &lt;div class = "mail-form-title"&gt;
+        message:
+      &lt;/ div&gt;
+      &lt;div class = "mail-form-body"&gt;
+        &lt;textarea name = "message"&gt; &lt;/ textarea&gt;
+      &lt;/ div&gt;
+    &lt;/ label&gt;
     &lt;div&gt;
-      &lt;button type="button"&gt;メッセージを送信&lt;/button&gt;
-    &lt;/div&gt;
-  &lt;/form&gt;
-&lt;/div&gt;
-</pre>
-<p>
-  これを、以下のファイル名で、配置してください。
-</p>
-<pre>
-templates/mail.html
-</pre>
-<h3>お問い合わせフォームのCGI</h3>
-<p>
-  お問い合わせフォームのCGIです。
-</p>
-<p>
-  「$mailto」の部分に、送信先のメールアドレスを指定してください。
-</p>
-<pre>
-#!/usr/bin/env perl
+      &lt;button type = "button"&gt; Send message &lt;/ button&gt;
+    &lt;/ div&gt;
+  &lt;/ form&gt;
+&lt;/ div&gt;
+&lt;/ pre&gt;
+
+Place this with the following file name.
+
+&lt;pre&gt;
+templates / mail.html
+&lt;/ pre&gt;
+
+&lt;h3&gt; CGI of inquiry form &lt;/ h3&gt;
+
+This is the CGI of the inquiry form.
+
+Please specify the destination email address in the "$ mailto" part.
+
+&lt;pre&gt;
+#! / usr / bin / env perl
 
 use strict;
 use warnings;
 use utf8;
 
 use CGI;
-use JSON::PP 'encode_json';
-use MIME::Lite;
+use JSON :: PP'encode_json';
+use MIME :: Lite;
 
-use Encode 'decode', 'encode';
+use Encode'decode','encode';
 
-my $q = CGI-&gt;new;
+my $ q = CGI-&gt; new;
 
-# Mail to
-my $mailto = 'info@foo.example';
+#Mail to
+my $ mailto ='info@foo.example';
 
-# Mail title
-my $subject = 'サイトにメールが届いています';
+#Mail title
+my $ subject ='Email has arrived at the site';
 
-# Errors
+#Errors
 my @errors;
 
-# Name
-my $name = $q-&gt;param('name');
-$name = decode('UTF-8', $name);
-unless (length $name) {
-  push @errors, "名前を指定してください。";
+#Name
+my $ name = $ q-&gt; param ('name');
+$ name = decode ('UTF-8', $ name);
+unless (length $ name) {
+  push @errors, "Please specify a name.";
 }
 
-# Email
-my $email = $q-&gt;param('email');
-$email = decode('UTF-8', $email);
+#Email
+my $ email = $ q-&gt; param ('email');
+$ email = decode ('UTF-8', $ email);
 
-unless (length $email &amp;&amp; $email =~ /\@/) {
-  push @errors, "Eメールアドレスを正しく入力してください。";
+unless (length $ email &amp;&amp; $ email = ~ / \ @ /) {
+  push @errors, "Please enter your email address correctly.";
 }
 
-# Message
-my $message = $q-&gt;param('message');
-$message = decode('UTF-8', $message);
-unless (length $message) {
-  push @errors, "メッセージを指定してください。";
+#Message
+my $ message = $ q-&gt; param ('message');
+$ message = decode ('UTF-8', $ message);
+unless (length $ message) {
+  push @errors, "Please specify a message.";
 }
 
-# Response
-my $res = &lt;&lt;"EOS";
-Content-type: application/json;
+#Response
+my $ res = &lt;&lt; "EOS";
+Content-type: application / json;
 
 EOS
 
-my $res_data = {};
+my $ res_data = {};
 
 unless (@errors) {
-  # Mail body
-  my $mail_body = &lt;&lt;"EOS";
-Name: $name
-Email: $email
-Message: $message
+  #Mail body
+  my $ mail_body = &lt;&lt; "EOS";
+Name: $ name
+Email: $ email
+Message: $ message
 EOS
 
-  # Send mail
-  my $msg = MIME::Lite-&gt;new(
-    From    =&gt; $mailto,
-    To      =&gt; $mailto,
-    Subject =&gt; encode('MIME-Header', $subject),
-    Type    =&gt; 'multipart/mixed'
+  #Send mail
+  my $ msg = MIME :: Lite-&gt; new (
+    From =&gt; $ mailto,
+    To =&gt; $ mailto,
+    Subject =&gt; encode ('MIME-Header', $ subject),
+    Type =&gt;'multipart / mixed'
   );
-  $msg-&gt;attach(
-    Type     =&gt; 'TEXT',
-    Data     =&gt; encode('UTF-8', $mail_body),
+  $ msg-&gt; attach (
+    Type =&gt;'TEXT',
+    Data =&gt; encode ('UTF-8', $ mail_body),
   );
-  unless ($msg-&gt;send) {
-    push @errors, "メールの送信に失敗しました。";
+  unless ($ msg-&gt; send) {
+    push @errors, "Failed to send email.";
   }
 }
 
 if (@errors) {
-  $res_data-&gt;{success} = 0;
-  $res_data-&gt;{errors} = \@errors;
+  $ res_data-&gt; {success} = 0;
+  $ res_data-&gt; {errors} = \ @ errors;
 }
 else {
-  $res_data-&gt;{success} = 1;
+  $ res_data-&gt; {success} = 1;
 }
 
-# JSON response
-my $res_json = encode_json($res_data);
-$res .= "$res_json\n";
+#JSON response
+my $ res_json = encode_json ($ res_data);
+$ res. = "$ res_json \ n";
 
-# Print response
-print $res;
-</pre>
-<p>
-  これを、以下のファイル名で、配置してください。
-</p>
-<pre>
-templates/static/mail.cgi
-</pre>
-<p>
-  改行コードは「LF」で保存してください。
-</p>
-<p>
-  パーミッションは以下のコマンドで、「755」に変更してください。
-</p>
-<pre>
-chmod 755 templates/static/mail.cgi
-</pre>
-<p>
-  Gitを使う場合以外で、公開サーバーに配置する場合は、公開サーバー上でも、改行コードをLFに、パーミッションを755に設定する必要があります。
-</p>
-<p>
-  Perl入門ゼミの「<a href="https://github.com/yuki-kimoto/perlzemitut/tree/master/templates">メールフォーム</a>」も参考にしてください。
-</p>
+#Print response
+print $ res;
+&lt;/ pre&gt;
+
+Place this with the following file name.
+
+&lt;pre&gt;
+templates / static / mail.cgi
+&lt;/ pre&gt;
+
+Save the line feed code as "LF".
+
+Change the permission to "755" with the following command.
+
+&lt;pre&gt;
+chmod 755 templates / static / mail.cgi
+&lt;/ pre&gt;
+
+If you want to place it on a public server other than when using Git, you need to set the line feed code to LF and the permission to 755 even on the public server.
+
+Please also refer to "&lt;a href="https://github.com/yuki-kimoto/perlzemitut/tree/master/templates"&gt; mail form &lt;/a&gt;" in the Perl introductory seminar.
 
   </div>
   <div class="bottom">
@@ -290,12 +287,10 @@ chmod 755 templates/static/mail.cgi
           <!-- side -->
 <div class="side-list">
   <div class="side-list-title">
-    メニュー
+    Menu
   </div>
   <ul>
-    <li><a href="/blog/20190416153053.html">Windowsで個人ブログを作る</a></li>
-    <li>Macで個人ブログを作る</li>
-    <li>Linuxで個人ブログを作る</li>
+    <li><a href="/blog/20190416153053.html">Create Your Blogs on Windows</a></li>
   </ul>
 </div>
 

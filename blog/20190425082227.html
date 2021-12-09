@@ -17,12 +17,12 @@
 
   gtag('config', 'G-H9CYDCGDRK');
 </script>
-<title>スタイルシート(CSS)を編集する - Giblog Official Site - Tools creating Web Site and Blog that is managed using Git</title>
-<meta name="description" content="スタイルシート(CSS)を編集してみましょう。">
+<title> Edit stylesheet (CSS)  - Giblog Official Site - Tools creating Web Site and Blog that is managed using Git</title>
+<meta name="description" content="Let's edit the style sheet (CSS).">
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:site" content="@perlzemi" />
-<meta name="twitter:title" content="スタイルシート(CSS)を編集する - Giblog Official Site - Tools creating Web Site and Blog that is managed using Git" />
-<meta name="twitter:description" content="スタイルシート(CSS)を編集してみましょう。" />
+<meta name="twitter:title" content=" Edit stylesheet (CSS)  - Giblog Official Site - Tools creating Web Site and Blog that is managed using Git" />
+<meta name="twitter:description" content="Let's edit the style sheet (CSS)." />
 <meta name="twitter:image" content="https://en.giblog.perlzemi.com//images/giblog-favicon.png" />
 
 
@@ -45,7 +45,7 @@
 
 <div class="header-content">
   <div class="header-content-title">
-    <a href="/"><img src="/images/giblog-logo-image-text.png" width="170" alt="Giblog公式サイト" style="vertical-align:-25px;"></a>
+    <a href="/"><img src="/images/giblog-logo-image-text.png" width="170" alt="Giblog" style="vertical-align:-25px;"></a>
   </div>
   <div class="menu-button" onclick="$('.header-content-menu').toggle();">
     <img src="/images/menu.png" style="width:40px;">
@@ -66,216 +66,216 @@
 
   </div>
   <div class="middle">
-    <h2><a href="/blog/20190425082227.html">スタイルシート(CSS)を編集する</a></h2>
+    <h2><a href="/blog/20190425082227.html"> Edit stylesheet (CSS) </a></ h2>
 <p>
-  スタイルシート(CSS)を編集してみましょう。
+  Let's edit the style sheet (CSS).
 </p>
 <p>
-  スタイルシートというのは、Webサイトのデザインを変更するための仕組みで、文字の色や背景の色などを変えたりすることができます。
+  A style sheet is a mechanism for changing the design of a website, and you can change the color of characters and the color of the background.
 </p>
 <p>
-  スタイルシートは、以下のファイルに書かれています。
-</p>
-<pre>
-templates/static/css/common.css
-</pre>
-<p>
-  スタイルシートを編集したい場合は、このファイルを編集してください。
-</p>
-<h2>スタイルシートのサンプル</h2>
-<p>
-  サンプルとしてGiblogで作成されたWebサイトのスタイルシートの中身を公開しておきます。
+  The style sheet is written in the following file.
 </p>
 <pre>
-/* Default settings */
+templates / static / css / common.css
+&lt;/ pre&gt;
+
+If you want to edit the stylesheet, edit this file.
+
+&lt;h2&gt; Stylesheet sample &lt;/ h2&gt;
+
+As a sample, I will publish the contents of the style sheet of the website created by Giblog.
+
+&lt;pre&gt;
+/ * Default settings * /
   
-  /* all */
-  * {
-    margin:0;
-    padding:0;
+  / * all * /
+  * {{
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
-    -webkit-text-size-adjust:100%;
+    -webkit-text-size-adjust: 100%;
   }
-  a, a:visited {
-    color:#0000EE;
+  a, a: visited {
+    color: # 0000EE;
   }
   
-  /* header */
+  / * header * /
   .header {
-    background:white;
-    margin-bottom:15px;
-    border-bottom:5px solid #3081ff;
+    background: white;
+    margin-bottom: 15px;
+    border-bottom: 5px solid # 3081ff;
   }
   
-  /* footer */
+  / * footer * /
   .footer {
-    background:white;
-    margin-top:15px;
-    text-align:center;
-    padding:15px 0;
-    border-top:1px solid #ccc;
+    background: white;
+    margin-top: 15px;
+    text-align: center;
+    padding: 15px 0;
+    border-top: 1px solid #ccc;
   }
-  .footer a, .footer a:visited {
-    color:#000;
+  .footer a, .footer a: visited {
+    color: # 000;
   }
   
-  /* container */
+  / * container * /
   .container {
-    background:#f7fffd;
+    background: # f7fffd;
   }
   
-  /* main */
+  / * main * /
   .main {
-    max-width:960px;
-    width:100%;
+    max-width: 960px;
+    width: 100%;
     margin: 0 auto 15px auto;
   }
-  .main:after {
-    content:"";
-    display:block;
-    clear:both;
+  .main: after {
+    content: "";
+    display: block;
+    clear: both;
   }
   
-  /* content */
+  / * content * /
   .content {
-    float:left;
-    width:74%;
+    float: left;
+    width: 74%;
   }
   
-  /* entry */
+  / * entry * /
   .entry {
-    border:1px solid #C0C0C0;
-    background:white;
-    box-shadow: 0 0 3px rgba(0,0,0,.1);
-    padding:15px 25px;
-    margin-bottom:10px;
+    border: 1px solid # C0C0C0;
+    background: white;
+    box-shadow: 0 0 3px rgba (0,0,0, .1);
+    padding: 15px 25px;
+    margin-bottom: 10px;
   }
   .entry li {
-    margin-left:25px;
-    line-height:1.5;
+    margin-left: 25px;
+    line-height: 1.5;
   }
   
-  /* side */
+  / * side * /
   .side {
-    float:left;
-    width:25%;
-    margin-left:1%;
+    float: left;
+    width: 25%;
+    margin-left: 1%;
   }
   
-  /* tags */
+  / * tags * /
   h1 {
-    max-width:960px;
-    width:100%;
-    font-size:30px;
-    padding:12px 10px 10px 13px;
+    max-width: 960px;
+    width: 100%;
+    font-size: 30px;
+    padding: 12px 10px 10px 13px;
     margin: 0 auto;
   }
   .site-description {
-    max-width:960px;
-    width:100%;
+    max-width: 960px;
+    width: 100%;
     margin: 0 auto;
-    padding:0px 15px 15px 15px;
+    padding: 0px 15px 15px 15px;
   }
-  h1 a, h1 a:visited {
-    text-decoration:none;
-    color:#0f213d;
+  h1 a, h1 a: visited {
+    text-decoration: none;
+    color: # 0f213d;
   }
   h2 {
-    font-size:23px;
-    padding:10px 0;
-    letter-spacing:0.5px;
+    font-size: 23px;
+    padding: 10px 0;
+    letter-spacing: 0.5px;
   }
-  h2 a, h2 a:visited {
-    text-decoration:none;
-    color:#000;
+  h2 a, h2 a: visited {
+    text-decoration: none;
+    color: # 000;
   }
   h3 {
-    font-size:18px;
-    border-left:7px solid #ffad49;
-    padding:6px 0px 4px 12px;
-    letter-spacing:0.5px;
-    margin:15px 0 10px 0;
+    font-size: 18px;
+    border-left: 7px solid # ffad49;
+    padding: 6px 0px 4px 12px;
+    letter-spacing: 0.5px;
+    margin: 15px 0 10px 0;
   }
   h4 {
-    font-size:17px;
-    font-weight:bold;
-    padding:6px 0px 4px 5px;
-    letter-spacing:0.5px;
-    margin:15px 0 10px 0;
+    font-size: 17px;
+    font-weight: bold;
+    padding: 6px 0px 4px 5px;
+    letter-spacing: 0.5px;
+    margin: 15px 0 10px 0;
   }
   p {
-    font-size:16px;
-    color:#111;
-    margin:10px 0;
-    line-height:1.5;
+    font-size: 16px;
+    color: # 111;
+    margin: 10px 0;
+    line-height: 1.5;
   }
   pre {
-    font-size:16px;
-    background:#FCFCFC;
-    border:1px solid #CCCCCC;
-    border-radius:5px;
-    padding:10px 15px;
-    margin:10px 0;
-    line-height:1.5;
+    font-size: 16px;
+    background: #FCFCFC;
+    border: 1px solid #CCCCCC;
+    border-radius: 5px;
+    padding: 10px 15px;
+    margin: 10px 0;
+    line-height: 1.5;
   }
   blockquote {
-    font-size:16px;
-    background:#FCFCFC;
-    border:1px solid #CCCCCC;
-    border-radius:5px;
-    padding:10px 15px;
-    margin:10px 0;
-    line-height:1.5;
+    font-size: 16px;
+    background: #FCFCFC;
+    border: 1px solid #CCCCCC;
+    border-radius: 5px;
+    padding: 10px 15px;
+    margin: 10px 0;
+    line-height: 1.5;
   }
   
-  /* advanced */
+  / * advanced * /
   .day {
-    text-align:right;
-    color:#999;
+    text-align: right;
+    color: # 999;
   }
   .before-days {
-    text-align:center;
+    text-align: center;
   }
   .side-list {
-    box-shadow: 0 0 3px rgba(0,0,0,.1);
+    box-shadow: 0 0 3px rgba (0,0,0, .1);
   }
   .side-list-title {
-    background:#3081ff;
-    color:white;
-    font-weight:bold;
+    background: # 3081ff;
+    color: white;
+    font-weight: bold;
     padding: 7px 0px 5px 0px;
-    text-align:center;
-    border:1px solid #ccc;
-    border-bottom:none;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-bottom: none;
   }
   .side-list ul {
-    border:1px solid #ccc;
+    border: 1px solid #ccc;
   }
   .side-list li {
-    list-style:none;
-    background:white;
-    border-bottom:1px solid #ccc;
-    padding:7px 10px 5px 10px;
+    list-style: none;
+    background: white;
+    border-bottom: 1px solid #ccc;
+    padding: 7px 10px 5px 10px;
   }
-  .side li:last-child {
-    border-bottom:none;
+  .side li: last-child {
+    border-bottom: none;
   }
 
-/* Tablet and Smart phone */
-@media only screen and (max-width:960px) {
+/ * Tablet and Smart phone * /
+@media only screen and (max-width: 960px) {
   .content {
-    float:none;
-    width:97%;
-    margin:0 auto;
-    margin-bottom:15px;
+    float: none;
+    width: 97%;
+    margin: 0 auto;
+    margin-bottom: 15px;
   }
   .side {
-    float:none;
-    width:97%;
-    margin:0 auto;
+    float: none;
+    width: 97%;
+    margin: 0 auto;
   }
 }
-</pre>
+&lt;/ pre&gt;
 
   </div>
   <div class="bottom">
@@ -289,12 +289,10 @@ templates/static/css/common.css
           <!-- side -->
 <div class="side-list">
   <div class="side-list-title">
-    メニュー
+    Menu
   </div>
   <ul>
-    <li><a href="/blog/20190416153053.html">Windowsで個人ブログを作る</a></li>
-    <li>Macで個人ブログを作る</li>
-    <li>Linuxで個人ブログを作る</li>
+    <li><a href="/blog/20190416153053.html">Create Your Blogs on Windows</a></li>
   </ul>
 </div>
 

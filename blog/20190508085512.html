@@ -17,12 +17,12 @@
 
   gtag('config', 'G-H9CYDCGDRK');
 </script>
-<title>jQueryなどのJavaScriptライブラリを使おう - Giblog Official Site - Tools creating Web Site and Blog that is managed using Git</title>
-<meta name="description" content="jQueryやなどのJavaScriptライブラリを配置して使ってみましょう。">
+<title> Use a JavaScript library such as jQuery  - Giblog Official Site - Tools creating Web Site and Blog that is managed using Git</title>
+<meta name="description" content="Let's place and use a JavaScript library such as jQuery.">
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:site" content="@perlzemi" />
-<meta name="twitter:title" content="jQueryなどのJavaScriptライブラリを使おう - Giblog Official Site - Tools creating Web Site and Blog that is managed using Git" />
-<meta name="twitter:description" content="jQueryやなどのJavaScriptライブラリを配置して使ってみましょう。" />
+<meta name="twitter:title" content=" Use a JavaScript library such as jQuery  - Giblog Official Site - Tools creating Web Site and Blog that is managed using Git" />
+<meta name="twitter:description" content="Let's place and use a JavaScript library such as jQuery." />
 <meta name="twitter:image" content="https://en.giblog.perlzemi.com//images/giblog-favicon.png" />
 
 
@@ -45,7 +45,7 @@
 
 <div class="header-content">
   <div class="header-content-title">
-    <a href="/"><img src="/images/giblog-logo-image-text.png" width="170" alt="Giblog公式サイト" style="vertical-align:-25px;"></a>
+    <a href="/"><img src="/images/giblog-logo-image-text.png" width="170" alt="Giblog" style="vertical-align:-25px;"></a>
   </div>
   <div class="menu-button" onclick="$('.header-content-menu').toggle();">
     <img src="/images/menu.png" style="width:40px;">
@@ -66,94 +66,86 @@
 
   </div>
   <div class="middle">
-    <h2><a href="/blog/20190508085512.html">jQueryなどのJavaScriptライブラリを使おう</a></h2>
+    <h2><a href="/blog/20190508085512.html"> Use a JavaScript library such as jQuery </a></ h2>
 <p>
-  jQueryやなどのJavaScriptライブラリを配置して使ってみましょう。
+  Let's place and use a JavaScript library such as jQuery.
 </p>
 <p>
-  Giblogで作成されたWebサイトでは、静的なCMSでは、JavaScriptが使えます。
+  Websites created with Giblog can use JavaScript in static CMS.
 </p>
 <p>
-  ここでは、例としてjQueryを使ってみましょう。
+  Here, let's use jQuery as an example.
 </p>
 <p>
-  jQueryを、ダウンロードしてきて、配置して利用するという方法をとります。
+  The method is to download jQuery, place it, and use it.
 </p>
 <blockquote>
 <p>
-  <a href="https://jquery.com/download/">jQuery公式サイト - ダウンロード</a>
+  <a href="https://jquery.com/download/"> jQuery official website-download </a>
 </p>
-</blockquote>
+</ blockquote>
 <p>
-  サイトの上の方にある以下の部分に注目。
+  Pay attention to the following part at the top of the site.
 </p>
 <pre>
 Download the compressed, production jQuery 3.4.1
-</pre>
-<p>
-  2019年5月8日のバージョンは、3.4.1です。
-</p>
-<p>
-  このリンクを右クリックして、名前を付けてリンク先を保存してください。
-</p>
-<p>
-  名前は「jquery-3.4.1.min.js」のようにしてください。
-</p>
-<p>
-  JavaScriptを使うと、サイトで動きのある表現を使えるようになります。
-</p>
-<h3>JavaScriptライブラリを配置する</h3>
-<p>
-  最初に、JavaScriptライブラリを配置する必要があります。
-</p>
-<p>
-  保存した名前が「jquery-3.4.1.min.js」だとして、以下のディレクトリの中に配置しましょう。
-</p>
-<pre>
-templates/static/js
-</pre>
-<h3>JavaScriptライブラリを読み込もう</h3>
-<p>
-  次にJavaScriptライブラリを読み込む必要があります。JavaScriptライブラリは、使う前に、読み込むことが必要です。
-</p>
-<p>
-  HTMLのheadセクションで読み込むのが推奨です。以下のファイルの中に記述しましょう。
-</p>
-<pre>
-templates/common/meta.html
-</pre>
-<p>
-  ファイルを開いて、次の一行を書き込みます。
-</p>
-<pre>
-&lt;script src="/js/jquery-3.4.1.min.js"&gt;&lt;/script&gt;
-</pre>
-<p>
-  JavaScriptはscriptタグで読み込むことができ、パスをsrc属性に記述します。
-</p>
-<h3>jQueryで「こんにちは」</h3>
-<p>
-  次に、実際にjQueryを使ってみましょう。
-</p>
-<p>
-  ブログの記事やindex.htmlなど、好きなコンテンツを開いてみてください。
-</p>
-<p>
-  この中の一番上に、次のように記述しましょう。
-</p>
-<pre>
+&lt;/ pre&gt;
+
+The May 8, 2019 version is 3.4.1.
+
+Right-click on this link and save it as a name.
+
+The name should be something like "jquery-3.4.1.min.js".
+
+JavaScript allows you to use dynamic expressions on your site.
+
+&lt;h3&gt; Place the JavaScript library &lt;/ h3&gt;
+
+First, you need to deploy the JavaScript library.
+
+Let's assume that the saved name is "jquery-3.4.1.min.js" and place it in the following directory.
+
+&lt;pre&gt;
+templates / static / js
+&lt;/ pre&gt;
+
+&lt;h3&gt; Load the JavaScript library &lt;/ h3&gt;
+
+Next you need to load the JavaScript library. The JavaScript library needs to be loaded before it can be used.
+
+It is recommended to load it in the head section of HTML. Write it in the following file.
+
+&lt;pre&gt;
+templates / common / meta.html
+&lt;/ pre&gt;
+
+Open the file and write the following line.
+
+&lt;pre&gt;
+&lt;script src = "/ js / jquery-3.4.1.min.js"&gt; &lt;/ script&gt;
+&lt;/ pre&gt;
+
+JavaScript can be read with a script tag, and the path is described in the src attribute.
+
+&lt;h3&gt; "Hello" with jQuery &lt;/ h3&gt;
+
+Next, let's actually use jQuery.
+
+Try opening your favorite content, such as blog posts or index.html.
+
+At the top of this, write:
+
+&lt;pre&gt;
 &lt;script&gt;
-  $(function() {
-    alert('こんにちは');
+  $ (function () {
+    alert ('Hello');
   });
-&lt;/script&gt;
-</pre>
-<p>
-  これはjQueryの文法で書かれています。
-</p>
-<p>
-  このJavaScriptが書かれたページを開くと、「こんにちは」というメッセージボックスが表示されます。
-</p>
+&lt;/ script&gt;
+&lt;/ pre&gt;
+
+It's written in jQuery syntax.
+
+When you open the page where this JavaScript is written, the message box "Hello" is displayed.
 
   </div>
   <div class="bottom">
@@ -167,12 +159,10 @@ templates/common/meta.html
           <!-- side -->
 <div class="side-list">
   <div class="side-list-title">
-    メニュー
+    Menu
   </div>
   <ul>
-    <li><a href="/blog/20190416153053.html">Windowsで個人ブログを作る</a></li>
-    <li>Macで個人ブログを作る</li>
-    <li>Linuxで個人ブログを作る</li>
+    <li><a href="/blog/20190416153053.html">Create Your Blogs on Windows</a></li>
   </ul>
 </div>
 
