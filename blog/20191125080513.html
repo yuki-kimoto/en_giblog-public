@@ -1,15 +1,13 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- meta -->
-<meta charset="UTF-8">
+    <!-- meta --><meta charset="UTF-8">
 <link rel="icon" type="image/x-icon" href="/images/giblog-favicon.png">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
 <link rel="stylesheet" type="text/css" href="/css/common.css">
 <script src="/js/jquery-3.4.1.min.js"></script>
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-H9CYDCGDRK"></script>
+<!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-H9CYDCGDRK"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -30,8 +28,7 @@
   <body>
     <div class="container">
       <div class="header">
-        <!-- header -->
-<script>
+        <!-- header --><script>
   $(document).ready(function () {
     $(window).on('resize', function () {
       var width = $(window).width();
@@ -63,100 +60,102 @@
           <div class="entry">
   <div class="top">
     <!-- top -->
-
   </div>
   <div class="middle">
-    <h2><a href="/blog/20191125080513.html"> Make it possible to write articles with Markdown </a></ h2>
+    <h2><a href="/blog/20191125080513.html"> Make it possible to write articles with Markdown </a></h2>
 <p>
   Let's make it possible to write articles with Markdown. Giblog defaults to Giblog notation, but you can also make it compatible with Markdown. If the extension is "md", let's write it in markdown notation.
 </p>
-<h3> Install Markdown module </ h3>
+<h3> Install Markdown module </h3>
 <p>
-  Perl has several modules on CPAN that convert Markdown input to HTML. Here, let's use Text :: Markdown :: Hoedown, which has a description similar to the markdown notation of Github.
+  Perl has several modules on CPAN that convert Markdown input to HTML. Here, let's use Text::Markdown::Hoedown, which has a description similar to the markdown notation of Github.
 </p>
 <pre>
-cpan Text :: Markdown :: Hoedown
-&lt;/ pre&gt;
+cpan Text::Markdown::Hoedown
+</pre>
+<p>
+  or
+</p>
+<pre>
+cpanm Text::Markdown::Hoedown
+</pre>
+<p>
+  If you have cpanm installed, install it with cpanm, and if you only have cpan, install it with cpan.
+</p>
+<h3> Modification of the program for writing articles in Markdown </h3>
+<p>
+  To add / change Giblog functions, modify the build command "lib / Giblog / Command / build.pm". It is safe to back up this file in case the fix accidentally stops working.
+</p>
+<p>
+  Now let's add a feature that can be edited with Markdown to the build command. First, look for the part where the method called parse_giblog_syntax is called.
+</p>
+<pre>
+package Giblog::Command::build;
 
-or
-
-&lt;pre&gt;
-cpanm Text :: Markdown :: Hoedown
-&lt;/ pre&gt;
-
-If you have cpanm installed, install it with cpanm, and if you only have cpan, install it with cpan.
-
-&lt;h3&gt; Modification of the program for writing articles in Markdown &lt;/ h3&gt;
-
-To add / change Giblog functions, modify the build command "lib / Giblog / Command / build.pm". It is safe to back up this file in case the fix accidentally stops working.
-
-Now let's add a feature that can be edited with Markdown to the build command. First, look for the part where the method called parse_giblog_syntax is called.
-
-&lt;pre&gt;
-package Giblog :: Command :: build;
-
-use base'Giblog :: Command';
+use base'Giblog::Command';
 
 use strict;
 use warnings;
 use utf8;
 
-use File :: Basename'basename';
+use File::Basename'basename';
 
 sub run {
   # ...
 
     #Parse Giblog syntax
-    $ api-&gt; parse_giblog_syntax ($ data);
+    $api-&gt;parse_giblog_syntax($data);
   
   # ...
 }
-&lt;/ pre&gt;
-
-If the extension of the file is "md", this part is interpreted as Markdown and HTML is output.
-
-&lt;pre&gt;
+</pre>
+<p>
+  If the extension of the file is "md", this part is interpreted as Markdown and HTML is output.
+</p>
+<pre>
 sub run {
   # ...
 
     #Parse Markdown syntax
-    if ($ data-&gt; {file} = ~ /\.md$/) {
-      require Text :: Markdown :: Hoedown;
+    if ($data-&gt;{file} = ~ /\.md$/) {
+      require Text::Markdown::Hoedown;
       
       #Convert extenstion from md to html
-      $ data-&gt; {file} = ~ s /\.md$/.html/;
+      $data-&gt;{file} = ~ s /\.md$/.html/;
       
       #Convert Markdown to HTML
-      $ data-&gt; {content} = Text :: Markdown :: Hoedown :: markdown ($ data-&gt; {content});
+      $data-&gt;{content} = Text::Markdown::Hoedown::markdown ($data-&gt;{content});
     }
     else {
       #Parse Giblog syntax
-      $ api-&gt; parse_giblog_syntax ($ data);
+      $api-&gt;parse_giblog_syntax($data);
     }
   
   # ...
 }
-&lt;/ pre&gt;
-
-I'm using the require statement to dynamically load Text :: Markdown :: Hoedown.
-
-If the file extension is "md", I am writing a process to modify it to html for output.
-
-I am writing a process to change the content from Markdown to HTML using the markdown function.
-
-Let's write an article with Markdown by setting the extension of the file in templates to "md". If the output is HTML, you're successful.
+</pre>
+<p>
+  I'm using the require statement to dynamically load Text::Markdown::Hoedown.
+</p>
+<p>
+  If the file extension is "md", I am writing a process to modify it to html for output.
+</p>
+<p>
+  I am writing a process to change the content from Markdown to HTML using the markdown function.
+</p>
+<p>
+  Let's write an article with Markdown by setting the extension of the file in templates to "md". If the output is HTML, you're successful.
+</p>
 
   </div>
   <div class="bottom">
     <!-- bottom -->
-
   </div>
 </div>
 
         </div>
         <div class="side">
-          <!-- side -->
-<div class="side-list">
+          <!-- side --><div class="side-list">
   <div class="side-list-title">
     Menu
   </div>

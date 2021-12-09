@@ -1,15 +1,13 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- meta -->
-<meta charset="UTF-8">
+    <!-- meta --><meta charset="UTF-8">
 <link rel="icon" type="image/x-icon" href="/images/giblog-favicon.png">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
 <link rel="stylesheet" type="text/css" href="/css/common.css">
 <script src="/js/jquery-3.4.1.min.js"></script>
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-H9CYDCGDRK"></script>
+<!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-H9CYDCGDRK"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -30,8 +28,7 @@
   <body>
     <div class="container">
       <div class="header">
-        <!-- header -->
-<script>
+        <!-- header --><script>
   $(document).ready(function () {
     $(window).on('resize', function () {
       var width = $(window).width();
@@ -63,10 +60,9 @@
           <div class="entry">
   <div class="top">
     <!-- top -->
-
   </div>
   <div class="middle">
-    <h2><a href="/blog/20190508085512.html"> Use a JavaScript library such as jQuery </a></ h2>
+    <h2><a href="/blog/20190508085512.html"> Use a JavaScript library such as jQuery </a></h2>
 <p>
   Let's place and use a JavaScript library such as jQuery.
 </p>
@@ -81,83 +77,89 @@
 </p>
 <blockquote>
 <p>
-  <a href="https://jquery.com/download/"> jQuery official website-download </a>
+  <a href="https://jquery.com/download/"> jQuery official website-download</a>
 </p>
-</ blockquote>
+</blockquote>
 <p>
   Pay attention to the following part at the top of the site.
 </p>
 <pre>
 Download the compressed, production jQuery 3.4.1
-&lt;/ pre&gt;
-
-The May 8, 2019 version is 3.4.1.
-
-Right-click on this link and save it as a name.
-
-The name should be something like "jquery-3.4.1.min.js".
-
-JavaScript allows you to use dynamic expressions on your site.
-
-&lt;h3&gt; Place the JavaScript library &lt;/ h3&gt;
-
-First, you need to deploy the JavaScript library.
-
-Let's assume that the saved name is "jquery-3.4.1.min.js" and place it in the following directory.
-
-&lt;pre&gt;
+</pre>
+<p>
+  The May 8, 2019 version is 3.4.1.
+</p>
+<p>
+  Right-click on this link and save it as a name.
+</p>
+<p>
+  The name should be something like "jquery-3.4.1.min.js".
+</p>
+<p>
+  JavaScript allows you to use dynamic expressions on your site.
+</p>
+<h3> Place the JavaScript library </h3>
+<p>
+  First, you need to deploy the JavaScript library.
+</p>
+<p>
+  Let's assume that the saved name is "jquery-3.4.1.min.js" and place it in the following directory.
+</p>
+<pre>
 templates / static / js
-&lt;/ pre&gt;
-
-&lt;h3&gt; Load the JavaScript library &lt;/ h3&gt;
-
-Next you need to load the JavaScript library. The JavaScript library needs to be loaded before it can be used.
-
-It is recommended to load it in the head section of HTML. Write it in the following file.
-
-&lt;pre&gt;
+</pre>
+<h3> Load the JavaScript library </h3>
+<p>
+  Next you need to load the JavaScript library. The JavaScript library needs to be loaded before it can be used.
+</p>
+<p>
+  It is recommended to load it in the head section of HTML. Write it in the following file.
+</p>
+<pre>
 templates / common / meta.html
-&lt;/ pre&gt;
-
-Open the file and write the following line.
-
-&lt;pre&gt;
-&lt;script src = "/ js / jquery-3.4.1.min.js"&gt; &lt;/ script&gt;
-&lt;/ pre&gt;
-
-JavaScript can be read with a script tag, and the path is described in the src attribute.
-
-&lt;h3&gt; "Hello" with jQuery &lt;/ h3&gt;
-
-Next, let's actually use jQuery.
-
-Try opening your favorite content, such as blog posts or index.html.
-
-At the top of this, write:
-
-&lt;pre&gt;
+</pre>
+<p>
+  Open the file and write the following line.
+</p>
+<pre>
+&lt;script src = "/ js / jquery-3.4.1.min.js"&gt; &lt;/script&gt;
+</pre>
+<p>
+  JavaScript can be read with a script tag, and the path is described in the src attribute.
+</p>
+<h3> "Hello" with jQuery </h3>
+<p>
+  Next, let's actually use jQuery.
+</p>
+<p>
+  Try opening your favorite content, such as blog posts or index.html.
+</p>
+<p>
+  At the top of this, write:
+</p>
+<pre>
 &lt;script&gt;
-  $ (function () {
+  $(function () {
     alert ('Hello');
   });
-&lt;/ script&gt;
-&lt;/ pre&gt;
-
-It's written in jQuery syntax.
-
-When you open the page where this JavaScript is written, the message box "Hello" is displayed.
+&lt;/script&gt;
+</pre>
+<p>
+  It's written in jQuery syntax.
+</p>
+<p>
+  When you open the page where this JavaScript is written, the message box "Hello" is displayed.
+</p>
 
   </div>
   <div class="bottom">
     <!-- bottom -->
-
   </div>
 </div>
 
         </div>
         <div class="side">
-          <!-- side -->
-<div class="side-list">
+          <!-- side --><div class="side-list">
   <div class="side-list-title">
     Menu
   </div>

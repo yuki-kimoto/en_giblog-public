@@ -1,15 +1,13 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- meta -->
-<meta charset="UTF-8">
+    <!-- meta --><meta charset="UTF-8">
 <link rel="icon" type="image/x-icon" href="/images/giblog-favicon.png">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
 <link rel="stylesheet" type="text/css" href="/css/common.css">
 <script src="/js/jquery-3.4.1.min.js"></script>
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-H9CYDCGDRK"></script>
+<!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-H9CYDCGDRK"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -30,8 +28,7 @@
   <body>
     <div class="container">
       <div class="header">
-        <!-- header -->
-<script>
+        <!-- header --><script>
   $(document).ready(function () {
     $(window).on('resize', function () {
       var width = $(window).width();
@@ -63,10 +60,9 @@
           <div class="entry">
   <div class="top">
     <!-- top -->
-
   </div>
   <div class="middle">
-    <h2><a href="/blog/20190809083515.html"> Manage all pages with git </a></ h2>
+    <h2><a href="/blog/20190809083515.html"> Manage all pages with git </a></h2>
 <p>
   In Giblog, all files can be managed by Git as static files.
 </p>
@@ -79,7 +75,7 @@
 <p>
   No knowledge of the database is required.
 </p>
-<h3> Managing articles using git </ h3>
+<h3> Managing articles using git </h3>
 <p>
   In Giblog, when you create an article and execute a build command, HTML for publication enclosed in headers and footers is generated.
 </p>
@@ -89,26 +85,26 @@ templates / mypage.html
 
 # Build
 giblog build
-&lt;/ pre&gt;
-
-The built file is generated under the public directory "public".
-
-&lt;pre&gt;
+</pre>
+<p>
+  The built file is generated under the public directory "public".
+</p>
+<pre>
 #Create an article
 public / mypage.html
-&lt;/ pre&gt;
-
-The site configuration is as follows. In Giblog, "resource files before build" and "public files after build" are managed in separate git repositories.
-
-&lt;pre&gt;
+</pre>
+<p>
+  The site configuration is as follows. In Giblog, "resource files before build" and "public files after build" are managed in separate git repositories.
+</p>
+<pre>
 mysite --.git
        --public -
                 --.git
-&lt;/ pre&gt;
-
-You can make the above configuration by executing the following command.
-
-&lt;pre&gt;
+</pre>
+<p>
+  You can make the above configuration by executing the following command.
+</p>
+<pre>
 #Manage resource files with git
 cd mysite
 git init
@@ -116,97 +112,108 @@ git init
 #Git management of public files
 cd public
 git init
-&lt;/ pre&gt;
-
-Pre-build and post-build files are managed as separate Git repositories, so you can place your public files on a public server by simply "git cloning" or "git pulling" them. ..
-
-Files that do not need to combine headers and footers, such as CSS, JavaScript, image files, and video files, can be placed in the public directory without any editing by placing them in the "templates / static" directory. I can do it.
-
-&lt;pre&gt;
+</pre>
+<p>
+  Pre-build and post-build files are managed as separate Git repositories, so you can place your public files on a public server by simply "git cloning" or "git pulling" them. ..
+</p>
+<p>
+  Files that do not need to combine headers and footers, such as CSS, JavaScript, image files, and video files, can be placed in the public directory without any editing by placing them in the "templates / static" directory. I can do it.
+</p>
+<pre>
 #Image file placement
 templates / static / example.png
 
 # Build
 giblog build
-&lt;/ pre&gt;
-
-&lt;pre&gt;
+</pre>
+<pre>
 #Create an article
 public / example.png
-&lt;/ pre&gt;
-
-Prior to Git, it was imperative that the CMS have article management capabilities. Users were required to learn their own CMS features to manage their articles.
-
-Giblog specializes in the ability to create articles and entrusts Git with the ability to manage articles. Giblog users can take full advantage of Git's features with excellent article management capabilities.
-
-&lt;h3&gt; Article group management function &lt;/ h3&gt;
-
-Giglog entrusts Git with all the article management capabilities.
-
-Git specializes in collaborative program development. Git is being leveraged for the purpose of collaborating on program development with multiple people.
-
-You can use the co-management feature of this program as a group management feature for articles.
-
-Create a website repository on &lt;a href="https://github.co.jp/"&gt; Github &lt;/a&gt; and the co-article author will clone the repository.
-
-The co-author writes an article and requests a pull request in his local environment.
-
-The main author can then bring the content of the article into his repository.
-
-The management method of this article is also very strong in terms of security.
-
-CMS tools that dynamically generate websites require you to enter an ID and password from the management screen in order to manage groups of articles.
-
-Giblog is a static website generation tool that leaves co-management to Git, reducing security risks.
-
-A security hole on the side of the tool does not cause the website to be rewritten and the corporate credibility to be compromised.
-
-&lt;h3&gt; Easy deployment with git &lt;/ h3&gt;
-
-To deploy to a production environment, simply "git clone" the git repository that manages the public files into the production environment.
-
-&lt;pre&gt;
+</pre>
+<p>
+  Prior to Git, it was imperative that the CMS have article management capabilities. Users were required to learn their own CMS features to manage their articles.
+</p>
+<p>
+  Giblog specializes in the ability to create articles and entrusts Git with the ability to manage articles. Giblog users can take full advantage of Git's features with excellent article management capabilities.
+</p>
+<h3> Article group management function </h3>
+<p>
+  Giglog entrusts Git with all the article management capabilities.
+</p>
+<p>
+  Git specializes in collaborative program development. Git is being leveraged for the purpose of collaborating on program development with multiple people.
+</p>
+<p>
+  You can use the co-management feature of this program as a group management feature for articles.
+</p>
+<p>
+  Create a website repository on <a href="https://github.co.jp/"> Github</a> and the co-article author will clone the repository.
+</p>
+<p>
+  The co-author writes an article and requests a pull request in his local environment.
+</p>
+<p>
+  The main author can then bring the content of the article into his repository.
+</p>
+<p>
+  The management method of this article is also very strong in terms of security.
+</p>
+<p>
+  CMS tools that dynamically generate websites require you to enter an ID and password from the management screen in order to manage groups of articles.
+</p>
+<p>
+  Giblog is a static website generation tool that leaves co-management to Git, reducing security risks.
+</p>
+<p>
+  A security hole on the side of the tool does not cause the website to be rewritten and the corporate credibility to be compromised.
+</p>
+<h3> Easy deployment with git </h3>
+<p>
+  To deploy to a production environment, simply "git clone" the git repository that manages the public files into the production environment.
+</p>
+<pre>
 git clone URL of git repository for public files
-&lt;/ pre&gt;
-
-For the second and subsequent deployments, just do a git pull origin master.
-
-&lt;pre&gt;
+</pre>
+<p>
+  For the second and subsequent deployments, just do a git pull origin master.
+</p>
+<pre>
 cd mysite
 git pull origin master
-&lt;/ pre&gt;
-
-&lt;h3&gt; Easy backup with git &lt;/ h3&gt;
-
-git is a distributed management repository system that stores the file change history completely in each repository.
-
-In other words, to back it up, all you have to do is copy the git repository.
-
-If you have the following configuration, you can easily perform triple backup.
-
-&lt;pre&gt;
+</pre>
+<h3> Easy backup with git </h3>
+<p>
+  git is a distributed management repository system that stores the file change history completely in each repository.
+</p>
+<p>
+  In other words, to back it up, all you have to do is copy the git repository.
+</p>
+<p>
+  If you have the following configuration, you can easily perform triple backup.
+</p>
+<pre>
 Github
 
 Development server
 
 Backup server
-&lt;/ pre&gt;
-
-Create a website on the development server. Push the resource repository to Github.
-
-Write cron on the backup server so that you can git pull origin master from Github on a regular basis.
+</pre>
+<p>
+  Create a website on the development server. Push the resource repository to Github.
+</p>
+<p>
+  Write cron on the backup server so that you can git pull origin master from Github on a regular basis.
+</p>
 
   </div>
   <div class="bottom">
     <!-- bottom -->
-
   </div>
 </div>
 
         </div>
         <div class="side">
-          <!-- side -->
-<div class="side-list">
+          <!-- side --><div class="side-list">
   <div class="side-list-title">
     Menu
   </div>

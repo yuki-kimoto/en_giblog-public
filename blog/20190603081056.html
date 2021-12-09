@@ -1,15 +1,13 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- meta -->
-<meta charset="UTF-8">
+    <!-- meta --><meta charset="UTF-8">
 <link rel="icon" type="image/x-icon" href="/images/giblog-favicon.png">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
 <link rel="stylesheet" type="text/css" href="/css/common.css">
 <script src="/js/jquery-3.4.1.min.js"></script>
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-H9CYDCGDRK"></script>
+<!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-H9CYDCGDRK"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -30,8 +28,7 @@
   <body>
     <div class="container">
       <div class="header">
-        <!-- header -->
-<script>
+        <!-- header --><script>
   $(document).ready(function () {
     $(window).on('resize', function () {
       var width = $(window).width();
@@ -63,10 +60,9 @@
           <div class="entry">
   <div class="top">
     <!-- top -->
-
   </div>
   <div class="middle">
-    <h2><a href="/blog/20190603081056.html"> Set up an inquiry form </a></ h2>
+    <h2><a href="/blog/20190603081056.html"> Set up an inquiry form </a></h2>
 <p>
   Let's set up an inquiry form.
 </p>
@@ -74,38 +70,38 @@
   It must be running on a rental server that can run CGI.
 </p>
 <p>
-  Introducing this time is a <a href="https://perlzemi.com/mail.html"> simple email form </a> that allows you to send a subject, email address and message.
+  Introducing this time is a <a href="https://perlzemi.com/mail.html"> simple email form</a> that allows you to send a subject, email address and message.
 </p>
 <p>
   It works by setting the HTML of the inquiry form and the CGI of the inquiry form.
 </p>
-<h3> Inquiry Form HTML </ h3>
+<h3> Inquiry Form HTML </h3>
 <p>
   HTML for the contact form.
 </p>
 <pre>
-&lt;script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"&gt; &lt;/ script&gt;
+&lt;script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"&gt; &lt;/script&gt;
 
 &lt;script&gt;
-  $ (function () {
-    $ ('.mail-form button'). on ('click', function () {
-      var form_values ​​= $ ('.mail-form form'). serialize ();
-      $ .post (
+  $(function () {
+    $('.mail-form button'). on ('click', function () {
+      var form_values ​​= $('.mail-form form'). serialize ();
+      $.post (
         "/mail.cgi",
         form_values,
         function (data) {
           if (data.success) {
-            $ ('.mail-form'). html ('&lt;div class = "mail-form-success"&gt; Message accepted. Thank you for sending. &lt;/ Div&gt;');
+            $('.mail-form'). html ('&lt;div class = "mail-form-success"&gt; Message accepted. Thank you for sending. &lt;/Div&gt;');
           }
           else {
             // Error message
             var errors = data.errors;
-            $ ('.mail-form-errors'). empty ();
+            $('.mail-form-errors'). empty ();
             for (var i = 0; i &lt;errors.length; i ++) {
               var error = errors [i];
-              var li = $ ('&lt;li&gt; &lt;/ li&gt;');
+              var li = $('&lt;li&gt; &lt;/li&gt;');
               li.text (error);
-              $ ('.mail-form-errors'). Append (li);
+              $('.mail-form-errors'). Append (li);
             }
           }
         },
@@ -113,57 +109,57 @@
       );
     });
   });
-&lt;/ script&gt;
+&lt;/script&gt;
 
-&lt;h2&gt; Inquiry Form &lt;/ h2&gt;
+&lt;h2&gt; Inquiry Form &lt;/h2&gt;
 &lt;div class = "mail-form"&gt;
   &lt;ul class = "mail-form-errors"&gt;
-  &lt;/ ul&gt;
+  &lt;/ul&gt;
   &lt;form&gt;
     &lt;label&gt;
       &lt;div class = "mail-form-title"&gt;
         name:
-      &lt;/ div&gt;
+      &lt;/div&gt;
       &lt;div class = "mail-form-body"&gt;
         &lt;input type = "text" size = 50 name = "name"&gt; &lt;br&gt;
-      &lt;/ div&gt;
-    &lt;/ label&gt;
+      &lt;/div&gt;
+    &lt;/label&gt;
     &lt;label&gt;
       &lt;div class = "mail-form-title"&gt;
         email address:
-      &lt;/ div&gt;
+      &lt;/div&gt;
       &lt;div class = "mail-form-body"&gt;
         &lt;input type = "text" size = 50 name = "email"&gt;
-      &lt;/ div&gt;
-    &lt;/ label&gt;
+      &lt;/div&gt;
+    &lt;/label&gt;
     &lt;label&gt;
       &lt;div class = "mail-form-title"&gt;
         message:
-      &lt;/ div&gt;
+      &lt;/div&gt;
       &lt;div class = "mail-form-body"&gt;
-        &lt;textarea name = "message"&gt; &lt;/ textarea&gt;
-      &lt;/ div&gt;
-    &lt;/ label&gt;
+        &lt;textarea name = "message"&gt; &lt;/textarea&gt;
+      &lt;/div&gt;
+    &lt;/label&gt;
     &lt;div&gt;
-      &lt;button type = "button"&gt; Send message &lt;/ button&gt;
-    &lt;/ div&gt;
-  &lt;/ form&gt;
-&lt;/ div&gt;
-&lt;/ pre&gt;
-
-Place this with the following file name.
-
-&lt;pre&gt;
+      &lt;button type = "button"&gt; Send message &lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/form&gt;
+&lt;/div&gt;
+</pre>
+<p>
+  Place this with the following file name.
+</p>
+<pre>
 templates / mail.html
-&lt;/ pre&gt;
-
-&lt;h3&gt; CGI of inquiry form &lt;/ h3&gt;
-
-This is the CGI of the inquiry form.
-
-Please specify the destination email address in the "$ mailto" part.
-
-&lt;pre&gt;
+</pre>
+<h3> CGI of inquiry form </h3>
+<p>
+  This is the CGI of the inquiry form.
+</p>
+<p>
+  Please specify the destination email address in the "$mailto" part.
+</p>
+<pre>
 #! / usr / bin / env perl
 
 use strict;
@@ -171,121 +167,122 @@ use warnings;
 use utf8;
 
 use CGI;
-use JSON :: PP'encode_json';
-use MIME :: Lite;
+use JSON::PP'encode_json';
+use MIME::Lite;
 
 use Encode'decode','encode';
 
-my $ q = CGI-&gt; new;
+my $q = CGI-&gt;new;
 
 #Mail to
-my $ mailto ='info@foo.example';
+my $mailto ='info@foo.example';
 
 #Mail title
-my $ subject ='Email has arrived at the site';
+my $subject ='Email has arrived at the site';
 
 #Errors
 my @errors;
 
 #Name
-my $ name = $ q-&gt; param ('name');
-$ name = decode ('UTF-8', $ name);
-unless (length $ name) {
+my $name = $q-&gt;param('name');
+$name = decode ('UTF-8', $name);
+unless (length $name) {
   push @errors, "Please specify a name.";
 }
 
 #Email
-my $ email = $ q-&gt; param ('email');
-$ email = decode ('UTF-8', $ email);
+my $email = $q-&gt;param('email');
+$email = decode ('UTF-8', $email);
 
-unless (length $ email &amp;&amp; $ email = ~ / \ @ /) {
+unless (length $email &amp;&amp; $email = ~ / \ @/) {
   push @errors, "Please enter your email address correctly.";
 }
 
 #Message
-my $ message = $ q-&gt; param ('message');
-$ message = decode ('UTF-8', $ message);
-unless (length $ message) {
+my $message = $q-&gt;param('message');
+$message = decode ('UTF-8', $message);
+unless (length $message) {
   push @errors, "Please specify a message.";
 }
 
 #Response
-my $ res = &lt;&lt; "EOS";
+my $res = &lt;&lt; "EOS";
 Content-type: application / json;
 
 EOS
 
-my $ res_data = {};
+my $res_data = {};
 
 unless (@errors) {
   #Mail body
-  my $ mail_body = &lt;&lt; "EOS";
-Name: $ name
-Email: $ email
-Message: $ message
+  my $mail_body = &lt;&lt; "EOS";
+Name: $name
+Email: $email
+Message: $message
 EOS
 
   #Send mail
-  my $ msg = MIME :: Lite-&gt; new (
-    From =&gt; $ mailto,
-    To =&gt; $ mailto,
-    Subject =&gt; encode ('MIME-Header', $ subject),
+  my $msg = MIME::Lite-&gt;new(
+    From =&gt; $mailto,
+    To =&gt; $mailto,
+    Subject =&gt; encode ('MIME-Header', $subject),
     Type =&gt;'multipart / mixed'
   );
-  $ msg-&gt; attach (
+  $msg-&gt;attach(
     Type =&gt;'TEXT',
-    Data =&gt; encode ('UTF-8', $ mail_body),
+    Data =&gt; encode ('UTF-8', $mail_body),
   );
-  unless ($ msg-&gt; send) {
+  unless ($msg-&gt;send) {
     push @errors, "Failed to send email.";
   }
 }
 
 if (@errors) {
-  $ res_data-&gt; {success} = 0;
-  $ res_data-&gt; {errors} = \ @ errors;
+  $res_data-&gt;{success} = 0;
+  $res_data-&gt;{errors} = \ @errors;
 }
 else {
-  $ res_data-&gt; {success} = 1;
+  $res_data-&gt;{success} = 1;
 }
 
 #JSON response
-my $ res_json = encode_json ($ res_data);
-$ res. = "$ res_json \ n";
+my $res_json = encode_json ($res_data);
+$res. = "$res_json\n";
 
 #Print response
-print $ res;
-&lt;/ pre&gt;
-
-Place this with the following file name.
-
-&lt;pre&gt;
+print $res;
+</pre>
+<p>
+  Place this with the following file name.
+</p>
+<pre>
 templates / static / mail.cgi
-&lt;/ pre&gt;
-
-Save the line feed code as "LF".
-
-Change the permission to "755" with the following command.
-
-&lt;pre&gt;
+</pre>
+<p>
+  Save the line feed code as "LF".
+</p>
+<p>
+  Change the permission to "755" with the following command.
+</p>
+<pre>
 chmod 755 templates / static / mail.cgi
-&lt;/ pre&gt;
-
-If you want to place it on a public server other than when using Git, you need to set the line feed code to LF and the permission to 755 even on the public server.
-
-Please also refer to "&lt;a href="https://github.com/yuki-kimoto/perlzemitut/tree/master/templates"&gt; mail form &lt;/a&gt;" in the Perl introductory seminar.
+</pre>
+<p>
+  If you want to place it on a public server other than when using Git, you need to set the line feed code to LF and the permission to 755 even on the public server.
+</p>
+<p>
+  Please also refer to "<a href="https://github.com/yuki-kimoto/perlzemitut/tree/master/templates"> mail form</a>" in the Perl introductory seminar.
+</p>
 
   </div>
   <div class="bottom">
     <!-- bottom -->
-
   </div>
 </div>
 
         </div>
         <div class="side">
-          <!-- side -->
-<div class="side-list">
+          <!-- side --><div class="side-list">
   <div class="side-list-title">
     Menu
   </div>

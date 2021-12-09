@@ -1,15 +1,13 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- meta -->
-<meta charset="UTF-8">
+    <!-- meta --><meta charset="UTF-8">
 <link rel="icon" type="image/x-icon" href="/images/giblog-favicon.png">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
 <link rel="stylesheet" type="text/css" href="/css/common.css">
 <script src="/js/jquery-3.4.1.min.js"></script>
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-H9CYDCGDRK"></script>
+<!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-H9CYDCGDRK"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -30,8 +28,7 @@
   <body>
     <div class="container">
       <div class="header">
-        <!-- header -->
-<script>
+        <!-- header --><script>
   $(document).ready(function () {
     $(window).on('resize', function () {
       var width = $(window).width();
@@ -63,14 +60,13 @@
           <div class="entry">
   <div class="top">
     <!-- top -->
-
   </div>
   <div class="middle">
-    <h2><a href="/blog/20190826074335.html"> Giblog is compatible with Windows, Mac OS and Linux </a></ h2>
+    <h2><a href="/blog/20190826074335.html"> Giblog is compatible with Windows, Mac OS and Linux </a></h2>
 <p>
   Giblog is compatible with Windows, Mac OS and Linux. We also support development on local PCs on Windows and Mac OS, and development on remote servers on Linux such as Debian, Ubuntu, CentOS, and Red Hat.
 </p>
-<h3> Windows support </ h3>
+<h3> Windows support </h3>
 <p>
   On Windows, you can use Giblog by installing a tool called msys2 that reproduces a pseudo Linux environment.
 </p>
@@ -78,67 +74,69 @@
   The installation method and how to use Giblog are explained below.
 </p>
 <p>
-  <a href="/blog/20190416153053.html"> Create an environment for creating websites on Windows </a>
+  <a href="/blog/20190416153053.html"> Create an environment for creating websites on Windows</a>
 </p>
-<h3> Mac OS support </ h3>
+<h3> Mac OS support </h3>
 <p>
   Perl is installed by default on Mac OS, so you can start using it as is. Also install Mojolicious, which is required for automatic rebuilding of HTML files.
 </p>
 <pre>
 cpanm Mojolicious
-&lt;/ pre&gt;
-
-In recent Mac OS, there is a problem that Perl modules cannot be installed correctly depending on the version, and in the future, there is a policy that the scripting language including Perl will not be provided by default. Listen.
-
-If you want to make sure the installation is successful, use Perl built in your local environment. Use tools such as perlbrew and plenv to build Perl in your local environment.
-
-&lt;ul&gt;
-  &lt;li&gt; &lt;a href="https://perlzemi.com/blog/20110220130464.html"&gt; perlbrew --Install Perl in your environment &lt;/a&gt; &lt;/ li&gt;
-  &lt;li&gt; &lt;a href="https://perlzemi.com/blog/20180816153437.html"&gt; plenv --Install Perl in your environment &lt;/a&gt; &lt;/ li&gt;
-&lt;/ ul&gt;
-
-Both are similar tools, so choose your favorite.
-
-After this, execute the following command to install Giblog. Also install Mojolicious, which is required for automatic rebuilding of HTML files.
-
-&lt;pre&gt;
+</pre>
+<p>
+  In recent Mac OS, there is a problem that Perl modules cannot be installed correctly depending on the version, and in the future, there is a policy that the scripting language including Perl will not be provided by default. Listen.
+</p>
+<p>
+  If you want to make sure the installation is successful, use Perl built in your local environment. Use tools such as perlbrew and plenv to build Perl in your local environment.
+</p>
+<ul>
+  <li> <a href="https://perlzemi.com/blog/20110220130464.html"> perlbrew --Install Perl in your environment</a> </li>
+  <li> <a href="https://perlzemi.com/blog/20180816153437.html"> plenv --Install Perl in your environment</a> </li>
+</ul>
+<p>
+  Both are similar tools, so choose your favorite.
+</p>
+<p>
+  After this, execute the following command to install Giblog. Also install Mojolicious, which is required for automatic rebuilding of HTML files.
+</p>
+<pre>
 cpanm Giblog
 cpanm Mojolicious
-&lt;/ pre&gt;
-
-&lt;h3&gt; Linux support &lt;/ h3&gt;
-
-You can also SSH into a Linux server such as Debian, Ubuntu, CentOS, RedHat and develop in a remote environment.
-
-When developing in a remote environment, I think that there are many cases where you want to develop in a user environment.
-
-In that case, use Perl built in your local environment. It's okay to use tools such as perlbrew and plenv that build Perl in your local environment.
-
-&lt;ul&gt;
-  &lt;li&gt; &lt;a href="https://perlzemi.com/blog/20110220130464.html"&gt; perlbrew --Install Perl in your environment &lt;/a&gt; &lt;/ li&gt;
-  &lt;li&gt; &lt;a href="https://perlzemi.com/blog/20180816153437.html"&gt; plenv --Install Perl in your environment &lt;/a&gt; &lt;/ li&gt;
-&lt;/ ul&gt;
-
-Both are similar tools, so choose your favorite.
-
-After this, execute the following command to install Giblog. Also install Mojolicious, which is required for automatic rebuilding of HTML files.
-
-&lt;pre&gt;
+</pre>
+<h3> Linux support </h3>
+<p>
+  You can also SSH into a Linux server such as Debian, Ubuntu, CentOS, RedHat and develop in a remote environment.
+</p>
+<p>
+  When developing in a remote environment, I think that there are many cases where you want to develop in a user environment.
+</p>
+<p>
+  In that case, use Perl built in your local environment. It's okay to use tools such as perlbrew and plenv that build Perl in your local environment.
+</p>
+<ul>
+  <li> <a href="https://perlzemi.com/blog/20110220130464.html"> perlbrew --Install Perl in your environment</a> </li>
+  <li> <a href="https://perlzemi.com/blog/20180816153437.html"> plenv --Install Perl in your environment</a> </li>
+</ul>
+<p>
+  Both are similar tools, so choose your favorite.
+</p>
+<p>
+  After this, execute the following command to install Giblog. Also install Mojolicious, which is required for automatic rebuilding of HTML files.
+</p>
+<pre>
 cpanm Giblog
 cpanm Mojolicious
-&lt;/ pre&gt;
+</pre>
 
   </div>
   <div class="bottom">
     <!-- bottom -->
-
   </div>
 </div>
 
         </div>
         <div class="side">
-          <!-- side -->
-<div class="side-list">
+          <!-- side --><div class="side-list">
   <div class="side-list-title">
     Menu
   </div>

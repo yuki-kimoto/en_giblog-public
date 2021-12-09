@@ -1,15 +1,13 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- meta -->
-<meta charset="UTF-8">
+    <!-- meta --><meta charset="UTF-8">
 <link rel="icon" type="image/x-icon" href="/images/giblog-favicon.png">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
 <link rel="stylesheet" type="text/css" href="/css/common.css">
 <script src="/js/jquery-3.4.1.min.js"></script>
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-H9CYDCGDRK"></script>
+<!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-H9CYDCGDRK"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -30,8 +28,7 @@
   <body>
     <div class="container">
       <div class="header">
-        <!-- header -->
-<script>
+        <!-- header --><script>
   $(document).ready(function () {
     $(window).on('resize', function () {
       var width = $(window).width();
@@ -63,64 +60,59 @@
           <div class="entry">
   <div class="top">
     <!-- top -->
-
   </div>
   <div class="middle">
-    <h2><a href="/blog/20190516083029.html"> How to create your own blog top page </a></ h2>
+    <h2><a href="/blog/20190516083029.html"> How to create your own blog top page </a></h2>
 <p>
   For blogs created with the new_blog command, the top page containing articles for one week is automatically generated. I will explain how to make the top page of the blog a static HTML page.
 </p>
-<h3> Open build script </ h3>
+<h3> Open build script </h3>
 <p>
   First of all, open the Perl script that is building your site.
 </p>
 <pre>
 lib / Giblog / Command / build.pm
-&lt;/ pre&gt;
-
-&lt;h3&gt; Comment out the process of automatically generating the top page &lt;/ h3&gt;
-
-Look for the following code.
-
-&lt;pre&gt;
+</pre>
+<h3> Comment out the process of automatically generating the top page </h3>
+<p>
+  Look for the following code.
+</p>
+<pre>
   #Create index page
-  $ self-&gt; create_index;
-&lt;/ pre&gt;
-
-Comment out this part. Perl comments are "#".
-
-&lt;pre&gt;
+  $self-&gt;create_index;
+</pre>
+<p>
+  Comment out this part. Perl comments are "#".
+</p>
+<pre>
   #Create index page
-  # $ self-&gt; create_index;
-&lt;/ pre&gt;
-
-&lt;h3&gt; Place the HTML of the top page &lt;/ h3&gt;
-
-Finally, create your own top page. Create the following file.
-
-&lt;pre&gt;
+  # $self-&gt;create_index;
+</pre>
+<h3> Place the HTML of the top page </h3>
+<p>
+  Finally, create your own top page. Create the following file.
+</p>
+<pre>
 templates / index.html
-&lt;/ pre&gt;
-
-The content is the content of the top page.
-
-&lt;pre&gt;
-&lt;h2&gt; My site &lt;/ h2&gt;
+</pre>
+<p>
+  The content is the content of the top page.
+</p>
+<pre>
+&lt;h2&gt; My site &lt;/h2&gt;
 
 This is my site.
-&lt;/ pre&gt;
+</pre>
 
   </div>
   <div class="bottom">
     <!-- bottom -->
-
   </div>
 </div>
 
         </div>
         <div class="side">
-          <!-- side -->
-<div class="side-list">
+          <!-- side --><div class="side-list">
   <div class="side-list-title">
     Menu
   </div>

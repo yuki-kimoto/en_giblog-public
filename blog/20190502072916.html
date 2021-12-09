@@ -1,15 +1,13 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- meta -->
-<meta charset="UTF-8">
+    <!-- meta --><meta charset="UTF-8">
 <link rel="icon" type="image/x-icon" href="/images/giblog-favicon.png">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
 <link rel="stylesheet" type="text/css" href="/css/common.css">
 <script src="/js/jquery-3.4.1.min.js"></script>
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-H9CYDCGDRK"></script>
+<!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-H9CYDCGDRK"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -30,8 +28,7 @@
   <body>
     <div class="container">
       <div class="header">
-        <!-- header -->
-<script>
+        <!-- header --><script>
   $(document).ready(function () {
     $(window).on('resize', function () {
       var width = $(window).width();
@@ -63,10 +60,9 @@
           <div class="entry">
   <div class="top">
     <!-- top -->
-
   </div>
   <div class="middle">
-    <h2><a href="/blog/20190502072916.html"> Display image </a></ h2>
+    <h2><a href="/blog/20190502072916.html"> Display image </a></h2>
 <p>
   Let's display the image in the article. With easy-to-understand illustrations, the quality of the article will be greatly improved.
 </p>
@@ -79,7 +75,7 @@
 <p>
   The above is the example displayed.
 </p>
-<h3> Place the image </ h3>
+<h3> Place the image </h3>
 <p>
   First, you need to place the image.
 </p>
@@ -88,89 +84,92 @@
 </p>
 <pre>
 templates / static / images
-&lt;/ pre&gt;
-
-Place your images in this directory.
-
-&lt;h3&gt; Display image &lt;/ h3&gt;
-
-After arranging the images, let's display the images.
-
-Add the following line to your article.
-
-&lt;pre&gt;
+</pre>
+<p>
+  Place your images in this directory.
+</p>
+<h3> Display image </h3>
+<p>
+  After arranging the images, let's display the images.
+</p>
+<p>
+  Add the following line to your article.
+</p>
+<pre>
 &lt;img src = "/ images / linux-penguin.png"&gt;
-&lt;/ pre&gt;
-
-The image is displayed.
-
-The img tag is an HTML function for displaying images. Specify the image path in the attribute called src.
-
-&lt;h3&gt; FAQ &lt;/ h3&gt;
-
-&lt;h4&gt; I want to specify the size of the image &lt;/ h4&gt;
-
-If you want to specify the size of the image, use a stylesheet and write:
-
-&lt;pre&gt;
+</pre>
+<p>
+  The image is displayed.
+</p>
+<p>
+  The img tag is an HTML function for displaying images. Specify the image path in the attribute called src.
+</p>
+<h3> FAQ </h3>
+<h4> I want to specify the size of the image </h4>
+<p>
+  If you want to specify the size of the image, use a stylesheet and write:
+</p>
+<pre>
 &lt;img src = "/ images / linux-penguin.png" style = "width: 400px"&gt;
-&lt;/ pre&gt;
-
-&lt;img src = "/ images / linux-penguin.png" style = "width: 400px"&gt;
-
-&lt;h4&gt; I want to support the image size on both smartphones and PCs &lt;/ h4&gt;
-
-If you want to support the size of the image on both smartphones and PCs, write as follows.
-
-For smartphones, it is displayed at 98% of the horizontal screen, and for PCs, it is displayed at 400px.
-
-&lt;pre&gt;
+</pre>
+<p>
+  <img src = "/ images / linux-penguin.png" style = "width: 400px">
+</p>
+<h4> I want to support the image size on both smartphones and PCs </h4>
+<p>
+  If you want to support the size of the image on both smartphones and PCs, write as follows.
+</p>
+<p>
+  For smartphones, it is displayed at 98%of the horizontal screen, and for PCs, it is displayed at 400px.
+</p>
+<pre>
 &lt;img src = "/ images / linux-penguin.png" style = "width: 98%; max-width: 400px;"&gt;
-&lt;/ pre&gt;
-
-&lt;img src = "/ images / linux-penguin.png" style = "width: 98%; max-width: 400px;"&gt;
-
-&lt;h4&gt; I want to surround the image with a border &lt;/ h4&gt;
-
-If you want to surround the image with a border, write as follows.
-
-&lt;pre&gt;
+</pre>
+<p>
+  <img src = "/ images / linux-penguin.png" style = "width: 98%; max-width: 400px;">
+</p>
+<h4> I want to surround the image with a border </h4>
+<p>
+  If you want to surround the image with a border, write as follows.
+</p>
+<pre>
 &lt;img src = "/ images / linux-penguin.png" style = "border: 1px solid #ddd"&gt;
-&lt;/ pre&gt;
-
-&lt;img src = "/ images / linux-penguin.png" style = "border: 1px solid #ddd"&gt;
-
-Surrounded by a 1px light gray border.
-
-&lt;h4&gt; Is it okay to place images in subdirectories? &lt;/ H4&gt;
-
-Yes.
-
-&lt;pre&gt;
+</pre>
+<p>
+  <img src = "/ images / linux-penguin.png" style = "border: 1px solid #ddd">
+</p>
+<p>
+  Surrounded by a 1px light gray border.
+</p>
+<h4> Is it okay to place images in subdirectories? </H4>
+<p>
+  Yes.
+</p>
+<pre>
 templates / static / images / foo / bar.png
-&lt;/ pre&gt;
-
-It's okay to have a subdirectory like this.
-
-The image is specified
-
-&lt;pre&gt;
+</pre>
+<p>
+  It's okay to have a subdirectory like this.
+</p>
+<p>
+  The image is specified
+</p>
+<pre>
 &lt;img src = "/ images / foo / bar.png"&gt;
-&lt;/ pre&gt;
-
-Will be.
+</pre>
+<p>
+  Will be.
+</p>
 
   </div>
   <div class="bottom">
     <!-- bottom -->
-
   </div>
 </div>
 
         </div>
         <div class="side">
-          <!-- side -->
-<div class="side-list">
+          <!-- side --><div class="side-list">
   <div class="side-list-title">
     Menu
   </div>

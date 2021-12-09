@@ -1,15 +1,13 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- meta -->
-<meta charset="UTF-8">
+    <!-- meta --><meta charset="UTF-8">
 <link rel="icon" type="image/x-icon" href="/images/giblog-favicon.png">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
 <link rel="stylesheet" type="text/css" href="/css/common.css">
 <script src="/js/jquery-3.4.1.min.js"></script>
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-H9CYDCGDRK"></script>
+<!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-H9CYDCGDRK"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -30,8 +28,7 @@
   <body>
     <div class="container">
       <div class="header">
-        <!-- header -->
-<script>
+        <!-- header --><script>
   $(document).ready(function () {
     $(window).on('resize', function () {
       var width = $(window).width();
@@ -63,19 +60,18 @@
           <div class="entry">
   <div class="top">
     <!-- top -->
-
   </div>
   <div class="middle">
-    <h2><a href="/blog/20190820075913.html"> You can set up an inquiry form on the website created by Giblog </a></ h2>
+    <h2><a href="/blog/20190820075913.html"> You can set up an inquiry form on the website created by Giblog </a></h2>
 <p>
   Giblog is a static CMS generation tool, but you can set up a contact form.
 </p>
 <div style = "text-align: center">
-  <a href="/mail.html"> Contact form sample </a>
-</ div>
+  <a href="/mail.html"> Contact form sample</a>
+</div>
 <div style = "text-align: center">
-  <a href="/mail.html"> <img src = "/ images / otoiawase-example.png" style = "border: 1px solid #ddd; width: 80%;"> </a>
-</ div>
+  <a href="/mail.html"> <img src = "/ images / otoiawase-example.png" style = "border: 1px solid #ddd; width: 80%;"></a>
+</div>
 <p>
   The contact form is not included in the Giblog itself.
 </p>
@@ -86,79 +82,81 @@
   For the actual CGI form configuration, see the following two files in the repository on the official Giblog site.
 </p>
 <p>
-  <a href="https://github.com/yuki-kimoto/giblog-website/tree/master/templates"> Giblog official website inquiry form </a>
+  <a href="https://github.com/yuki-kimoto/giblog-website/tree/master/templates"> Giblog official website inquiry form</a>
 </p>
 <pre>
 templates / mail.html
 template / static / mail.cgi
-&lt;/ pre&gt;
-
-You can copy the Giblog website as it is with "git clone", but if you want to save only the inquiry form, save it with the permission of the CGI program of 755 and the line feed code of LF.
-
-&lt;h3&gt; Mechanism for embedding an inquiry form on a website &lt;/ h3&gt;
-
-Giblog realizes the CGI inquiry form that can be embedded in the website by the following method.
-
-&lt;h4&gt; The contact form is a simple HTML template &lt;/ h4&gt;
-
-The contact form is a simple HTML file.
-
-
-&lt;pre&gt;
+</pre>
+<p>
+  You can copy the Giblog website as it is with "git clone", but if you want to save only the inquiry form, save it with the permission of the CGI program of 755 and the line feed code of LF.
+</p>
+<h3> Mechanism for embedding an inquiry form on a website </h3>
+<p>
+  Giblog realizes the CGI inquiry form that can be embedded in the website by the following method.
+</p>
+<h4> The contact form is a simple HTML template </h4>
+<p>
+  The contact form is a simple HTML file.
+</p>
+<pre>
 templates / mail.html
-&lt;/ pre&gt;
-
-The mail form is described using the HTML form tag.
-
-It is wrapped with the same structure as normal content such as header and footer.
-
-&lt;h4&gt; CGI program to send emails &lt;/ h4&gt;
-
-&lt;pre&gt;
+</pre>
+<p>
+  The mail form is described using the HTML form tag.
+</p>
+<p>
+  It is wrapped with the same structure as normal content such as header and footer.
+</p>
+<h4> CGI program to send emails </h4>
+<pre>
 template / static / mail.cgi
-&lt;/ pre&gt;
-
-Is a CGI program that sends emails.
-
-&lt;h4&gt; Call CGI with Ajax communication &lt;/ h4&gt;
-
-JavaScript is described in "mail.html", and "mail.cgi" is called by Ajax communication.
-
-In this way, we have realized how to embed the contact form in the website.
-
-&lt;h3&gt; Can I create a form created with CGI other than the inquiry form? &lt;/ H3&gt;
-
-Yes. Everything you can do with a CGI program, such as a board for exchanging messages and a survey form, is feasible.
-
-&lt;h3&gt; What kind of environment does it work in? &lt;/ H3&gt;
-
-We are assuming a rental server that supports CGI.
-
-&lt;h3&gt; What will happen to the security if I install the CGI form? &lt;/ H3&gt;
-
-The security of installing a CGI form depends on whether the CGI is vulnerable.
-
-If security is a priority over the contact form being integrated with the site, make the site completely static and &lt;a href="https://www.google.com/intl" You can also use external web services such as / ja_jp / forms / about / "&gt; google forms &lt;/a&gt;.
-
-&lt;h3&gt; Can I use an existing CGI program? &lt;/ H3&gt;
-
-It seems that almost all existing CGI programs are configured so that HTML forms are written inside the CGI program.
-
-So unfortunately it will be difficult to reuse.
-
-If the HTML form and the CGI program are separated and the Ajax communication is performed in the CGI program, I think it is easy to reuse.
+</pre>
+<p>
+  Is a CGI program that sends emails.
+</p>
+<h4> Call CGI with Ajax communication </h4>
+<p>
+  JavaScript is described in "mail.html", and "mail.cgi" is called by Ajax communication.
+</p>
+<p>
+  In this way, we have realized how to embed the contact form in the website.
+</p>
+<h3> Can I create a form created with CGI other than the inquiry form? </H3>
+<p>
+  Yes. Everything you can do with a CGI program, such as a board for exchanging messages and a survey form, is feasible.
+</p>
+<h3> What kind of environment does it work in? </H3>
+<p>
+  We are assuming a rental server that supports CGI.
+</p>
+<h3> What will happen to the security if I install the CGI form? </H3>
+<p>
+  The security of installing a CGI form depends on whether the CGI is vulnerable.
+</p>
+<p>
+  If security is a priority over the contact form being integrated with the site, make the site completely static and <a href="https://www.google.com/intl" You can also use external web services such as / ja_jp / forms / about / "> google forms</a>.
+</p>
+<h3> Can I use an existing CGI program? </H3>
+<p>
+  It seems that almost all existing CGI programs are configured so that HTML forms are written inside the CGI program.
+</p>
+<p>
+  So unfortunately it will be difficult to reuse.
+</p>
+<p>
+  If the HTML form and the CGI program are separated and the Ajax communication is performed in the CGI program, I think it is easy to reuse.
+</p>
 
   </div>
   <div class="bottom">
     <!-- bottom -->
-
   </div>
 </div>
 
         </div>
         <div class="side">
-          <!-- side -->
-<div class="side-list">
+          <!-- side --><div class="side-list">
   <div class="side-list-title">
     Menu
   </div>

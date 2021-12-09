@@ -1,15 +1,13 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- meta -->
-<meta charset="UTF-8">
+    <!-- meta --><meta charset="UTF-8">
 <link rel="icon" type="image/x-icon" href="/images/giblog-favicon.png">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
 <link rel="stylesheet" type="text/css" href="/css/common.css">
 <script src="/js/jquery-3.4.1.min.js"></script>
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-H9CYDCGDRK"></script>
+<!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-H9CYDCGDRK"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -30,8 +28,7 @@
   <body>
     <div class="container">
       <div class="header">
-        <!-- header -->
-<script>
+        <!-- header --><script>
   $(document).ready(function () {
     $(window).on('resize', function () {
       var width = $(window).width();
@@ -63,14 +60,13 @@
           <div class="entry">
   <div class="top">
     <!-- top -->
-
   </div>
   <div class="middle">
-    <h2><a href="/blog/20190816080249.html"> Advanced SEO measures-automatic setting of title tag and description </a></ h2>
+    <h2><a href="/blog/20190816080249.html"> Advanced SEO measures-automatic setting of title tag and description </a></h2>
 <p>
   By default, Giblog has effective SEO measures implemented.
 </p>
-<h3> Automatic setting of title tag </ h3>
+<h3> Automatic setting of title tag </h3>
 <p>
   The title of the top page "index.html" will be the site title set in "site_title" of giblog.conf.
 </p>
@@ -83,133 +79,130 @@ use utf8;
   site_title =&gt;'My original site',
   site_url =&gt;'http://somesite.example',
 }
-&lt;/ pre&gt;
-
-In this case, the title tag of the top page will be "My original site".
-
-&lt;pre&gt;
-&lt;title&gt; My own original site &lt;/ title&gt;
-&lt;/ pre&gt;
-
-Titles other than the top page will have the site title after the first heading on the page.
-
-An example of a page other than the top page is, for example, the first heading
-
-&lt;pre&gt;
-&lt;h2&gt; How to eat delicious tomatoes &lt;/ h2&gt;
-&lt;/ pre&gt;
-
-If so, the title tag on this page will be "How to Eat Tomatoes-My Original Site".
-
-&lt;pre&gt;
-&lt;title&gt; How to eat delicious tomatoes-my original site &lt;/ title&gt;
-&lt;/ pre&gt;
-
-&lt;h3&gt; Automatic description setting &lt;/ h3&gt;
-
-The first untagged paragraph is automatically set to description.
-
-&lt;pre&gt;
-&lt;h2&gt; How to eat delicious tomatoes &lt;/ h2&gt;
+</pre>
+<p>
+  In this case, the title tag of the top page will be "My original site".
+</p>
+<pre>
+&lt;title&gt; My own original site &lt;/title&gt;
+</pre>
+<p>
+  Titles other than the top page will have the site title after the first heading on the page.
+</p>
+<p>
+  An example of a page other than the top page is, for example, the first heading
+</p>
+<pre>
+&lt;h2&gt; How to eat delicious tomatoes &lt;/h2&gt;
+</pre>
+<p>
+  If so, the title tag on this page will be "How to Eat Tomatoes-My Original Site".
+</p>
+<pre>
+&lt;title&gt; How to eat delicious tomatoes-my original site &lt;/title&gt;
+</pre>
+<h3> Automatic description setting </h3>
+<p>
+  The first untagged paragraph is automatically set to description.
+</p>
+<pre>
+&lt;h2&gt; How to eat delicious tomatoes &lt;/h2&gt;
 
 How can I eat tomatoes deliciously? Let's cool it in the refrigerator.
-&lt;/ pre&gt;
-
-&lt;pre&gt;
+</pre>
+<pre>
 &lt;meta name = "description" content = "How can I eat tomatoes deliciously? Let's cool them in the refrigerator."&gt;
-&lt;/ pre&gt;
-
-The first paragraph with a tag is not recognized as a description, so you can also write a breadcrumb trail that is important for SEO.
-
-&lt;pre&gt;
+</pre>
+<p>
+  The first paragraph with a tag is not recognized as a description, so you can also write a breadcrumb trail that is important for SEO.
+</p>
+<pre>
 &lt;ol class = "bread" itemscope itemtype = "http://schema.org/BreadcrumbList"&gt;
   &lt;li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem"&gt;
-    &lt;a itemprop="item" href="/"&gt; &lt;span itemprop = "name"&gt; tomato &lt;/ span&gt; &lt;/a&gt;
+    &lt;a itemprop="item" href="/"&gt; &lt;span itemprop = "name"&gt; tomato &lt;/span&gt;&lt;/a&gt;
     &lt;meta itemprop = "position" content = "1" /&gt;
-  &lt;/ li&gt;
+  &lt;/li&gt;
   &amp; # 8250;
   &lt;li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem"&gt;
-    &lt;a itemprop="item" href="/blog/20101130129876.html"&gt; &lt;span itemprop = "name"&gt; How to eat &lt;/ span&gt; &lt;/a&gt;
+    &lt;a itemprop="item" href="/blog/20101130129876.html"&gt; &lt;span itemprop = "name"&gt; How to eat &lt;/span&gt;&lt;/a&gt;
     &lt;meta itemprop = "position" content = "2" /&gt;
-  &lt;/ li&gt;
+  &lt;/li&gt;
   &amp; # 8250;
   &lt;li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem"&gt;
-      &lt;span itemprop = "name"&gt; here &lt;/ span&gt;
-  &lt;/ li&gt;
-&lt;/ ol&gt;
+      &lt;span itemprop = "name"&gt; here &lt;/span&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
 
-&lt;h2&gt; How to eat delicious tomatoes &lt;/ h2&gt;
+&lt;h2&gt; How to eat delicious tomatoes &lt;/h2&gt;
 
 How can I eat tomatoes deliciously? Let's cool it in the refrigerator.
-&lt;/ pre&gt;
-
-As mentioned above, even if you have a breadcrumb trail, the content of the first untagged paragraph is set to description.
-
-&lt;pre&gt;
+</pre>
+<p>
+  As mentioned above, even if you have a breadcrumb trail, the content of the first untagged paragraph is set to description.
+</p>
+<pre>
 &lt;meta name = "description" content = "How can I eat tomatoes deliciously? Let's cool them in the refrigerator."&gt;
-&lt;/ pre&gt;
-
-&lt;h3&gt; Customize title tag and description &lt;/ h3&gt;
-
-The above settings can also be customized by editing "lib / Giblog / Command / build.pm".
-
-If you know &lt;a href="https://perlzemi.com/"&gt; Perl &lt;/a&gt;, it will be easy to customize, but if you want to change the delimiter between the page title and the site title, simply rewrite it. only.
-
-&lt;pre&gt;
+</pre>
+<h3> Customize title tag and description </h3>
+<p>
+  The above settings can also be customized by editing "lib / Giblog / Command / build.pm".
+</p>
+<p>
+  If you know <a href="https://perlzemi.com/"> Perl</a>, it will be easy to customize, but if you want to change the delimiter between the page title and the site title, simply rewrite it. only.
+</p>
+<pre>
 lib / Giblog / Command / build.pm
-&lt;/ pre&gt;
-
-Changed the delimiter "-" between the page title and the site title to "|".
-
-&lt;pre&gt;
-package Giblog :: Command :: build;
+</pre>
+<p>
+  Changed the delimiter "-" between the page title and the site title to "|".
+</p>
+<pre>
+package Giblog::Command::build;
 
 # omit
 
 sub run {
-  my ($ self, @args) = @_;
+  my ($self, @args) = @_;
   
   # omit
   
-  for my $ file (@ $ files) {
+  for my $file (@$files) {
     
     #Parse title
-    $ api-&gt; parse_title_from_first_h_tag ($ data);
+    $api-&gt;parse_title_from_first_h_tag($data);
 
     #Edit title
-    my $ site_title = $ config-&gt; {site_title};
-    if ($ data-&gt; {file} eq'index.html') {
-      $ data-&gt; {title} = $ site_title;
+    my $site_title = $config-&gt;{site_title};
+    if ($data-&gt;{file} eq'index.html') {
+      $data-&gt;{title} = $site_title;
     }
     else {
       #
       # Edited here
       #
-      $ data-&gt; {title} = "$ data-&gt; {title} | $ site_title";
+      $data-&gt;{title} = "$data-&gt;{title} | $site_title";
     }
 
     #Add page link
-    $ api-&gt; add_page_link_to_first_h_tag ($ data, {root =&gt;'index.html'});
+    $api-&gt;add_page_link_to_first_h_tag($data, {root =&gt;'index.html'});
 
     #Parse description
-    $ api-&gt; parse_description_from_first_p_tag ($ data);
+    $api-&gt;parse_description_from_first_p_tag($data);
   }
   
   # omit
 }
-&lt;/ pre&gt;
+</pre>
 
   </div>
   <div class="bottom">
     <!-- bottom -->
-
   </div>
 </div>
 
         </div>
         <div class="side">
-          <!-- side -->
-<div class="side-list">
+          <!-- side --><div class="side-list">
   <div class="side-list-title">
     Menu
   </div>

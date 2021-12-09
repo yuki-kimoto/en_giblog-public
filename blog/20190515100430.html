@@ -1,15 +1,13 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- meta -->
-<meta charset="UTF-8">
+    <!-- meta --><meta charset="UTF-8">
 <link rel="icon" type="image/x-icon" href="/images/giblog-favicon.png">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
 <link rel="stylesheet" type="text/css" href="/css/common.css">
 <script src="/js/jquery-3.4.1.min.js"></script>
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-H9CYDCGDRK"></script>
+<!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-H9CYDCGDRK"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -30,8 +28,7 @@
   <body>
     <div class="container">
       <div class="header">
-        <!-- header -->
-<script>
+        <!-- header --><script>
   $(document).ready(function () {
     $(window).on('resize', function () {
       var width = $(window).width();
@@ -63,10 +60,9 @@
           <div class="entry">
   <div class="top">
     <!-- top -->
-
   </div>
   <div class="middle">
-    <h2><a href="/blog/20190515100430.html"> Hide / change width / swap left / right sidebar </a></ h2>
+    <h2><a href="/blog/20190515100430.html"> Hide / change width / swap left / right sidebar </a></h2>
 <p>
   Hide, change the width, and change the width of the sidebar. Blogs and websites created with Giblog have a sidebar set by default. If you want to change this, you can do it.
 </p>
@@ -75,15 +71,17 @@
 </p>
 <pre>
 templates / static / css / common.css
-&lt;/ pre&gt;
-
-First, open this file.
-
-Look for content and sidebar settings. There are two settings, the default setting and the setting for smartphones.
-
-The ones above "@media only screen and (max-width: 960px)" are the default settings, and the ones below are the settings for smartphones.
-
-&lt;pre&gt;
+</pre>
+<p>
+  First, open this file.
+</p>
+<p>
+  Look for content and sidebar settings. There are two settings, the default setting and the setting for smartphones.
+</p>
+<p>
+  The ones above "@media only screen and (max-width: 960px)" are the default settings, and the ones below are the settings for smartphones.
+</p>
+<pre>
   / * content * /
   .content {
     / * Content area settings * /
@@ -103,13 +101,12 @@ The ones above "@media only screen and (max-width: 960px)" are the default setti
     / * Sidebar settings-Smartphone * /
   }
 }
-&lt;/ pre&gt;
-
-&lt;h3&gt; Hide sidebar &lt;/ h3&gt;
-
-&lt;b&gt; If you want to hide the sidebar only for smartphones &lt;/ b&gt;, write as follows.
-
-&lt;pre&gt;
+</pre>
+<h3> Hide sidebar </h3>
+<p>
+  <b> If you want to hide the sidebar only for smartphones </b>, write as follows.
+</p>
+<pre>
   / * content * /
   .content {
     / * Content area settings * /
@@ -129,11 +126,11 @@ The ones above "@media only screen and (max-width: 960px)" are the default setti
     display: none;
   }
 }
-&lt;/ pre&gt;
-
-&lt;b&gt; If you want to hide the sidebar on both your PC and smartphone &lt;/ b&gt;, write:
-
-&lt;pre&gt;
+</pre>
+<p>
+  <b> If you want to hide the sidebar on both your PC and smartphone </b>, write:
+</p>
+<pre>
   / * content * /
   .content {
     width: 100%;
@@ -153,15 +150,15 @@ The ones above "@media only screen and (max-width: 960px)" are the default setti
     display: none;
   }
 }
-&lt;/ pre&gt;
-
-&lt;h3&gt; Change the width of the sidebar &lt;/ h3&gt;
-
-To change the width of the sidebar, set as follows: Change width and margin-left.
-
-This is an example of setting the main content to 70%, the sidebar to 29%, and the margin between them to 1%.
-
-&lt;pre&gt;
+</pre>
+<h3> Change the width of the sidebar </h3>
+<p>
+  To change the width of the sidebar, set as follows: Change width and margin-left.
+</p>
+<p>
+  This is an example of setting the main content to 70%, the sidebar to 29%, and the margin between them to 1%.
+</p>
+<pre>
   / * content * /
   .content {
     float: left;
@@ -174,13 +171,12 @@ This is an example of setting the main content to 70%, the sidebar to 29%, and t
     width: 29%;
     margin-left: 1%;
   }
-&lt;/ pre&gt;
-
-&lt;h3&gt; Swap the left and right sides of the sidebar &lt;/ h3&gt;
-
-To swap the left and right sides of the sidebar, set as follows. Change the float setting to right and change margin-left to margin-right.
-
-&lt;pre&gt;
+</pre>
+<h3> Swap the left and right sides of the sidebar </h3>
+<p>
+  To swap the left and right sides of the sidebar, set as follows. Change the float setting to right and change margin-left to margin-right.
+</p>
+<pre>
   / * content * /
   .content {
     float: right;
@@ -193,25 +189,24 @@ To swap the left and right sides of the sidebar, set as follows. Change the floa
     width: 25%;
     margin-right: 1%;
   }
-&lt;/ pre&gt;
-
-&lt;h3&gt; Reference &lt;/ h3&gt;
-
-If you want to know the basics of CSS for changing the design of the sidebar, please refer to the following articles.
-
-&lt;a href="/blog/20190509080917.html"&gt; CSS basics for creating websites &lt;/a&gt;
+</pre>
+<h3> Reference </h3>
+<p>
+  If you want to know the basics of CSS for changing the design of the sidebar, please refer to the following articles.
+</p>
+<p>
+  <a href="/blog/20190509080917.html"> CSS basics for creating websites</a>
+</p>
 
   </div>
   <div class="bottom">
     <!-- bottom -->
-
   </div>
 </div>
 
         </div>
         <div class="side">
-          <!-- side -->
-<div class="side-list">
+          <!-- side --><div class="side-list">
   <div class="side-list-title">
     Menu
   </div>

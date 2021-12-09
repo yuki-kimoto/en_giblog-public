@@ -1,15 +1,13 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- meta -->
-<meta charset="UTF-8">
+    <!-- meta --><meta charset="UTF-8">
 <link rel="icon" type="image/x-icon" href="/images/giblog-favicon.png">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
 <link rel="stylesheet" type="text/css" href="/css/common.css">
 <script src="/js/jquery-3.4.1.min.js"></script>
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-H9CYDCGDRK"></script>
+<!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-H9CYDCGDRK"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -30,8 +28,7 @@
   <body>
     <div class="container">
       <div class="header">
-        <!-- header -->
-<script>
+        <!-- header --><script>
   $(document).ready(function () {
     $(window).on('resize', function () {
       var width = $(window).width();
@@ -63,128 +60,127 @@
           <div class="entry">
   <div class="top">
     <!-- top -->
-
   </div>
   <div class="middle">
-    <h2><a href="/blog/20190520080109.html"> Add a Twitter card </a></ h2>
+    <h2><a href="/blog/20190520080109.html"> Add a Twitter card </a></h2>
 <p>
   Let's add a Twitter card. A Twitter card is a function that allows you to post a summary on Twitter simply by linking to an article.
 </p>
-<h3> Open build script </ h3>
+<h3> Open build script </h3>
 <p>
   First of all, open the Perl script that is building your site.
 </p>
 <pre>
 lib / Giblog / Command / build.pm
-&lt;/ pre&gt;
-
-&lt;h3&gt; Added a program to add a Twitter card &lt;/ h3&gt;
-
-Add a Perl program for "Twitter card" between "Add meta description" and "Build entry html".
-
-&lt;pre&gt;
+</pre>
+<h3> Added a program to add a Twitter card </h3>
+<p>
+  Add a Perl program for "Twitter card" between "Add meta description" and "Build entry html".
+</p>
+<pre>
     #Add meta description
-    $ api-&gt; add_meta_description ($ data);
+    $api-&gt;add_meta_description($data);
     
     #Twitter card
     {
-      my $ meta = $ data-&gt; {meta};
+      my $meta = $data-&gt;{meta};
       
-      my $ site_url = $ config-&gt; {site_url};
-      my $ title = $ data-&gt; {title} ||'';
-      my $ description = $ data-&gt; {description} ||'';
+      my $site_url = $config-&gt;{site_url};
+      my $title = $data-&gt;{title} ||'';
+      my $description = $data-&gt;{description} ||'';
       
-      my $ twitter_card = &lt;&lt; "EOS";
+      my $twitter_card = &lt;&lt; "EOS";
 &lt;meta name = "twitter: card" content = "summary" /&gt;
-&lt;meta name = "twitter: site" content = "\ @ perlzemi" /&gt;
-&lt;meta name = "twitter: title" content = "$ title" /&gt;
-&lt;meta name = "twitter: description" content = "$ description" /&gt;
-&lt;meta name = "twitter: image" content = "$ site_url / images / perlzemi-twitter-card.png" /&gt;
+&lt;meta name = "twitter: site" content = "\ @perlzemi" /&gt;
+&lt;meta name = "twitter: title" content = "$title" /&gt;
+&lt;meta name = "twitter: description" content = "$description" /&gt;
+&lt;meta name = "twitter: image" content = "$site_url / images / perlzemi-twitter-card.png" /&gt;
 EOS
       
-      $ meta. = "\ n $ twitter_card \ n";
+      $meta. = "\ n $twitter_card\n";
       
-      $ data-&gt; {meta} = $ meta;
+      $data-&gt;{meta} = $meta;
     }
     
     #Build entry html
-    $ api-&gt; build_entry ($ data);
-&lt;/ pre&gt;
-
-This way you can write Perl programs directly to customize your site.
-
-&lt;h3&gt; How to check your Twitter card &lt;/ h3&gt;
-
-To check if the Twitter card is displayed correctly, use the "Card validator" provided by Twitter.
-
-&lt;a href="https://cards-dev.twitter.com/validator"&gt; Card validator &lt;/a&gt;
-
-&lt;h3&gt; How to display the first image of an article? &lt;/ H3&gt;
-
-On smartphone sites, it's also common to put the first image of an article on a Twitter Card.
-
-If you want to see the first image of an article, do the following:
-
-Add a Perl program to get the first image between "Create description from first p tag" and "Read common templates".
-
-&lt;pre&gt;
+    $api-&gt;build_entry($data);
+</pre>
+<p>
+  This way you can write Perl programs directly to customize your site.
+</p>
+<h3> How to check your Twitter card </h3>
+<p>
+  To check if the Twitter card is displayed correctly, use the "Card validator" provided by Twitter.
+</p>
+<p>
+  <a href="https://cards-dev.twitter.com/validator"> Card validator</a>
+</p>
+<h3> How to display the first image of an article? </H3>
+<p>
+  On smartphone sites, it's also common to put the first image of an article on a Twitter Card.
+</p>
+<p>
+  If you want to see the first image of an article, do the following:
+</p>
+<p>
+  Add a Perl program to get the first image between "Create description from first p tag" and "Read common templates".
+</p>
+<pre>
     #Create description from first p tag
-    $ api-&gt; parse_description_from_first_p_tag ($ data);
+    $api-&gt;parse_description_from_first_p_tag($data);
 
     #Get first image src
-    $ api-&gt; parse_first_img_src ($ data);
+    $api-&gt;parse_first_img_src($data);
 
     #Read common templates
-    $ api-&gt; read_common_templates ($ data);
-&lt;/ pre&gt;
-
-Next, describe the part of the Twitter card as follows.
-
-&lt;pre&gt;
+    $api-&gt;read_common_templates($data);
+</pre>
+<p>
+  Next, describe the part of the Twitter card as follows.
+</p>
+<pre>
     #Add meta description
-    $ api-&gt; add_meta_description ($ data);
+    $api-&gt;add_meta_description($data);
     
     #Twitter card
     {
-      my $ meta = $ data-&gt; {meta};
+      my $meta = $data-&gt;{meta};
       
-      my $ site_url = $ config-&gt; {site_url};
-      my $ title = $ data-&gt; {title} ||'';
-      my $ description = $ data-&gt; {description} ||'';
-      my $ img_src = $ data-&gt; {img_src};
+      my $site_url = $config-&gt;{site_url};
+      my $title = $data-&gt;{title} ||'';
+      my $description = $data-&gt;{description} ||'';
+      my $img_src = $data-&gt;{img_src};
       
-      my $ twitter_card = &lt;&lt; "EOS";
+      my $twitter_card = &lt;&lt; "EOS";
 &lt;meta name = "twitter: card" content = "summary" /&gt;
-&lt;meta name = "twitter: site" content = "\ @ perlzemi" /&gt;
-&lt;meta name = "twitter: title" content = "$ title" /&gt;
-&lt;meta name = "twitter: description" content = "$ description" /&gt;
+&lt;meta name = "twitter: site" content = "\ @perlzemi" /&gt;
+&lt;meta name = "twitter: title" content = "$title" /&gt;
+&lt;meta name = "twitter: description" content = "$description" /&gt;
 EOS
-      if (defined $ img_src) {
-        $ twitter_card. = &lt;&lt; "EOS";
-&lt;meta name = "twitter: image" content = "$ site_url $ img_src" /&gt;
+      if (defined $img_src) {
+        $twitter_card. = &lt;&lt; "EOS";
+&lt;meta name = "twitter: image" content = "$site_url $img_src" /&gt;
 EOS
       }
       
-      $ meta. = "\ n $ twitter_card \ n";
+      $meta. = "\ n $twitter_card\n";
       
-      $ data-&gt; {meta} = $ meta;
+      $data-&gt;{meta} = $meta;
     }
     
     #Build entry html
-    $ api-&gt; build_entry ($ data);
-&lt;/ pre&gt;
+    $api-&gt;build_entry($data);
+</pre>
 
   </div>
   <div class="bottom">
     <!-- bottom -->
-
   </div>
 </div>
 
         </div>
         <div class="side">
-          <!-- side -->
-<div class="side-list">
+          <!-- side --><div class="side-list">
   <div class="side-list-title">
     Menu
   </div>
